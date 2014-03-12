@@ -783,6 +783,9 @@ staff_grading_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'coffee/src/staff
 open_ended_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'coffee/src/open_ended/**/*.js'))
 notes_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'coffee/src/notes/**/*.js'))
 instructor_dash_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'coffee/src/instructor_dashboard/**/*.js'))
+foundation_js = [
+    'js/foundation.js',
+]
 
 PIPELINE_CSS = {
     'style-vendor': {
@@ -915,6 +918,11 @@ PIPELINE_JS = {
         'source_filenames': instructor_dash_js,
         'output_filename': 'js/instructor_dash.js',
         'test_order': 9,
+    },
+    'foundation': {
+        'source_filenames': foundation_js,
+        'output_filename': 'js/foundation.js',
+        'test_order': 10,
     },
 }
 

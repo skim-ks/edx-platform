@@ -51,12 +51,14 @@
 
   <link rel="icon" type="image/x-icon" href="${static.url(MicrositeConfiguration.get_microsite_configuration_value('favicon_path', settings.FAVICON_PATH))}" />
 
-  <%static:css group='style-vendor'/>
-  <%static:css group='style-app'/>
-  <%static:css group='style-app-extend1'/>
-  <%static:css group='style-app-extend2'/>
+  ##<%static:css group='style-vendor'/>
+  ##<%static:css group='style-app'/>
+  ##<%static:css group='style-app-extend1'/>
+  ##<%static:css group='style-app-extend2'/>
+  <%static:css group='style-gacco'/>
 
   <%static:js group='main_vendor'/>
+  <%static:js group='foundation'/>
 
   <%block name="headextra"/>
 
@@ -103,6 +105,8 @@
 </head>
 
 <body class="<%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
+<div class="row">
+<div class="columns">
   <a class="nav-skip" href="<%block name="nav_skip">#content</%block>">${_("Skip to this view's content")}</a>
 
   <%include file="mathjax_accessible.html" />
@@ -125,6 +129,14 @@
   <%static:js group='module-js'/>
 
   <%block name="js_extra"/>
+</div>
+</div>
+
+
+<script>
+   $(document).foundation();
+</script>
+
 </body>
 </html>
 

@@ -17,13 +17,13 @@ def url_class(is_active):
 <% import waffle %>
 
 <nav class="${active_page} course-material">
-  <div class="inner-wrapper">
-    <ol class="course-tabs">
+  <div class="inner-wrapperi row">
+    <ul class="button-group course-tabs">
       % for tab in get_course_tabs(user, course, active_page, request):
         % if waffle.flag_is_active(request, 'visual_treatment') or waffle.flag_is_active(request, 'merge_course_tabs'):
           <li class="${"prominent" if tab.name in ("Courseware", "Course Content") else ""}">
         % else:
-          <li>
+          <li class="button small">
         % endif
              <a href="${tab.link | h}" class="${url_class(tab.is_active)}">
                  ${_(tab.name) | h}
@@ -42,7 +42,7 @@ def url_class(is_active):
           <li style="float:right"><a href="#" id="staffstatus">${_("Staff view")}</a></li>
           % endif
         % endif
-    </ol>
+    </ul>
   </div>
 </nav>
 
