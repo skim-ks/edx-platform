@@ -756,7 +756,7 @@ main_vendor_js = [
     'js/RequireJS-namespace-undefine.js',
     'js/vendor/json2.js',
     'js/vendor/jquery.min.js',
-    'js/vendor/jquery-ui.min.js',
+    ##'js/vendor/jquery-ui.min.js',
     'js/vendor/jquery.cookie.js',
     'js/vendor/jquery.qtip.min.js',
     'js/vendor/swfobject/swfobject.js',

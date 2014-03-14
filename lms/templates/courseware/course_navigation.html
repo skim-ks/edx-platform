@@ -18,14 +18,14 @@ def url_class(is_active):
 
 <nav class="${active_page} course-material">
   <div class="inner-wrapperi row">
-    <ul class="button-group course-tabs">
+    <ul class="button-group course-tabs radius">
       % for tab in get_course_tabs(user, course, active_page, request):
         % if waffle.flag_is_active(request, 'visual_treatment') or waffle.flag_is_active(request, 'merge_course_tabs'):
           <li class="${"prominent" if tab.name in ("Courseware", "Course Content") else ""}">
         % else:
-          <li class="button small">
+          <li>
         % endif
-             <a href="${tab.link | h}" class="${url_class(tab.is_active)}">
+             <a href="${tab.link | h}" class="button small ${url_class(tab.is_active)}">
                  ${_(tab.name) | h}
                  % if tab.is_active == True:
                    <span class="sr">, current location</span>

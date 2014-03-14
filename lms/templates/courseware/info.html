@@ -8,7 +8,7 @@
 
 <%block name="headextra">
 <%static:css group='style-course-vendor'/>
-<%static:css group='style-course'/>
+##<%static:css group='style-course'/>
 </%block>
 
 <%include file="/dashboard/_dashboard_prompt_midcourse_reverify.html" />
@@ -25,26 +25,51 @@ $(document).ready(function(){
 </%block>
 
 <%block name="bodyclass">${course.css_class or ''}</%block>
+
 <section class="container">
-  <div class="info-wrapper">
+<div class="info-wrapper">
+  <div class="row">
     % if user.is_authenticated():
     <section class="updates">
-      <h1>${_("Course Updates &amp; News")}</h1>
-      ${get_course_info_section(request, course, 'updates')}
+      <div id="black_updatenews" class="columns small-12 medium-8 large-8">
+        <h1>${_("Course Updates &amp; News")}</h1>
+        ${get_course_info_section(request, course, 'updates')}
+      </div>  
     </section>
     <section aria-label="Handout Navigation" class="handouts">
-      <h1>${course.info_sidebar_name}</h1>
-      ${get_course_info_section(request, course, 'handouts')}
+      <div class="columns small-12 medium-4 small-4">
+          <h1>${course.info_sidebar_name}</h1>
+          ${get_course_info_section(request, course, 'handouts')}
+      </div>
     </section>
+  </div>
     % else:
     <section class="updates">
-      <h1>${_("Course Updates &amp; News")}</h1>
-      ${get_course_info_section(request, course, 'guest_updates')}
+      <div id="black_updatenews" class="columns small-12 medium-8 large-8">
+        <h1>${_("Course Updates &amp; News")}</h1>
+        ${get_course_info_section(request, course, 'guest_updates')}
+      </div>
     </section>
     <section aria-label="${_('Handout Navigation')}" class="handouts">
-      <h1>${_("Course Handouts")}</h1>
-      ${get_course_info_section(request, course, 'guest_handouts')}
+      <div class="columns small-12 medium-4 small-4">
+        <h1>${_("Course Handouts")}</h1>
+        ${get_course_info_section(request, course, 'guest_handouts')}
+      </div>
     </section>
     % endif
   </div>
+</div>
 </section>
+
+
+
+<script>
+## no wrap with 'no_black', then ol/li tags to be unwraped
+## but wrap with <div class="no_black">, then ol/li tags are averable.
+$("#black_updatenews ol").filter(function(){
+  return !$(this).parents(".no_black").length;
+}).contents().unwrap();
+$("#black_updatenews li").filter(function(){
+  return !$(this).parents(".no_black").length;
+}).contents().unwrap();
+</script>
