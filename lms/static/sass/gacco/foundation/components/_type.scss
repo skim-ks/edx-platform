@@ -331,10 +331,10 @@ $text-breakpoint-up-queries:
       }
     }
 
-    h1 { font-size: $h1-font-size - rem-calc(2); } //default rem-calc(10)
-    h2 { font-size: $h2-font-size - rem-calc(2); } //default rem-calc(10)
-    h3 { font-size: $h3-font-size - rem-calc(1); } //default rem-calc(5)
-    h4 { font-size: $h4-font-size - rem-calc(1); } //default rem-calc(5)
+    h1 { font-size: $h1-font-size - rem-calc(10); }
+    h2 { font-size: $h2-font-size - rem-calc(10); }
+    h3 { font-size: $h3-font-size - rem-calc(5); }
+    h4 { font-size: $h4-font-size - rem-calc(5); }
     h5 { font-size: $h5-font-size; }
     h6 { font-size: $h6-font-size; }
 
@@ -344,7 +344,7 @@ $text-breakpoint-up-queries:
       border: $hr-border-style $hr-border-color;
       border-width: $hr-border-width 0 0;
       clear: both;
-      margin: $hr-margin 0 ($hr-margin - em-calc(strip-unit($hr-border-width)));
+      margin: $hr-margin 0 ($hr-margin - rem-calc($hr-border-width));
       height: 0;
     }
 
