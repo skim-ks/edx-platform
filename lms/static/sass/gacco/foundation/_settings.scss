@@ -1,4 +1,3 @@
-@charset "UTF-8";
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -11,7 +10,7 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "functions";
+@import "foundation/functions";
 
 // $experimental: true;
 
@@ -44,7 +43,6 @@
 // $body-bg: #fff;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック", "MS P Gothic", Verdana, Arial, Helvetica, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -129,12 +127,12 @@ $body-font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hira
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
- $h1-font-size: rem-calc(26);
- $h2-font-size: rem-calc(22);
- $h3-font-size: rem-calc(18);
- $h4-font-size: rem-calc(14);
- $h5-font-size: rem-calc(12);
- $h6-font-size: 1rem;
+// $h1-font-size: rem-calc(44);
+// $h2-font-size: rem-calc(37);
+// $h3-font-size: rem-calc(27);
+// $h4-font-size: rem-calc(23);
+// $h5-font-size: rem-calc(18);
+// $h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -277,6 +275,7 @@ $body-font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hira
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
 // $block-grid-default-spacing: rem-calc(20);
+// $align-block-grid-to-grid: true;
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -594,7 +593,7 @@ $body-font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hira
 
 // Keystrokes
 
-// $include-html-type-classes: $include-html-classes;
+// $include-html-keystroke-classes: $include-html-classes;
 
 // We use these to control text styles.
 // $keystroke-font: "Consolas", "Menlo", "Courier", monospace;
@@ -681,8 +680,10 @@ $body-font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hira
 // $tabbar-menu-icon-padding: 0;
 
 // $tabbar-hamburger-icon-width: rem-calc(16);
-// $tabbar-hamburger-icon-left: rem-calc(13);
-// $tabbar-hamburger-icon-top: rem-calc(5);
+// $tabbar-hamburger-icon-left: false;
+// $tabbar-hamburger-icon-top: false;
+// $tapbar-hamburger-icon-thickness: 1px;
+// $tapbar-hamburger-icon-gap: 6px;
 
 // Off Canvas Back-Link Overlay
 // $off-canvas-overlay-transition: background 300ms ease;
@@ -1203,3 +1204,37 @@ $body-font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hira
 // $include-html-visibility-classes: $include-html-classes;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
+
+//
+// RANGE SLIDER
+//
+
+// $include-html-range-slider-classes: $include-html-classes;
+
+// These variabels define the slider bar styles
+// $range-slider-bar-width: 100%;
+// $range-slider-bar-height: rem-calc(16);
+
+// $range-slider-bar-border-width: 1px;
+// $range-slider-bar-border-style: solid;
+// $range-slider-bar-border-color: #ddd;
+// $range-slider-radius: $global-radius;
+// $range-slider-round: $global-rounded;
+// $range-slider-bar-bg-color: #fafafa;
+
+// Vertical bar styles
+// $range-slider-vertical-bar-width: rem-calc(16);
+// $range-slider-vertical-bar-height: rem-calc(200);
+
+// These variabels define the slider handle styles
+// $range-slider-handle-width: rem-calc(32);
+// $range-slider-handle-height: rem-calc(22);
+// $range-slider-handle-position-top: rem-calc(-5);
+// $range-slider-handle-bg-color: $primary-color;
+// $range-slider-handle-border-width: 1px;
+// $range-slider-handle-border-style: solid;
+// $range-slider-handle-border-color: none;
+// $range-slider-handle-radius: $global-radius;
+// $range-slider-handle-round: $global-rounded;
+// $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%);
+// $range-slider-handle-cursor: pointer;
