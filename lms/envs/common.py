@@ -785,6 +785,10 @@ notes_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'coffee/src/notes/**/*.js
 instructor_dash_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'coffee/src/instructor_dashboard/**/*.js'))
 foundation_js = [
     'js/foundation.js',
+    'js/fastclick.js',
+]
+foundation_jq = [
+    'js/jquery.js',
 ]
 
 PIPELINE_CSS = {
@@ -841,11 +845,17 @@ PIPELINE_CSS = {
         ],
         'output_filename': 'css/lms-style-course.css',
     },
+    'style-normalize': {
+        'source_filenames': [
+            'sass/gacco/normalize.css',
+        ],
+        'output_filename': 'css/lms-style-normalize.css',
+    },
     'style-gacco': {
         'source_filenames': [
             'sass/gacco/gacco.css',
         ],
-        'output_filename': 'css/lms-style-gacco.css'
+        'output_filename': 'css/lms-style-gacco.css',
     },
 }
 
@@ -922,8 +932,13 @@ PIPELINE_JS = {
     'foundation': {
         'source_filenames': foundation_js,
         'output_filename': 'js/foundation.js',
-        'test_order': 10,
+        'test_order': 11,
     },
+    'foundation_jq': {
+       'source_filenames': foundation_jq,
+       'output_filename': 'js/foundation_jquery.js',
+       'test_order': 10,
+    }
 }
 
 PIPELINE_DISABLE_WRAPPER = True

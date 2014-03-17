@@ -17,7 +17,7 @@ def url_class(is_active):
 <% import waffle %>
 
 <nav class="${active_page} course-material">
-  <div class="inner-wrapperi row">
+  <div class="inner-wrapperi row" style="margin-bottom:2rem;">
     <ul class="button-group course-tabs radius">
       % for tab in get_course_tabs(user, course, active_page, request):
         % if waffle.flag_is_active(request, 'visual_treatment') or waffle.flag_is_active(request, 'merge_course_tabs'):
