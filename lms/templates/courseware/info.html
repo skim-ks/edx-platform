@@ -21,47 +21,48 @@ $(document).ready(function(){
 </%block>
 
 
-
-			<div class="off-canvas-wrap">
+<div class="off-canvas-wrap">
 	<div class="inner-wrap">
 
-		<nav class="top-bar" data-topbar>
-		<ul class="title-area">
-		<li class="name">
-		<span class="tab-bar">
-		<a class="left-off-canvas-toggle menu-icon">
-		<span></span><div style="font-size:1.5rem; margin-left:1rem; padding-top:0.2rem; color:#333333;">gacco</div>
-		</a>
-		</span>
-		</li>
-		<li class="toggle-topbar has-form"><a href="#" class="button success">学習メニュー</a></li>
-		</ul>
-		
-		<section class="top-bar-section">
 
-		<!-- Right Nav Section -->
-		<ul class="right hide-for-medium-up">
-			<li><a href="#">学習メニュー項目</a></li>
-			<li><a href="#">学習メニュー項目</a></li>
-			<li><a href="#">学習メニュー項目</a></li>
-			<li><a href="#">学習メニュー項目</a></li>
-		</ul>
-		<ul class="right show-for-medium-up">
-			<li class="has-dropdown active">
-				<a href="#">学習メニュー</a>
-				<ul class="dropdown">
+		<nav class="top-bar hide-for-large-up" data-topbar>
+			<!-- Header || Tablet/SP -->
+			<ul class="title-area">
+				<li class="name">
+					<span class="tab-bar">
+						<a class="left-off-canvas-toggle menu-icon">
+						<span></span><div style="font-size:1.5rem; margin-left:1rem; padding-top:0.2rem; color:#333333;">gacco</div>
+						</a>
+					</span>
+				</li>
+				<li class="toggle-topbar has-form"><a href="#" class="button success">学習メニュー</a></li>
+			</ul>
+		
+			<section class="top-bar-section">
+				<!-- Right Nav Section || Tablet -->
+				<ul class="right hide-for-medium-up">
 					<li><a href="#">学習メニュー項目</a></li>
 					<li><a href="#">学習メニュー項目</a></li>
 					<li><a href="#">学習メニュー項目</a></li>
 					<li><a href="#">学習メニュー項目</a></li>
 				</ul>
-			</li>
-		</ul>
-		</section>
+				<!-- Right Nav Section || Smartphone -->
+				<ul class="right show-for-medium-up">
+					<li class="has-dropdown active">
+						<a href="#">学習メニュー</a>
+						<ul class="dropdown">
+							<li><a href="#">学習メニュー項目</a></li>
+							<li><a href="#">学習メニュー項目</a></li>
+							<li><a href="#">学習メニュー項目</a></li>
+							<li><a href="#">学習メニュー項目</a></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
 		</nav>
 
 
-		<aside class="left-off-canvas-menu">
+		<aside class="left-off-canvas-menu hide-for-large-up">
 			<ul class="off-canvas-list">
 				<li><label>Foundation</label></li>
 				<li><a href="#">The Psychohistorians</a></li>
@@ -79,28 +80,85 @@ $(document).ready(function(){
 		</aside>
 		
 		<section class="main-section">
-			<div class="row">
-				<div class="large-12 columns">
-					<br>
-					<h4>ボディ見出し</h4>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
-					<p>ボディ</p>
+			<!-- Header for Tab/SP -->
+			<div class="hide-for-large-up" style="background-color:#B9B9B9; width:100%;"><p><span style="margin-left:1rem;"></span>メガネ講座 〜過去から未来への戦い〜 あいうえおかきくけこさしすせそたちつてとなにぬねの</p></div>
+			<!-- Header for PC -->
+			<div class="row show-for-large-up" style="margin-top:0.5rem;">
+				<div class="columns large-8"><span style="font-size:3rem;">gacco</span><span style="font-size:1rem;"> | メガネ講座 〜過去から未来への戦い〜 </span></div>
+				<div class="columns large-4"><span class="right button radius small secondary">ナビボタン▼</span></div>
+			</div>
+			<!-- Navigation for PC -->
+			<div style="background:#EEE; margin-bottom:2rem;">
+				<div class="row show-for-large-up" style="margin-top:1rem; padding-top:1.2rem;">
+					<div class="large-12 columns">
+						<ul class="button-group course-tabs" style="margin-left:1rem;">
+							<li>
+							<a href="/courses/edX/Open_DemoX/edx_demo_course/courseware" class="button small">
+							学習する
+							</a>
+							</li>
+							<li>
+							<a href="/courses/edX/Open_DemoX/edx_demo_course/info" class="button small success">
+							お知らせ
+							</a>
+							</li>
+							<li>
+							<a href="/courses/edX/Open_DemoX/edx_demo_course/discussion/forum" class="button small">
+							ディスカッション
+							</a>
+							</li>
+							<li>
+							<a href="/courses/edX/Open_DemoX/edx_demo_course/course_wiki" class="button small">
+							Ｗｉｋｉ
+							</a>
+							</li>
+							<li>
+							<a href="/courses/edX/Open_DemoX/edx_demo_course/progress" class="button small">
+							成績
+							</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</section>
-		
+<!-- Common Contets Area for All devices -->
+			<div class="row">
+				<%block name="bodyclass">${course.css_class or ''}</%block>
+				<section class="container">
+					<div class="info-wrapper">
+						<div class="row">
+							% if user.is_authenticated():
+							<section class="updates">
+								<div id="black_updatenews" class="columns small-12 medium-8 large-8">
+								<h1>${_("Course Updates &amp; News")}</h1>
+								${get_course_info_section(request, course, 'updates')}
+								</div>
+							</section>
+							<section aria-label="Handout Navigation" class="handouts">
+								<div class="columns small-12 medium-4 small-4">
+									<h1>${course.info_sidebar_name}</h1>
+									${get_course_info_section(request, course, 'handouts')}
+								</div>
+							</section>
+							% else:
+							<section class="updates">
+								<div id="black_updatenews" class="columns small-12 medium-8 large-8">
+									<h1>${_("Course Updates &amp; News")}</h1>
+									${get_course_info_section(request, course, 'guest_updates')}
+								</div>
+							</section>
+							<section aria-label="${_('Handout Navigation')}" class="handouts">
+								<div class="columns small-12 medium-4 small-4">
+									<h1>${_("Course Handouts")}</h1>
+									${get_course_info_section(request, course, 'guest_handouts')}
+								</div>
+							</section>
+							% endif
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>		
 		<a class="exit-off-canvas"></a>
 	</div>
 </div>

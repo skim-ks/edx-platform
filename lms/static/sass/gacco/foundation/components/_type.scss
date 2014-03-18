@@ -17,12 +17,19 @@ $header-bottom-margin: .5rem !default;
 $header-text-rendering: optimizeLegibility !default;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(44) !default;
-$h2-font-size: rem-calc(37) !default;
-$h3-font-size: rem-calc(27) !default;
-$h4-font-size: rem-calc(23) !default;
-$h5-font-size: rem-calc(18) !default;
+$h1-font-size: rem-calc(22) !default;
+$h2-font-size: rem-calc(18) !default;
+$h3-font-size: rem-calc(16) !default;
+$h4-font-size: rem-calc(14) !default;
+$h5-font-size: rem-calc(12) !default;
 $h6-font-size: 1rem !default;
+
+//Defaults
+//$h1-font-size: rem-calc(44) !default;
+//$h2-font-size: rem-calc(37) !default;
+//$h3-font-size: rem-calc(27) !default;
+//$h4-font-size: rem-calc(23) !default;
+//$h5-font-size: rem-calc(18) !default;
 
 // These control how subheaders are styled.
 $subheader-line-height: 1.4 !default;
@@ -331,10 +338,10 @@ $text-breakpoint-up-queries:
       }
     }
 
-    h1 { font-size: $h1-font-size - rem-calc(10); }
-    h2 { font-size: $h2-font-size - rem-calc(10); }
-    h3 { font-size: $h3-font-size - rem-calc(5); }
-    h4 { font-size: $h4-font-size - rem-calc(5); }
+    h1 { font-size: $h1-font-size - rem-calc(2); }
+    h2 { font-size: $h2-font-size - rem-calc(2); }
+    h3 { font-size: $h3-font-size - rem-calc(1); }
+    h4 { font-size: $h4-font-size - rem-calc(1); }
     h5 { font-size: $h5-font-size; }
     h6 { font-size: $h6-font-size; }
 
