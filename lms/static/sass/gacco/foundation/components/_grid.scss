@@ -108,8 +108,8 @@ $total-columns: 12 !default;
 
   // If collapsed, get rid of gutter padding
   @if $collapse {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
 
   // Gutter padding whenever a column isn't set to collapse

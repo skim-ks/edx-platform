@@ -22,7 +22,7 @@ from status.status import get_site_status_msg
 try:
     course_id = course.id
 except:
-    # can't figure out a better way to get at a possibly-defined course var
+    # cannot figure out a better way to get at a possibly-defined course var
     course_id = None
 site_status_msg = get_site_status_msg(course_id)
 %>
@@ -42,37 +42,94 @@ site_status_msg = get_site_status_msg(course_id)
 % else:
   <header class="global" aria-label="${_('Global Navigation')}">
 % endif
-  <nav>
 
-  <h1 class="logo">
-    <a href="${marketing_link('ROOT')}">
-      <%block name="navigation_logo">
-          <img src="${static.url(branding.get_logo_url())}" alt="
-          % if course:
-          ${course.display_org_with_default | h}: ${course.display_number_with_default | h} ${course.display_name_with_default | h} @ 
-          % endif
-          ${platform_name()}
-          " />
-      </%block>
-    </a>
-  </h1>
+<nav class="top-bar hide-for-large-up" data-topbar>
+			<!-- Header || Tablet/SP -->
+			<ul class="title-area">
+				<li class="name">
+					<span class="tab-bar">
+						<a class="left-off-canvas-toggle menu-icon">
+						<span></span><div style="font-size:1.5rem; margin-left:1rem; padding-top:0.2rem; color:#333333;">gacco</div>
+						</a>
+					</span>
+				</li>
+				<li class="toggle-topbar has-form"><a href="#" class="button success">学習メニュー</a></li>
+			</ul>
+		<section class="top-bar-section">
+				<!-- Right Nav Section || Tablet -->
+				<ul id="black_target_cnavi1" class="right hide-for-medium-up">
+				</ul>
+				<!-- Right Nav Section || Smartphone -->
+				<ul class="right show-for-medium-up">
+					<li class="has-dropdown active">
+						<a href="#">学習メニュー</a>
+						<ul id="black_target_cnavi2" class="dropdown">
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</nav>
 
+
+		<aside class="left-off-canvas-menu hide-for-large-up">
+			<ul id="black_target_offcanvas" class="off-canvas-list">
+				<li id="black_target_offcanvas"><label>ナビメニュー</label></li>
+			</ul>
+		</aside>
+
+
+
+
+	<nav>
+
+##  <h1 class="logo">
+##    <a href="${marketing_link('ROOT')}">
+##      <%block name="navigation_logo">
+##          <img src="${static.url(branding.get_logo_url())}" alt="
+##          % if course:
+##          ${course.display_org_with_default | h}: ${course.display_number_with_default | h} ${course.display_name_with_default | h} @ 
+##            ${course.display_number_with_default | h} ${course.display_name_with_default | h} @
+##          % endif
+##            ${platform_name()}
+##          " />
+##      </%block>
+##    </a>
+##  </h1>
+
+<div class="row show-for-large-up" style="margin-top:1rem;">
+  ## Sitename
+  <div class="columns large-9">
+  <a href="http://gacco.org/"><img src="http://gacco.org/images/vector/gacco_identity.svg" alt="gacco"></a>
+  <span style="margin-left:0.5rem;"> </span><span style="margin-bottom:3rem;"><small>Certified by </small></span><img src="http://gacco.org/images/jmooc.png" alt="JMOOC" width="70" style="margin-bottom:0.6rem;">
     % if course:
-      <h2><span class="provider">${course.display_org_with_default | h}:</span> ${course.display_number_with_default | h} ${course.display_name_with_default}</h2>
+      <h2 style="display:inline; font-size:1rem; color:#333333;"><span style="font-size:1.2rem; margin-left:0.2rem; margin-right:0.2rem; ">|</span>${course.display_number_with_default | h} ${course.display_name_with_default}</h2>
     % endif
+  </div>
+  ## navi button
+  <div class="columns large-3">
+
+
+
+##    % if course:
+##      <h2 id="black_course_name">
+##    <span class="provider">${course.display_org_with_default | h}:</span>
+##      ${course.display_number_with_default | h} ${course.display_name_with_default}</h2>
+##    % endif
 
     % if user.is_authenticated():
 
-    <ol class="left nav-global authenticated">
-      <%block name="navigation_global_links_authenticated">
-        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-          <li class="nav-global-01">
-            <a href="${marketing_link('COURSES')}">${_('Find Courses')}</a>
-          </li>
-        % endif
-      </%block>
-    </ol>
-    <a href="#" data-dropdown="drop-menu" class="button small secondary dropdown">Dropdown Button</a><br>
+##    <ol class="left nav-global authenticated">
+##      <%block name="navigation_global_links_authenticated">
+##        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+##          <li class="nav-global-01">
+##            <a href="${marketing_link('COURSES')}">${_('Find Courses')}</a>
+##          </li>
+##        % endif
+##      </%block>
+##    </ol>
+
+
+    <a href="#" data-dropdown="drop-menu" class="right button small radius secondary dropdown">ナビボタン</a><br>
     <ul id="drop-menu" data-dropdown-content class="user f-dropdown">
       <li class="primary">
         <a href="${reverse('dashboard')}" class="user-link">
@@ -80,9 +137,9 @@ site_status_msg = get_site_status_msg(course_id)
           <span class="sr">${_("Dashboard for:")} </span> ${user.username}
         </a>
       </li>
-      <li class="primary">
-        <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">${_("More options dropdown")}</span> &#9662;</a>
-        <ul class="dropdown-menu" aria-label="More Options" role="menu">
+##      <li class="primary">
+##        <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">${_("More options dropdown")}</span> &#9662;</a>
+##        <ul class="dropdown-menu" aria-label="More Options" role="menu">
           <%block name="navigation_dropdown_menu_links" >
             <li>
             <a href="${marketing_link('FAQ')}">${_("Help")}</a>
@@ -91,19 +148,40 @@ site_status_msg = get_site_status_msg(course_id)
           <li>
           <a href="${reverse('logout')}" role="menuitem">${_("Log Out")}</a>
           </li>
-        </ul>
-      </li>
+##        </ul>
+##      </li>
     </ul>
-      % if display_shopping_cart: # see shoppingcart.context_processor.user_has_cart_context_processor
-        <ol class="user">
-          <li class="primary">
-            <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
-              <i class="icon-shopping-cart"></i> Shopping Cart
-            </a>
-          </li>
-        </ol>
-      % endif
+
+
+	## black called in course_navigation
+	<ul id="black_move_offcanvas" class="off-canvas-list hide">
+	<li>
+	<a href="${reverse('dashboard')}" class="user-link">
+	${_("Dashboard for:")}${user.username}
+	</a>
+	</li>
+	<li>
+	<a href="${marketing_link('FAQ')}">${_("Help")}</a>
+	</li>
+	<li>
+	<a href="${reverse('logout')}" role="menuitem">${_("Log Out")}</a>
+	</li>
+	</ul>
+
+
+##      % if display_shopping_cart: # see shoppingcart.context_processor.user_has_cart_context_processor
+##        <ol class="user">
+##          <li class="primary">
+##            <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
+##              <i class="icon-shopping-cart"></i> Shopping Cart
+##            </a>
+##          </li>
+##        </ol>
+##      % endif
+
+
     % else:
+
     <ol class="left nav-global">
       <%block name="navigation_global_links">
         % if MicrositeConfiguration.get_microsite_configuration_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
@@ -143,6 +221,10 @@ site_status_msg = get_site_status_msg(course_id)
     </li>
     </ol>
     % endif
+
+  </div>
+</div>
+
   </nav>
 </header>
 % if course:
@@ -154,5 +236,14 @@ site_status_msg = get_site_status_msg(course_id)
 %if not user.is_authenticated():
   <%include file="forgot_password_modal.html" />
 %endif
+
+## BLACK offcanvas move
+<script>
+$(document).ready(function(){  
+        $("#black_target_offcanvas").after($("#black_move_offcanvas")); 
+        $("#black_move_offcanvas").removeClass("hide");
+});
+</script>
+
 
 <%include file="help_modal.html"/>

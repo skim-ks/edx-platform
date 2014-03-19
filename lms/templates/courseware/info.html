@@ -1,6 +1,23 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%! from courseware.courses import get_course_info_section %>
 
+##<!--course navigation meta-->
+##<%page args="active_page=None" />
+##
+##<%
+##if active_page is None and active_page_context is not UNDEFINED:
+##  # If active_page is not passed in as an argument, it may be in the context as active_page_context
+##  active_page = active_page_context
+##
+##def url_class(is_active):
+##  if is_active:
+##    return "active"
+##  return ""
+##%>
+##<!--course navigation meta-->
+
+
+
 <%inherit file="../main.html" />
 <%namespace name='static' file='../static_content.html'/>
 
@@ -21,106 +38,24 @@ $(document).ready(function(){
 </%block>
 
 
-<div class="off-canvas-wrap">
-	<div class="inner-wrap">
 
 
-		<nav class="top-bar hide-for-large-up" data-topbar>
-			<!-- Header || Tablet/SP -->
-			<ul class="title-area">
-				<li class="name">
-					<span class="tab-bar">
-						<a class="left-off-canvas-toggle menu-icon">
-						<span></span><div style="font-size:1.5rem; margin-left:1rem; padding-top:0.2rem; color:#333333;">gacco</div>
-						</a>
-					</span>
-				</li>
-				<li class="toggle-topbar has-form"><a href="#" class="button success">学習メニュー</a></li>
-			</ul>
-		
-			<section class="top-bar-section">
-				<!-- Right Nav Section || Tablet -->
-				<ul class="right hide-for-medium-up">
-					<li><a href="#">学習メニュー項目</a></li>
-					<li><a href="#">学習メニュー項目</a></li>
-					<li><a href="#">学習メニュー項目</a></li>
-					<li><a href="#">学習メニュー項目</a></li>
-				</ul>
-				<!-- Right Nav Section || Smartphone -->
-				<ul class="right show-for-medium-up">
-					<li class="has-dropdown active">
-						<a href="#">学習メニュー</a>
-						<ul class="dropdown">
-							<li><a href="#">学習メニュー項目</a></li>
-							<li><a href="#">学習メニュー項目</a></li>
-							<li><a href="#">学習メニュー項目</a></li>
-							<li><a href="#">学習メニュー項目</a></li>
-						</ul>
-					</li>
-				</ul>
-			</section>
-		</nav>
 
 
-		<aside class="left-off-canvas-menu hide-for-large-up">
-			<ul class="off-canvas-list">
-				<li><label>Foundation</label></li>
-				<li><a href="#">The Psychohistorians</a></li>
-				<li><a href="#">The Encyclopedists</a></li>
-				<li><a href="#">The Mayors</a></li>
-				<li><a href="#">The Traders</a></li>
-				<li><a href="#">The Merchant Princes</a></li>
-				<li><label>Foundation and Empire</label></li>
-				<li><a href="#">The General</a></li>
-				<li><a href="#">The Mule</a></li>
-				<li><label>Second Foundation</label></li>
-				<li><a href="#">Search by the Mule</a></li>
-				<li><a href="#">Search by the Foundation</a></li>
-			</ul>
-		</aside>
 		
 		<section class="main-section">
 			<!-- Header for Tab/SP -->
-			<div class="hide-for-large-up" style="background-color:#B9B9B9; width:100%;"><p><span style="margin-left:1rem;"></span>メガネ講座 〜過去から未来への戦い〜 あいうえおかきくけこさしすせそたちつてとなにぬねの</p></div>
+			<div class="hide-for-large-up" style="background-color:#B9B9B9; width:100%;"><p><span style="margin-left:1rem;" id="black_target_course_name"></span>講座名</p></div>
 			<!-- Header for PC -->
-			<div class="row show-for-large-up" style="margin-top:0.5rem;">
-				<div class="columns large-8"><span style="font-size:3rem;">gacco</span><span style="font-size:1rem;"> | メガネ講座 〜過去から未来への戦い〜 </span></div>
-				<div class="columns large-4"><span class="right button radius small secondary">ナビボタン▼</span></div>
-			</div>
+			##<div class="row show-for-large-up" style="margin-top:0.5rem;">
+			##	<div class="columns large-8"><span style="font-size:3rem;">gacco</span><span style="font-size:1rem;"> | メガネ講座 〜過去から未来への戦い〜 </span></div>
+			##	<div class="columns large-4"><span class="right button radius small secondary">ナビボタン▼</span></div>
+			##</div>
 			<!-- Navigation for PC -->
-			<div style="background:#EEE; margin-bottom:2rem;">
-				<div class="row show-for-large-up" style="margin-top:1rem; padding-top:1.2rem;">
-					<div class="large-12 columns">
-						<ul class="button-group course-tabs" style="margin-left:1rem;">
-							<li>
-							<a href="/courses/edX/Open_DemoX/edx_demo_course/courseware" class="button small">
-							学習する
-							</a>
-							</li>
-							<li>
-							<a href="/courses/edX/Open_DemoX/edx_demo_course/info" class="button small success">
-							お知らせ
-							</a>
-							</li>
-							<li>
-							<a href="/courses/edX/Open_DemoX/edx_demo_course/discussion/forum" class="button small">
-							ディスカッション
-							</a>
-							</li>
-							<li>
-							<a href="/courses/edX/Open_DemoX/edx_demo_course/course_wiki" class="button small">
-							Ｗｉｋｉ
-							</a>
-							</li>
-							<li>
-							<a href="/courses/edX/Open_DemoX/edx_demo_course/progress" class="button small">
-							成績
-							</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<%include file="/courseware/course_navigation.html" args="active_page='info'" />
+
+
+
 <!-- Common Contets Area for All devices -->
 			<div class="row">
 				<%block name="bodyclass">${course.css_class or ''}</%block>
@@ -159,25 +94,23 @@ $(document).ready(function(){
 				</section>
 			</div>
 		</section>		
-		<a class="exit-off-canvas"></a>
-	</div>
-</div>
-	
-				<script>
-					## no wrap with 'no_black', then ol/li tags to be unwraped
-					## but wrap with <div class="no_black">, then ol/li tags are averable.
-					$("#black_updatenews ol").filter(function(){
-						return !$(this).parents(".no_black").length;
-					}).contents().unwrap();
-					$("#black_updatenews li").filter(function(){
-						return !$(this).parents(".no_black").length;
-					}).contents().unwrap();
-				</script>
-				
-				</div>						
-				</section>
-			
-			<a class="exit-off-canvas"></a>
-			
-		</div>
-	</div>
+## ||||  Offcanvas Closer  ||||
+## this parts will be written in 'footer.html'
+##		<a class="exit-off-canvas"></a>
+##	</div>
+##</div>
+
+## Info_Update Wrapper 'no_black'
+<script>
+	## no wrap with 'no_black', then ol/li tags to be unwraped
+	## but wrap with <div class="no_black">, then ol/li tags are averable.
+	$("#black_updatenews ol").filter(function(){
+		return !$(this).parents(".no_black").length;
+	}).contents().unwrap();
+	$("#black_updatenews li").filter(function(){
+		return !$(this).parents(".no_black").length;
+	}).contents().unwrap();
+</script>
+
+
+
