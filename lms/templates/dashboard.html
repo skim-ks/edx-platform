@@ -187,14 +187,18 @@
   </section>
 % endif
 
+<div class="row">
 <section class="container dashboard" id="dashboard-main" aria-hidden="false">
 
   %if message:
+    <div class="columns">
     <section class="dashboard-banner">
       ${message}
     </section>
+    </div>
   %endif
 
+  <div class="columns large-4 medium-4 small-12">
   <section class="profile-sidebar">
     <header class="profile">
       <h1 class="user-name">${ user.username }</h1>
@@ -234,7 +238,9 @@
     </section>
 
   </section>
+  </div>
 
+  <div class="columns large-8 medium-8 small-12">
   <section class="my-courses" id="my-courses">
     <header>
       <h2>${_("Current Courses")}</h2>
@@ -281,7 +287,9 @@
       % endfor
     % endif
   </section>
+  </div>
 </section>
+</div>
 
 <section id="email-settings-modal" class="modal" aria-hidden="true">
   <div class="inner-wrapper" role="dialog" aria-labelledby="email-settings-title">
