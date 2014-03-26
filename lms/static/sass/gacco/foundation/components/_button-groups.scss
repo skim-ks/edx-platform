@@ -106,24 +106,3 @@ $button-group-border-width: 1px !default;
     }
   }
 }
-
-@include exports("f_button-group") {
-  @if $include-html-button-classes {
-    .f_button-group { @include button-group-container;
-
-      li { @include button-group-style(); }
-
-      &.radius > * { @include button-group-style($radius:$button-radius, $float:null); }
-      &.round > * { @include button-group-style($radius:$button-round, $float:null); }
-
-      @for $i from 2 through 8 {
-        &.even-#{$i} li { @include button-group-style($even:$i, $float:null); }
-      }
-    }
-
-    .f_button-bar {
-      @include clearfix;
-      .f_button-group { @include button-group-container($styles:false,$float:true); }
-    }
-  }
-}

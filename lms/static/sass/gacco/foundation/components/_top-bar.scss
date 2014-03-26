@@ -11,7 +11,7 @@
 $include-html-top-bar-classes: $include-html-classes !default;
 
 // Background color for the top bar
-$topbar-bg-color: #ccc !default;
+$topbar-bg-color: #eee !default;
 $topbar-bg: $topbar-bg-color !default;
 
 // Height and margin
@@ -23,9 +23,9 @@ $topbar-title-weight: normal !default;
 $topbar-title-font-size: rem-calc(17) !default;
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #ccc !default;
-$topbar-dropdown-link-color: #333 !default;
-$topbar-dropdown-link-bg: #fafafa !default;
+$topbar-dropdown-bg: #333 !default;
+$topbar-dropdown-link-color: #fff !default;
+$topbar-dropdown-link-bg: #333 !default;
 $topbar-dropdown-link-weight: normal !default;
 $topbar-dropdown-toggle-size: 5px !default;
 $topbar-dropdown-toggle-color: #fff !default;
@@ -61,7 +61,7 @@ $topbar-menu-link-transform: uppercase !default;
 $topbar-menu-link-font-size: rem-calc(13) !default;
 $topbar-menu-link-weight: bold !default;
 $topbar-menu-link-color: #fff !default;
-$topbar-menu-icon-color: #333 !default;
+$topbar-menu-icon-color: #fff !default;
 $topbar-menu-link-color-toggled: #888 !default;
 $topbar-menu-icon-color-toggled: #888 !default;
 

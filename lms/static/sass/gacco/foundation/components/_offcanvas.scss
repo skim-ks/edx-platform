@@ -9,10 +9,10 @@
 // Off Canvas Tab Bar Variables
 $include-html-off-canvas-classes: $include-html-classes !default;
 
-$tabbar-bg: #ccc !default;
+$tabbar-bg: #eee !default;
 $tabbar-height: rem-calc(45) !default;
 $tabbar-line-height: $tabbar-height !default;
-$tabbar-color: #333 !default;
+$tabbar-color: #fff !default;
 $tabbar-middle-padding: 0 rem-calc(10) !default;
 
 // Off Canvas Divider Styles
@@ -45,7 +45,7 @@ $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness
 
 // Off Canvas Menu Icon Variables
 $tabbar-menu-icon-color: #333 !default;
-$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%) !default;
+$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: 30%) !default;
 
 $tabbar-menu-icon-text-indent: rem-calc(35) !default;
 $tabbar-menu-icon-width: $tabbar-height !default;

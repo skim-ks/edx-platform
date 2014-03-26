@@ -188,29 +188,4 @@ $split-button-pip-default-float-lrg: rem-calc(-6) !default;
     }
 
   }
-
-
-@include exports("f_split-button") {
-  @if $include-html-button-classes {
-
-    .split.f_button { @include split-button;
-
-      &.secondary { @include split-button(false, $split-button-pip-color, $secondary-color, false); }
-      &.alert { @include split-button(false, false, $alert-color, false); }
-      &.success { @include split-button(false, false, $success-color, false); }
-
-      &.tiny { @include split-button(tiny, false, false, false); }
-      &.small { @include split-button(small, false, false, false); }
-      &.large { @include split-button(large, false, false, false); }
-      &.expand { padding-left: 2rem; }
-
-      &.secondary { @include split-button(false, $split-button-pip-color-alt, false, false); }
-
-      &.radius span { @include side-radius($opposite-direction, $global-radius); }
-      &.round span { @include side-radius($opposite-direction, 1000px); }
-    }
-
-  }
-}
-
 }
