@@ -247,3 +247,39 @@ $f-dropdown-content-padding: rem-calc(20) !default;
 
   }
 }
+
+@include exports("f_dropdown") {
+  @if $include-html-dropdown-classes {
+
+    /* Foundation Dropdowns */
+    .f-f_dropdown {
+      @include dropdown-container(list, bottom);
+
+      &.drop-right {
+        @include dropdown-container(list, left);
+      }
+
+      &.drop-left {
+        @include dropdown-container(list, right);
+      }
+
+      &.drop-top {
+        @include dropdown-container(list, top);
+      }
+      // max-width: none;
+
+      li { @include dropdown-style; }
+
+      // You can also put custom content in these dropdowns
+      &.content { @include dropdown-container(content, $triangle:false); }
+
+      // Sizes
+      &.tiny    { max-width: 200px; }
+      &.small   { max-width: 300px; }
+      &.medium  { max-width: 500px; }
+      &.large   { max-width: 800px; }
+    }
+
+  }
+}
+

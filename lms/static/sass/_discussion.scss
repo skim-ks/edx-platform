@@ -9,6 +9,34 @@ $dark-gray: #aaa;
 @import "discussion/discussion_article";
 @import "discussion/blank_slate";
 
+body.discussion{
+  .button,
+  .button:hover,
+  .button:active
+  {
+    text-shadow: none;
+    background-image: none;
+    letter-spacing: 0;
+    box-shadow: none;
+  }
+
+  textarea,
+  input[type="text"]{
+    box-shadow: none;
+    font: normal 14px sans-serif;
+  }
+  textarea,
+  input[type="text"]{
+    transition:none;
+    -webkit-transition:none;
+    -moz-transition: none;
+  }
+
+  .sub-nav{
+    margin-left: 0;
+  }
+}
+
 .container .discussion-body {
   display: block;
   line-height: 1.4;
@@ -18,10 +46,10 @@ $dark-gray: #aaa;
   .columns{
     padding: 0px;
   }
-  .row{
-    margin-left : 0px;
-    margin-right: 0px;
-  }
+  .row {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  } 
 
   .bottom-post-status {
     padding: 30px;

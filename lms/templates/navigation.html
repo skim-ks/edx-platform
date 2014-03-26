@@ -137,7 +137,7 @@ site_status_msg = get_site_status_msg(course_id)
 
 <div class="row show-for-large-up" style="margin-top:1rem;">
   ## Sitename
-  <div class="columns large-9">
+  <div class="columns large-8">
   <a href="http://gacco.org/"><img src="http://gacco.org/images/vector/gacco_identity.svg" alt="gacco"></a>
   <span style="margin-left:0.5rem;"> </span><span style="margin-bottom:3rem;"><small>Certified by </small></span><img src="http://gacco.org/images/jmooc.png" alt="JMOOC" width="70" style="margin-bottom:0.6rem;">
     % if course:
@@ -145,7 +145,7 @@ site_status_msg = get_site_status_msg(course_id)
     % endif
   </div>
   ## navi button
-  <div class="columns large-3">
+  <div class="columns large-4">
 
 
 
@@ -221,7 +221,8 @@ site_status_msg = get_site_status_msg(course_id)
 
     % else:
 
-    <ol class="left nav-global">
+##    <ol class="left nav-global">
+      <ul class="button-group radius">
       <%block name="navigation_global_links">
         % if MicrositeConfiguration.get_microsite_configuration_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
           <li class="nav-global-01">
@@ -241,24 +242,28 @@ site_status_msg = get_site_status_msg(course_id)
             <a class="cta cta-register" href="${reverse('course-specific-register', args=[course.id])}">${_("Register Now")}</a>
           </li>
           % else:
-          <li class="nav-global-04">
-            <a class="cta cta-register" href="/register">${_("Register Now")}</a>
-          </li>
+##          <li class="nav-global-04">
+##            <a class="cta cta-register" href="/register">${_("Register Now")}</a>
+##          </li>
+            <li><a href="/register" class="f_button small secondary">${_("Register Now")}</a></li>
           % endif
       % endif
-    </ol>
+##    </ol>
 
-    <ol class="right nav-courseware">
-    <li class="nav-courseware-01">
+##    <ol class="right nav-courseware">
+##    <li class="nav-courseware-01">
+      <li>
       % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
           <a class="cta cta-login" href="${reverse('course-specific-login', args=[course.id])}${login_query()}">${_("Log in")}</a>
           % else:
-          <a class="cta cta-login" href="/login${login_query()}">${_("Log in")}</a>
+##          <a class="cta cta-login" href="/login${login_query()}">${_("Log in")}</a>
+            <a href="/login${login_query()}" class="f_button small secondary">${_("Log in")}</a>
           % endif
       % endif
-    </li>
-    </ol>
+     </li>
+##    </ol>
+    </ul>
     % endif
 
   </div>
