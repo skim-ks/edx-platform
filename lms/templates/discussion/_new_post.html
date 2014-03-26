@@ -21,10 +21,12 @@
         </ul>
     </li>
 </%def>
-<article class="new-post-article">
-    <div class="inner-wrapper">
+
+<div id="discussion_new_post_modal" class="reveal-modal xlarge" data-reveal>
+  <article class="new-post-article">
         <form class="new-post-form">
-            <div class="left-column">
+	  <div class="row">
+            <div class="large-4 small-12 columns">
                 <span class="topic-dropdown-label" id="topic-dropdown-label">${_("Create new post about:")}</span>
                 <div class="form-topic-drop">
                     <a href="#" aria-labelledby="topic-dropdown-label" class="topic_dropdown_button">${_("Show All Discussions")}<span class="drop-arrow" aria-hidden="true">▾</span></a>
@@ -64,7 +66,7 @@
                     %endif
                 </div>
             </div>
-            <div class="right-column">
+            <div class="large-8 small-12 columns">
                 <ul class="new-post-form-errors"></ul>
                 <div class="form-row">
                     <label class="sr" for="new-post-title">${_("new post title")}</label>
@@ -74,9 +76,9 @@
                     <div class="new-post-body" name="body" placeholder="${_(u"Enter your question or comment…")}"></div>
                     <!---<div class="new-post-preview"><span class="new-post-preview-label">Preview</span></div>-->
                 </div>
-                <input type="submit" id="new-post-submit" class="submit" value="${_("Add post")}">
-                <a href="#" class="new-post-cancel">${_("Cancel")}</a>
+                <input type="submit" id="new-post-submit" class="button" value="${_("Add post")}">
+                <a href="#" class="new-post-cancel button">${_("Cancel")}</a>
             </div>
+	  </div>
         </form>
-    </div>
 </article>

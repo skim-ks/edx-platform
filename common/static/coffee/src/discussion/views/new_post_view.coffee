@@ -14,7 +14,7 @@ if Backbone?
           @setSelectedTopic()
 
           DiscussionUtil.makeWmdEditor @$el, $.proxy(@$, @), "new-post-body"
-          
+
           if @$($(".topic_menu li a")[0]).attr('cohorted') != "True"
             $('.choose-cohort').hide();
           
@@ -41,9 +41,9 @@ if Backbone?
               @showTopicDropdown()
 
       showTopicDropdown: () ->
-          @menuOpen = true
-          @dropdownButton.addClass('dropped')
-          @topicMenu.show()
+##          @menuOpen = true
+##          @dropdownButton.addClass('dropped')
+##          @topicMenu.show()
           $(".form-topic-drop-search-input").focus()
 
           $("body").bind "keydown", @setActiveItem
@@ -55,9 +55,9 @@ if Backbone?
 
       # Need a fat arrow because hideTopicDropdown is passed as a callback to bind
       hideTopicDropdown: () =>
-          @menuOpen = false
-          @dropdownButton.removeClass('dropped')
-          @topicMenu.hide()
+##          @menuOpen = false
+##          @dropdownButton.removeClass('dropped')
+##          @topicMenu.hide()
 
           $("body").unbind "keydown", @setActiveItem
           $("body").unbind "click", @hideTopicDropdown
