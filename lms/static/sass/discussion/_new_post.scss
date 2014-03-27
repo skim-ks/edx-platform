@@ -40,36 +40,43 @@
       font-weight: 700;
       color: #333;
     }
-      .new-post-form-error{
-        color: #f00;
-      }
-      .wmd-preview-container{
-        height: 100px;
-      }
-      .button {
-        float: left;
-	border-left: 1px solid;
-	border-color: rgba(255,255,255,0.5);
-      }
-
-      .options {
-        margin-top: 5px;
-
-        label {
-          display: inline;
-          margin-left: 8px;
-          font-size: 15px;
-          text-shadow: none;
-        }
-      }
+    .new-post-form-error{
+      color: #f00;
+    }
+    .wmd-preview-container{
+      height: 100px;
+    }
+    .button {
+      float: left;
+      border-left: 1px solid;
+      border-color: rgba(255,255,255,0.5);
     }
 
-    .thread-title {
-      display: block;
-      margin-bottom: $baseline;
-      font-size: 21px;
-      color: #333;
-      font-weight: 700;
+    .options {
+      margin-top: 5px;
+
+      label {
+        display: inline;
+        margin-left: 8px;
+        font-size: 15px;
+        text-shadow: none;
+      }
     }
   }
 
+  .thread-title {
+    display: block;
+    margin-bottom: $baseline;
+    font-size: 21px;
+    color: #333;
+    font-weight: 700;
+  }
+}
+
+.discussion.container{
+  .new-post-btn{
+    padding-top : 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
