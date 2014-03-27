@@ -215,13 +215,13 @@ if Backbone?
       $(".current-thread").html(target.children("span.title").html())
 
     showSearch: ->
-      @$(".browse").removeClass('is-dropped')
-      @hideTopicDrop($("#browse-topic-list"))
+##      @$(".browse").removeClass('is-dropped')
 
       setTimeout (-> @$(".post-search-field").focus()), 200 unless @$(".post-search-field").is(":focus")
 
     goHome: ->
       @template = _.template($("#discussion-home").html())
+      @hideTopicDrop($("#browse-topic-filter-dropdown"))
       $(".discussion-column").html(@template)
       $(".post-list a").removeClass("active")
       $("input.email-setting").bind "click", @updateEmailNotifications
@@ -415,7 +415,8 @@ if Backbone?
       newSort = $(event.target).parent()
       newSort.addClass("active")
       newSort.attr("aria-checked", "true")
-      @sortBy = newSort.data("sort")
+##      @sortBy = newSort.data("sort")
+      @sortBy = newSort.find("a").data("sort")
 
       @displayedCollection.comparator = switch @sortBy
         when 'date' then @displayedCollection.sortByDateRecentFirst
@@ -426,7 +427,8 @@ if Backbone?
     performSearch: (event) ->
       if event.which == 13
         event.preventDefault()
-        text = @$(".post-search-field").val()
+##        text = @$(".post-search-field").val()
+        text = $(event.target).val()
         @searchFor(text)
 
     searchFor: (text, callback, value) ->
