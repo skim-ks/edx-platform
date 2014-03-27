@@ -71,8 +71,8 @@ $close-reveal-modal-class: "close-reveal-modal" !default;
     top:0;
     #{$default-float}: 0;
     @media #{$small-only} {
-      height: 100vh;
-      min-height:100vh;
+//      height: 100vh;
+//      min-height:100vh;
     }
     @media #{$medium-up} {
       #{$default-float}: 50%;
@@ -147,6 +147,7 @@ $close-reveal-modal-class: "close-reveal-modal" !default;
   color: $color;
   font-weight: $reveal-close-weight;
   cursor: $cursor-pointer-value;
+  z-index: 99999;
 }
 
 @include exports("reveal") {

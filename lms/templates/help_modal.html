@@ -10,8 +10,8 @@
 
 % if settings.FEATURES.get('ENABLE_FEEDBACK_SUBMISSION', False):
 
-<div class="help-tab show-for-medium-up">
-  <a href="#help-modal" rel="leanModal" role="button" data-reveal-id="help-modal">${_("Help")}</a>
+<div class="help-tab">
+  <a href="#help-modal" rel="" role="button" data-reveal-id="help-modal">${_("Help")}</a>
 </div>
 
 <section id="help-modal" class="modal reveal-modal medium " aria-hidden="true" role="dialog" aria-label="${_("{platform_name} Help").format(platform_name=platform_name)}" data-reveal>
@@ -69,7 +69,7 @@ discussion_link = get_discussion_link(course) if course else None
 
   </div>
 
-  <div class="inner-wrapper" id="feedback_form_wrapper">
+  <div class="inner-wrapper" id="feedback_form_wrapper" style="background-color:transparent;">
 ##    <button class="close-modal">
 ##      &#10005;
 ##      <span class="sr">
@@ -103,7 +103,7 @@ discussion_link = get_discussion_link(course) if course else None
     </form>
   </div>
 
-  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0" style="background-color:transparent;">
 ##    <button class="close-modal" tabindex="0">
 ##      &#10005;
 ##      <span class="sr">
