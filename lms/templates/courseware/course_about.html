@@ -35,6 +35,70 @@
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
   <meta property="og:title" content="${get_course_about_section(course, 'title')}" />
   <meta property="og:description" content="${get_course_about_section(course, 'short_description')}" />
+
+  <style type="text/css">
+    <!--
+div .videowrap{
+	margin: 0 auto;
+	width: auto;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	background: #000;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-webkit-opacity: 0.5;
+	-o-opacity: 0.5;
+	-ms-opacity: 0.5;
+	opacity: 0.5;
+}
+
+div .videoplaywrap{
+	width:75px;
+	height:75px;
+	position:absolute;
+	background-color:transparent;
+	margin:auto;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+
+div .videoplaycircle {
+	z-index: 3;
+	border-color: #333;
+	border-style: solid;
+	border-width: 5px;
+	border-radius:52px;
+	-webkit-border-radius:52px;
+	-moz-border-radius:52px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	##top: 30%;
+	##left: 115px;
+	box-shadow: 0 5px 5px -5px #000;
+	margin: 0 auto;
+}
+
+div .videoplaytriangle{
+	z-index: 4;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	##border-right: 40px solid transparent;
+	border-right-width:0;
+	border-bottom: 20px solid transparent;
+	border-left: 40px solid #333;
+	position: absolute;
+	##top: 10px;
+	##left: 15px;
+	margin: 10px 15px auto;
+        ##box-shadow: 0 5px 5px -5px #000;
+}
+    -->
+  </style>
 </%block>
 
 <%block name="js_extra">
@@ -132,26 +196,76 @@
     <h1>${course.display_number_with_default | h}: ${get_course_about_section(course, "title")}</h1>
     <hr>
   </div>
-  <div class="columns large-8 medium-8">
-     ## Course About from CMS
-     ${get_course_about_section(course, "overview")}
-  </div>
-  <div class="columns large-4 medium-4">
+  <div class="columns hide-for-medium-up">
     % if get_course_about_section(course, "video"):
     <a href="#video-modal" class="media" rel="" data-reveal-id="video-modal">
+    <div class="videowrap">
+    <div class="videoplaywrap">
+      <div class="videoplaycircle">
+      <div class="videoplaytriangle"></div>
+      </div>
+    </div>
     <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")}" style="width:100%" />
-    <div class="play-intro"></div>
+    </div>
     </a>
     % else:
     <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")}" style="width:100%" />
     % endif
+    <ul class="pricing-table hide-for-medium-up">
+      <li class="bullet-item">${_("Course Number")}:${course.display_number_with_default | h}</li>
+      % if not course.start_date_is_still_default:
+      <li class="bullet-item">${_("Classes Start")}:${course.start_date_text}</li>
+      % endif
+      % if get_course_about_section(course, "end_date") or course.end:
+      <li class="bullet-item">${_("Classes End")}:
+        % if get_course_about_section(course, "end_date"):
+          ${get_course_about_section(course, "end_date")}
+        % else:
+          ${course.end_date_text}
+        % endif
+      </li>
+      % endif
+      % if get_course_about_section(course, "effort"):
+      <li class="bullet-item">${_("Estimated Effort")}:${get_course_about_section(course, "effort")}</li>
+      % endif
+      % if get_course_about_section(course, "prerequisites"):
+      <li class="bullet-item">${_("Prerequisites")}:${get_course_about_section(course, "prerequisites")}</li>
+      % endif
+    </ul>
+    <hr>
+  </div>
+  <div class="columns large-8 medium-8">
+     ## Course About from CMS
+     ${get_course_about_section(course, "overview")}
+  </div>
+  <div class="columns large-4 medium-4 show-for-medium-up">
+    % if get_course_about_section(course, "video"):
+    <a href="#video-modal" class="media" rel="" data-reveal-id="video-modal">
+    <div class="videowrap">
+    <div class="videoplaywrap">
+      <div class="videoplaycircle">
+      <div class="videoplaytriangle"></div>
+      </div>
+    </div>
+    <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")}" style="width:100%" />
+    </div>
+    </a>
+    % else:
+    <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")}" style="width:100%" />
+    % endif
+    </div>
+    <div class="columns large-4 medium-4">
+    <div class="panel radius" style="margin-top:0.5rem;">
+      <h5>※受講登録するとお客様の利用者情報は講座提供者（講師）に共有されます。詳しくは<a href="https://support.gacco.org/hc/ja/articles/200749224" target="_blank">利用規約</a>と<a href
+="https://support.gacco.org/hc/ja/articles/200749314" target="_blank">プライバシーポリシー</a>をご覧ください。</h5>
+    </div>
     %if user.is_authenticated() and registered:
       %if show_courseware_link:
       <a href="${course_target}" class="f_button small radius expand">
         <span class>${_("View Courseware")}</span>
       </a>
       % endif
-      <p class="text-center" style="margin-bottom:0.5rem;"><span class="f_label secondary">登録状況</span>${_("You are registered for this course")}</p>
+      <p class="text-center" style="margin-bottom:0.5rem;"><span class="f_label success" style="line-height:1rem; margin-right:0.2rem;">登録状況</span>${_("You are registered for this course")}</p>
     % elif is_course_full:
       <span class="register f_button small expand radius disabled">${_("Course is full")}</span>
     %else:
@@ -160,10 +274,7 @@
       </a>
       <div id="register_error"></div>
     % endif
-    <div class="panel radius">
-      <h5>※受講登録するとお客様の利用者情報は講座提供者（講師）に共有されます。詳しくは<a href="https://support.gacco.org/hc/ja/articles/200749224" target="_blank">利用規約</a>と<a href="https://support.gacco.org/hc/ja/articles/200749314" target="_blank">プライバシーポリシー</a>をご覧ください。</h5>
-    </div>
-    <ul class="pricing-table">
+    <ul class="pricing-table show-for-medium-up">
       <li class="bullet-item">${_("Course Number")}:${course.display_number_with_default | h}</li>
       % if not course.start_date_is_still_default:
       <li class="bullet-item">${_("Classes Start")}:${course.start_date_text}</li>
@@ -191,6 +302,13 @@
 </div>
 ## ------------------
 
+## BLACK tab/sp STUDY MENU are to be hidden
+<script>
+$(document).ready(function(){  
+  $("li.has-form").remove();
+  $("li.has-dropdown").remove();
+});
+</script>
 
 ## I dont know why this is need??
 %if not registered:
