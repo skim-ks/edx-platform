@@ -89,7 +89,7 @@ $(document).ready(function(){
         % else:
           <li>
         % endif
-             <a href="${tab.link | h}" class="${url_class(tab.is_active)}" style="padding-left:1.5rem;">
+             <a href="${tab.link | h}" class="${url_class(tab.is_active)}" style="padding-left:2.5rem;">
                  ${_(tab.name) | h}
                  % if tab.is_active == True:
                    <span class="sr hide">, current location</span>
