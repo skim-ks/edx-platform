@@ -7,6 +7,7 @@
     z-index: 1000;
     display: block;
     padding: 0 15px;
+    width: 100%;
     height: 40px;
     margin-top : 15px;
     line-height: 36px;
@@ -15,11 +16,11 @@
   .topic_menu_wrapper{
     display: none;
     position: absolute;
-    top: 40px;
+    top: 70px;
     left : 0px;
     z-index : 9999;
     width : 100%;
-
+    margin-left: 15px;
   }
 
   .new-post-form {

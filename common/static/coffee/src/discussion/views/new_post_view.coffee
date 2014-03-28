@@ -10,15 +10,18 @@ if Backbone?
           @topicId    = @$(".topic").first().data("discussion_id")
           @topicText  = @getFullTopicName(@$(".topic").first())
 
-          @maxNameWidth = 100
-          @setSelectedTopic()
+##          @maxNameWidth = 100;
+##          @setSelectedTopic()
+          ## load後に@setSelectedTopic()するよう変更。
+          $(window).bind "load", @updateTopicbar
+
+          ## 画面リサイズ時にトピック名の長さを調整する
+          $(window).bind "resize", @updateTopicbar
 
           DiscussionUtil.makeWmdEditor @$el, $.proxy(@$, @), "new-post-body"
 
           if @$($(".topic_menu li a")[0]).attr('cohorted') != "True"
-            $('.choose-cohort').hide();
-          
-            
+            $('.choose-cohort').hide();            
           
       events:
           "submit .new-post-form":            "createPost"
@@ -33,6 +36,13 @@ if Backbone?
       ignoreClick: (event) ->
           event.stopPropagation()
 
+      ## トピック名の長さをdropdownButtonに合わせる
+      ## ドロップダウンエリアの幅調整も
+      updateTopicbar: =>
+          @maxNameWidth = @dropdownButton.width() - 10
+          @setSelectedTopic()
+          @topicMenu.css('width', @dropdownButton.outerWidth())
+        
       toggleTopicDropdown: (event) ->
           event.stopPropagation()
           if @menuOpen
@@ -41,9 +51,9 @@ if Backbone?
               @showTopicDropdown()
 
       showTopicDropdown: () ->
-##          @menuOpen = true
-##          @dropdownButton.addClass('dropped')
-##          @topicMenu.show()
+          @menuOpen = true
+          @dropdownButton.addClass('dropped')
+          @topicMenu.show()
           $(".form-topic-drop-search-input").focus()
 
           $("body").bind "keydown", @setActiveItem
@@ -55,9 +65,9 @@ if Backbone?
 
       # Need a fat arrow because hideTopicDropdown is passed as a callback to bind
       hideTopicDropdown: () =>
-##          @menuOpen = false
-##          @dropdownButton.removeClass('dropped')
-##          @topicMenu.hide()
+          @menuOpen = false
+          @dropdownButton.removeClass('dropped')
+          @topicMenu.hide()
 
           $("body").unbind "keydown", @setActiveItem
           $("body").unbind "click", @hideTopicDropdown
@@ -100,6 +110,7 @@ if Backbone?
 
       fitName: (name) ->
           width = @getNameWidth(name)
+          console.log(width + ":" + @maxNameWidth)
           if width < @maxNameWidth
               return name
           path = (x.replace /^\s+|\s+$/g, "" for x in name.split("/"))
