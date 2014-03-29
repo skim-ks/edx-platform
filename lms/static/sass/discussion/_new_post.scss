@@ -72,6 +72,18 @@
     color: #333;
     font-weight: 700;
   }
+
+  .button-area{
+    margin-top: 10px;
+  }
+
+  .new-post-cancel{
+    display: block;
+    margin-left: 20px;
+    height: 60px;
+    line-height: 60px;
+  }
+
 }
 
 .discussion.container{
@@ -80,4 +92,5 @@
     padding-bottom: 0;
     margin-bottom: 0;
   }
+
 }

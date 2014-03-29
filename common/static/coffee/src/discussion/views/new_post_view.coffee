@@ -163,6 +163,8 @@ if Backbone?
                   thread = new Thread response['content']
                   DiscussionUtil.clearFormErrors(@$(".new-post-form-errors"))
                   @$el.hide()
+                  ## close new post modal
+                  $('#discussion_new_post_modal').foundation('reveal', 'close');
                   @$(".new-post-title").val("").attr("prev-text", "")
                   @$(".new-post-body textarea").val("").attr("prev-text", "")
                   @$(".wmd-preview p").html("")
