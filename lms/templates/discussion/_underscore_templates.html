@@ -37,7 +37,7 @@
       <div class="group-visibility-label">${"<%- obj.group_string%>"}</div>
               ${"<% }  %>"}
 
-          <a href="#" class="vote-btn" role="button" aria-pressed="false"><!-- DiscussionContentView.renderVote populates this --></a>
+          <a href="#" class="vote-btn" style="box-shadow:none; background-color:#fafafa;" role="button" aria-pressed="false"><!-- DiscussionContentView.renderVote populates this --></a>
           <h1>${'<%- title %>'}</h1>
           <p class="posted-details">
               ${"<% if (obj.username) { %>"}
@@ -129,7 +129,7 @@
 
 <script aria-hidden="true" type="text/template" id="thread-response-show-template">
     <header class="response-local">
-        <a href="#" class="vote-btn" role="button" aria-pressed="false"><!-- DiscussionContentView.renderVote() populates this --></a>
+        <a href="#" class="vote-btn" style="box-shadow:none; background-color:#fafafa;" role="button" aria-pressed="false"><!-- DiscussionContentView.renderVote() populates this --></a>
         <a href="javascript:void(0)" class="endorse-btn action-endorse" style="cursor: default; display: none;" data-tooltip="${_('endorse') | h}"><span class="check-icon" style="pointer-events: none; "></span></a>
         ${"<% if (obj.username) { %>"}
         <a href="${'<%- user_url %>'}" class="posted-by">${'<%- username %>'}</a>
@@ -252,15 +252,15 @@
 </script>
 <script aria-hidden="true" type="text/template" id="discussion-home">
   <div class="discussion-article blank-slate">
-    <section class="home-header">
-      <span class="label">${_("DISCUSSION HOME:")}</span>
+    <section class="home-header" style="border-bottom:none;">
+      <span class="label" style="background-color:#b9b9b9; color:#333;">${_("DISCUSSION HOME:")}</span>
       % if course and course.display_name_with_default:
-        <h1 class="home-title">${course.display_name_with_default}</h1>
+        <h2 class="home-title">${course.display_name_with_default}</h2>
       % endif
     </section>
   
       % if settings.FEATURES.get('ENABLE_DISCUSSION_HOME_PANEL'):
-        <span class="label label-settings">${_("HOW TO USE EDX DISCUSSIONS")}</span>
+        <span class="label label-settings" style="background-color:#b9b9b9; color:#333; margin-top:2rem;">${_("HOW TO USE EDX DISCUSSIONS")}</span>
         <table class="home-helpgrid">
           <tr class="helpgrid-row helpgrid-row-navigation">
             <td class="row-title">${_("Find discussions")}</td>

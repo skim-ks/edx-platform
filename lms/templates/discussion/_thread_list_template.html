@@ -1,9 +1,9 @@
 <%! from django.utils.translation import ugettext as _ %>
 <script type="text/template" id="thread-list-template">
-    <div class="browse-search">
-      <div class="browse">
-	  <a href="#" class="button split">
-            <p class="current-board">${_("Show All Discussions")}</p>
+    <div class="browse-search" style="border-bottom:none;">
+      <div class="browse" style="background-color:transparent;">
+	  <a href="#" class="f_button secondary small split" style="margin-bottom:0;">
+            <p class="current-board" style="margin-bottom:0; line-height:1rem;">${_("Show All Discussions")}</p>
 	    <span class="browse-dropdown" data-dropdown="browse-topic-filter-dropdown"></span>
             </a>
         </div>
@@ -27,13 +27,13 @@
 </script>
 
 <script type="text/template" id="topic-list-template">
-    <div class="search">
+    <div class="search" style="padding-top:10px; padding-bottom:10px;">
       <form class="post-search">
         <input type="text" id="search-discussions" placeholder="${_("Search all discussions")}" class="post-search-field">
       </form>
     </div>
 
-    <div class="sort-bar">
+    <div class="sort-bar" style="background-color:#e7e7e7;">
       <dl class="sub-nav">
         <dt class="sort-label">${_("Sort by:")}</dt>
         <dd class="active"><a href="#" role="radio" aria-checked="true" class="active" data-sort="date">${_("date")}</a></dd>

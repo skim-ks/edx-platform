@@ -120,10 +120,12 @@
 
       &.active {
         border-color: #4697c1;
-        box-shadow: 0 1px 0 #4697c1, 0 -1px 0 #4697c1;
+        //box-shadow: 0 1px 0 #4697c1, 0 -1px 0 #4697c1;
+        box-shadow: 0 1px 0 #ccc, 0 -1px 0 #ccc;
 
         .title {
           color: #333;
+          font-weight: bold;
         }
 
         .staff-post-icon {
@@ -136,7 +138,7 @@
 
         .votes-count,
         .comments-count {
-	  background-color : #43acba;
+	  background-color : #43ac6a;
 	  color: #fff;
 
           &:after {
