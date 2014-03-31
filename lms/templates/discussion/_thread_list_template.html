@@ -5,8 +5,8 @@
 	  <a href="#" class="f_button secondary small split" style="margin-bottom:0;">
             <p class="current-board" style="margin-bottom:0; line-height:1rem;">${_("Show All Discussions")}</p>
 	    <span class="browse-dropdown" data-dropdown="browse-topic-filter-dropdown"></span>
-            </a>
-        </div>
+          </a>
+      </div>
       <div id="browse-topic-filter-dropdown" class="f-dropdown" style="top:60px; z-index:10001;">
 	<%include file="_filter_dropdown.html" />
       </div>
@@ -35,7 +35,8 @@
 
     <div class="sort-bar" style="background-color:#e7e7e7;">
       <dl class="sub-nav">
-        <dt class="sort-label">${_("Sort by:")}</dt>
+        <dt class="sort-label">ソート</dt>
+##        <dt class="sort-label">${_("Sort by:")}</dt>
         <dd class="active"><a href="#" role="radio" aria-checked="true" class="active" data-sort="date">${_("date")}</a></dd>
         <dd><a href="#" role="radio" aria-checked="false" data-sort="votes">${_("votes")}</a></dd>
         <dd><a href="#" role="radio" aria-checked="false" data-sort="comments">コメント</a></dd>

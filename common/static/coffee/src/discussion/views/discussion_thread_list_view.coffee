@@ -57,7 +57,6 @@ if Backbone?
         @trigger "thread:created", thread.get('id')
 
     updateSidebar: =>
-      console.log("updateSidebar")
       width = $(".sidebar").width()
       $(".browse").css('width', width)
       $(".f-dropdown").css('width', width)
