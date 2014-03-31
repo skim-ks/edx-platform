@@ -13,10 +13,11 @@ if Backbone?
 ##          @maxNameWidth = 100;
 ##          @setSelectedTopic()
           ## load後に@setSelectedTopic()するよう変更。
-          $(window).bind "load", @updateTopicbar
+##          $(window).bind "load", @updateTopicbar
 
           ## 画面リサイズ時にトピック名の長さを調整する
-          $(window).bind "resize", @updateTopicbar
+##          $(window).bind "resize", @updateTopicbar
+##          @displayedCollection.on "reset", @updateTopicbar
 
           DiscussionUtil.makeWmdEditor @$el, $.proxy(@$, @), "new-post-body"
 
@@ -26,6 +27,7 @@ if Backbone?
       events:
           "submit .new-post-form":            "createPost"
           "click  .topic_dropdown_button":    "toggleTopicDropdown"
+          "click .drop-menu-parent-category": "toggleAccordion"
           "click  .topic_menu_wrapper":       "setTopic"
           "click  .topic_menu_search":        "ignoreClick"
           "keyup .form-topic-drop-search-input": DiscussionFilter.filterDrop
@@ -48,7 +50,19 @@ if Backbone?
           if @menuOpen
               @hideTopicDropdown()
           else
+              @updateTopicbar()
               @showTopicDropdown()
+
+      ## トピックのアコーディオン化のために追加
+      toggleAccordion: (event) ->
+        if($(event.target).hasClass("board-name"))
+          target = $(event.target).parent()
+        else
+          target = $(event.target)
+        target.toggleClass("active")
+        target.siblings("div.content").toggleClass("active")
+        event.preventDefault()
+        event.stopPropagation()
 
       showTopicDropdown: () ->
           @menuOpen = true
@@ -110,7 +124,6 @@ if Backbone?
 
       fitName: (name) ->
           width = @getNameWidth(name)
-          console.log(width + ":" + @maxNameWidth)
           if width < @maxNameWidth
               return name
           path = (x.replace /^\s+|\s+$/g, "" for x in name.split("/"))
