@@ -219,9 +219,6 @@ FEATURES = {
     # Turn off account locking if failed login attempts exceeds a limit
     'ENABLE_MAX_FAILED_LOGIN_ATTEMPTS': False,
 
-    # Hide any Personally Identifiable Information from application logs
-    'SQUELCH_PII_IN_LOGS': False,
-
     # Toggle embargo functionality
     'EMBARGO': False,
 }
@@ -1284,10 +1281,6 @@ REGISTRATION_EXTRA_FIELDS = {
     'city': 'hidden',
     'country': 'hidden',
 }
-
-########################## CERTIFICATE NAME ########################
-CERT_NAME_SHORT = "Certificate"
-CERT_NAME_LONG = "Certificate of Achievement"
 
 ###################### Grade Downloads ######################
 GRADES_DOWNLOAD_ROUTING_KEY = HIGH_MEM_QUEUE
