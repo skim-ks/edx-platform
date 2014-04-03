@@ -4933,7 +4933,7 @@ msgstr "スタッフ用デバッグ情報"
 
 #: lms/templates/staff_problem_info.html
 msgid "Submission history"
-msgstr "課題提出履歴"
+msgstr "課題提出履歴あ"
 
 #: lms/templates/staff_problem_info.html
 msgid "{platform_name} Content Quality Assessment"
