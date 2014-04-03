@@ -10,7 +10,7 @@
 </%def>
 
 <%def name="render_entry(entries, entry)">
-    <li role="menuitem"><a href="#" class="topic" data-discussion_id="${entries[entry]['id']}" aria-describedby="topic-name-span-${entries[entry]['id']}" cohorted = "${entries[entry]['id'] in cohorted_commentables}">${entry}</a></li>
+    <li role="menuitem" style="font-size:0.8rem;"><a href="#" class="topic" data-discussion_id="${entries[entry]['id']}" aria-describedby="topic-name-span-${entries[entry]['id']}" cohorted = "${entries[entry]['id'] in cohorted_commentables}">${entry}</a></li>
 </%def>
 
 <%def name="render_category(categories, category)">
@@ -22,20 +22,20 @@
     </li>
 </%def>
 
-<div id="discussion_new_post_modal" class="reveal-modal medium" data-reveal>
+<div id="discussion_new_post_modal" class="reveal-modal large" data-reveal>
   <article class="new-post-article">
         <form class="new-post-form">
 	  <div class="row">
             <div class="large-4 small-12 columns">
                 <span class="topic-dropdown-label" id="topic-dropdown-label">${_("Create new post about:")}</span>
                 <div class="form-topic-drop">
-                    <a href="#" aria-labelledby="topic-dropdown-label" class="f_button topic_dropdown_button">${_("Show All Discussions")}<span class="drop-arrow" aria-hidden="true">▾</span></a>
+                    <a href="#" aria-labelledby="topic-dropdown-label" class="f_button secondary topic_dropdown_button" style="font-size:0.7rem;">${_("Show All Discussions")}<span class="drop-arrow" aria-hidden="true">▾</span></a>
                     <div class="topic_menu_wrapper panel">
                         <div class="topic_menu_search" role="menu">
                             <label class="sr" for="browse-topic-newpost">${_("Filter List")}</label>
                             <input type="text" id="browse-topic-newpost" class="form-topic-drop-search-input" placeholder="${_("Filter discussion areas")}">
                         </div>
-                        <ul class="topic_menu" role="menu">
+                        <ul class="topic_menu" style="font-size:0.8rem;" role="menu">
                             ${render_form_filter_dropdown(category_map)}
                         </ul>
                     </div>
@@ -80,7 +80,7 @@
                 </div>
 		<div class="button-area">
                   <a href="#" class="new-post-cancel right">${_("Cancel")}</a>
-                  <input type="submit" id="new-post-submit" class="f_button right" value="${_("Add post")}">
+                  <input type="submit" id="new-post-submit" class="f_button small radius success right" value="${_("Add post")}">
 		</div>
             </div>
 	  </div>
