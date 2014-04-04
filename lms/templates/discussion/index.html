@@ -30,11 +30,14 @@
 <section class="discussion container" id="discussion-container" data-roles="${roles}" data-course-id="${course_id}" data-user-info="${user_info}" data-threads="${threads}" data-thread-pages="${thread_pages}" data-content-info="${annotated_content_info}" data-flag-moderator="${flag_moderator}">
     <div class="discussion-body">
       <div class="row">
-	<div class="columns large-3 medium-4 small-9" style="margin-top:3rem; margin-bottom:0px;">
-          <div class="sidebar"></div>
-	</div>
-	<div class="columns medium-8 small-3 end hide-for-large-up" style="margin-top:1px;">
-	  <a href="#" class="new-post-btn f_button small expand radius success" data-reveal-id="discussion_new_post_modal" style="float:right;">${_("New Post")}</a>
+        <div class="columns small-12 hide-for-medium-up">
+          <a href="#" class="f_button small right radius expand success" data-reveal-id="discussion_new_post_modal">${_("New Post")}</a>
+        </div>
+        <div class="columns medium-12 show-for-medium-only">
+          <a href="#" class="f_button small right radius success" data-reveal-id="discussion_new_post_modal">${_("New Post")}</a>
+        </div>
+	<div class="columns large-3 medium-4 small-12" style=" margin-bottom:0px;">
+          <div class="sidebar columns"></div>
 	</div>
 	<div class="columns medium-8 large-9">
 	  <div class="discussion-column" style="margin-left:1rem; padding-bottom:2rem; border:dotted 1px grey; border-radius:2px;background-color:#fafafa;">
