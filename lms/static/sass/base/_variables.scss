@@ -17,7 +17,8 @@ $fg-min-width: 810px;
 // ====================
 
 // FONTS
-$sans-serif: 'Open Sans', $verdana, sans-serif;
+//$sans-serif: 'Open Sans', $verdana, sans-serif;
+$sans-serif:"メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック", "MS P Gothic", Verdana, Arial, Helvetica, sans-serif;
 $monospace: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace;
 $body-font-family: $sans-serif;
 $serif: $georgia;
@@ -316,8 +317,8 @@ $video-thumb-url: '../images/courses/video-thumb.jpg';
 // SPLINT: new standards
 
 // SPLINT: fonts
-$f-serif: "$B%R%i%.%NL@D+(B ProN W6","HiraMinProN-W6","HG$BL@D+(BE","$B#M#S(B $B#PL@D+(B","MS PMincho","MS $BL@D+(B", serif;
-$f-sans-serif: "$B%a%$%j%*(B", "Meiryo", "$B%R%i%.%N3Q%4(B ProN W3", "Hiragino Kaku Gothic ProN", "$B#M#S(B $B#P%4%7%C%/(B",  "MS P Gothic", Verdana, Arial, Helvetica, sans-serif;
+$f-serif: "ヒラギノ明朝 ProN W6","HiraMinProN-W6","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝", serif;
+$f-sans-serif: "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック",  "MS P Gothic", Verdana, Arial, Helvetica, sans-serif;
 $f-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
 
 // SPLINT: colors
