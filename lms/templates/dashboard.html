@@ -393,6 +393,52 @@
   </div>
 ##</section>
 
+##<section id="change_email" class="modal" aria-hidden="true">
+##  <div class="inner-wrapper" role="dialog" aria-labelledby="change_email_title">
+    <div  id="change_email" class="reveal-modal medium" role="dialog" aria-labelledby="change_email_title" data-reveal>
+##    <button class="close-modal">
+##      <i class="icon-remove"></i>
+##      <span class="sr">
+##        ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
+##        ${_('Close')}
+##      </span>
+##    </button>
+
+    <header>
+      <h2>
+        <span id="change_email_title">${_("Change Email")}</span>
+##        <span class="sr">,
+##          ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
+##          ${_("window open")}
+        </span>
+      </h2>
+      <hr/>
+    </header>
+    <div id="change_email_body">
+      <form id="change_email_form">
+        <div id="change_email_error" class="modal-form-error"> </div>
+        <fieldset>
+          <div class="input-group">
+            <label>${_('Please enter your new email address:')}</label>
+            <input id="new_email_field" type="email" value="" />
+            <label>${_('Please confirm your password:')}</label>
+            <input id="new_email_password" value="" type="password" />
+          </div>
+          <section>
+            <p>${_('We will send a confirmation to both {email} and your new email as part of the process.').format(email=user.email)}</p>
+          </section>
+          <div class="submit">
+            <input type="submit" class="f_button small radius" id="submit_email_change" value="${_('Change Email')}"/>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  <a class="close-reveal-modal">×</a>
+  </div>
+##</section>
+
+
+
 ##<section id="resign_complete" class="modal" aria-hidden="true">
   <div id="resign_complete" class="reveal-modal medium" role="dialog" aria-labelledby="resign-email" data-reveal>
     <a class="close-reveal-modal">×</a>
