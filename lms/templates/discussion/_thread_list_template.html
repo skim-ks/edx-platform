@@ -2,7 +2,7 @@
 <script type="text/template" id="thread-list-template">
     <div class="browse-search" style="border-bottom:none;">
       <div class="browse" style="background-color:transparent;">
-	  <a href="#" class="f_button secondary small split" style="margin-bottom:0;">
+	  <a href="#" class="f_button secondary small expand split" style="margin-bottom:0;">
             <p class="current-board" style="margin-bottom:0; line-height:1rem;">${_("Show All Discussions")}</p>
 	    <span class="browse-dropdown" data-dropdown="browse-topic-filter-dropdown"></span>
           </a>
@@ -14,9 +14,9 @@
     <div class="topic-list hide-for-small">  
     </div>
     <div class="hide-for-medium-up browse-search">
-      <div class="browse">
-	<a href="#" class="split button" style="height: 40px">
-	  <p class="current-thread">スレッドリスト</p>
+      <div class="browse" style="background-color:#fff;">
+	<a href="#" class="split f_button secondary expand small">
+	  <p class="current-thread"  style="margin-bottom:0; line-height:1rem;">スレッドリスト</p>
 	  <span class="browse-dropdown" data-dropdown="browse-topic-list"></span>
 	</a>
       </div>
@@ -33,8 +33,8 @@
       </form>
     </div>
 
-    <div class="sort-bar" style="background-color:#e7e7e7;">
-      <dl class="sub-nav">
+    <div class="sort-bar columns" style="background-color:#e7e7e7;">
+      <dl class="sub-nav" style="width:100%;">
         <dt class="sort-label">ソート</dt>
 ##        <dt class="sort-label">${_("Sort by:")}</dt>
         <dd class="active"><a href="#" role="radio" aria-checked="true" class="active" data-sort="date">${_("date")}</a></dd>

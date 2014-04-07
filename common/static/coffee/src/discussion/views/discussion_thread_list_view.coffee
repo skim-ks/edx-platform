@@ -58,14 +58,14 @@ if Backbone?
 
     updateSidebar: =>
       width = $(".sidebar").width()
-      $(".browse").css('width', width)
-      $(".f-dropdown").css('width', width)
-      $("topic-list").css('width', width)
+#      $(".browse").css('width', width)
+#      $(".f-dropdown").css('width', width)
+#      $("topic-list").css('width', width)
 
-      if $(".hide-for-small").css('display') == "none"
-        $(".new-post-btn").eq(1).css({'width':'auto', 'line-height':'102px'})
-      else
-        $(".new-post-btn").eq(1).css({'width':'180px','line-height':'60px'})
+##      if $(".hide-for-small").css('display') == "none"
+##        $(".new-post-btn").eq(1).css({'width':'auto', 'line-height':'102px'})
+##      else
+##        $(".new-post-btn").eq(1).css({'width':'180px','line-height':'60px'})
 
 #      if scrollTop > discussionsBodyTop - @sidebar_padding
 #        sidebar.css('top', scrollTop - discussionsBodyTop + @sidebar_padding);

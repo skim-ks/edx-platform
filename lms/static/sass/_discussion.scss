@@ -72,13 +72,19 @@ body.discussion{
 /*    margin-top: $baseline;*/
 /*    padding: 0px $baseline*2;*/
 
+    > ol{
+      background-color:#fff;
+}
+
     > li {
+      background-color:#fff;
       position: relative;
-      margin: 0 -10px 30px;
+      margin: 0 0 30px;
+      padding: 10px;
 /*      padding: 26px 30px $baseline;*/
-      border-radius: 3px;
+      border-radius: 2px;
       border: 1px solid #b2b2b2;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+//      box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
 /*      @include animation(fadeIn .3s);*/
 
       &.staff {
@@ -105,7 +111,6 @@ body.discussion{
         color:#fff;
         text-transform: uppercase;
       }
-
       .community-ta-banner{
         position: absolute;
         top: 0;
@@ -165,7 +170,8 @@ body.discussion{
     border-radius: 5px;
     border: 1px solid #b2b2b2;
 /*    @include linear-gradient(top, #fff 35%, #ebebeb);*/
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+//    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    background-color:#fff;
     font-size: 12px;
     font-weight: 700;
     line-height: 25px;
@@ -188,8 +194,8 @@ body.discussion{
       background: #3db84b;
 /*      @include linear-gradient(top, #50cc5e, #3db84b);*/
       color:#fff;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset, 0 1px 2px rgba(0, 0, 0, .2);
+//      text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+//      box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset, 0 1px 2px rgba(0, 0, 0, .2);
 
       .plus-icon {
         background-position: 0 -10px;
@@ -243,20 +249,20 @@ body.discussion{
     border-top: 1px solid #ddd;
 
     > li {
-      background: #f6f6f6;
+      background: #fff;
       border-bottom: 1px solid #ddd;
 /*      padding: ($baseline/2) $baseline;*/
     }
 
     blockquote {
-      background: #e6e6e6;
+      background: #fff;
       border-radius: 3px;
 /*      padding: 5px $baseline/2;*/
       font-size: 14px;
     }
 
     .comment-form {
-      background: #eee;
+      background: transparent;
 
       .comment-form-input {
 /*        padding: 5px $baseline/2;*/

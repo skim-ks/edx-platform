@@ -194,7 +194,7 @@ div.course-wrapper {
 
   &.closed {
     div.course-index {
-      width: flex-grid(.6);
+//      width: flex-grid(.6);
       overflow: hidden;
 
       header#open_close_accordion {
@@ -221,7 +221,7 @@ div.course-wrapper {
     }
 
     section.course-content {
-      width: flex-grid(11.5) + flex-gutter();
+//      width: flex-grid(11.5) + flex-gutter();
     }
   }
 }
