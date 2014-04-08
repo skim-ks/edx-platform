@@ -43,7 +43,8 @@ if Backbone?
       content = @renderThread(thread)
       current_el = @$("a[data-id=#{thread_id}]")
       active = current_el.hasClass("active")
-      current_el.replaceWith(content)
+##      current_el.replaceWith(content)
+      console.log("renderdis" + content)
       if active
         @setActiveThread(thread_id)
 
@@ -200,6 +201,7 @@ if Backbone?
       view.on "thread:removed", @threadRemoved
       view.render()
       @$(".post-list").append(view.el)
+
 
     threadSelected: (e) =>
       # Use .attr('data-id') rather than .data('id') because .data does type
