@@ -177,3 +177,7 @@ msgstr "あなたが投稿した問題"
 #: lms/djangoapps/open_ended_grading/views.py
 msgid "Flagged Submission"
 msgstr "フラグされた投稿"
+
+#: Temporary Show Answer(s) has been deleted
+msgid "Show Answer(s)"
+msgstr "答えを見る"
