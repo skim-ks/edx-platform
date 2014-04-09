@@ -1,3 +1,4 @@
 {% load i18n %}{% autoescape off %}
-{% blocktrans %}Resignation from {{ site_name }}{% endblocktrans %}
+##{% blocktrans %}Resignation from {{ site_name }}{% endblocktrans %}
+■gacco 退会のご案内
 {% endautoescape %}
