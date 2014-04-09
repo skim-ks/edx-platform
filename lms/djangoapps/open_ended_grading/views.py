@@ -54,6 +54,13 @@ DESCRIPTION_DICT = {
     'Flagged Submissions': _("View submissions that have been flagged by students as inappropriate."),
 }
 
+NAME_DICT = {
+    'Peer Grading': _("Peer Grading"),
+    'Staff Grading': _("Staff grading"),
+    'Problems you have submitted': _("Problems you have submitted"),
+    'Flagged Submissions': _("Flagged Submission"),
+}
+
 ALERT_DICT = {
     'Peer Grading': _("New submissions to grade"),
     'Staff Grading': _("New submissions to grade"),
@@ -260,6 +267,11 @@ def combined_notifications(request, course_id):
             else:
                 description = ""
 
+            if human_name in NAME_DICT:
+                name = NAME_DICT[human_name]
+            else:
+                name = ""
+
             if human_name in ALERT_DICT:
                 alert_message = ALERT_DICT[human_name]
             else:
@@ -267,7 +279,7 @@ def combined_notifications(request, course_id):
 
             notification_item = {
                 'url': url,
-                'name': human_name,
+                'name': name,
                 'alert': has_img,
                 'description': description,
                 'alert_message': alert_message

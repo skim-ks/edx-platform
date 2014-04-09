@@ -104,7 +104,8 @@ site_status_msg = get_site_status_msg(course_id)
 				<li><a href="/register">会員登録</a></li>
 				<li><a href="/dashboard">ログイン</a></li>
 				% endif
-				<li><a href="${marketing_link('FAQ')}">${_("Help")}</a></li>
+##				<li><a href="${marketing_link('FAQ')}">${_("Help")}</a></li>
+				<li><a href="https://support.gacco.org/">よくある質問</a></li>
                                 % if user.is_authenticated():
 				<li><a href="${reverse('logout')}" role="menuitem">${_("Log Out")}</a></li>
                                 % endif
@@ -180,7 +181,8 @@ site_status_msg = get_site_status_msg(course_id)
 ##        <ul class="dropdown-menu" aria-label="More Options" role="menu">
 ##         <%block name="navigation_dropdown_menu_links" >
             <li>
-            <a href="${marketing_link('FAQ')}">${_("Help")}</a>
+##            <a href="${marketing_link('FAQ')}">${_("Help")}</a>
+            <a href="https://support.gacco.org/">よくある質問</a>
             </li>
 ##          </%block>
           <li>
@@ -199,7 +201,8 @@ site_status_msg = get_site_status_msg(course_id)
 	</a>
 	</li>
 	<li>
-	<a href="${marketing_link('FAQ')}">${_("Help")}</a>
+##	<a href="${marketing_link('FAQ')}">${_("Help")}</a>
+        <a href="https://support.gacco.org/">よくある質問</a>
 	</li>
 	<li>
 	<a href="${reverse('logout')}" role="menuitem">${_("Log Out")}</a>
