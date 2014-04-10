@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-02-27 15:42-0500\n"
-"PO-Revision-Date: 2014-02-24 17:06+0000\n"
+"POT-Creation-Date: 2014-04-07 10:06-0400\n"
+"PO-Revision-Date: 2014-04-04 00:40+0000\n"
 "Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -88,17 +88,31 @@ msgid "(%(num_points)s point possible)"
 msgid_plural "(%(num_points)s points possible)"
 msgstr[0] "(%(num_points)s 点 満点)"
 
-#. Translators: the word Answer here refers to the answer to a problem the
-#. student must solve.;
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
-msgid "Hide Answer(s)"
-msgstr "答えを隠す"
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Answer:"
+msgstr "解答："
 
 #. Translators: the word Answer here refers to the answer to a problem the
 #. student must solve.;
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
-msgid "Show Answer(s)"
-msgstr "答えを見る"
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Hide Answer"
+msgstr "解答を隠す"
+
+#. Translators: the word Answer here refers to the answer to a problem the
+#. student must solve.;
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Show Answer"
+msgstr "解答を見る"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Reveal Answer"
+msgstr "解答を表す"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Answer hidden"
+msgstr "解答非表示"
 
 #. Translators: the word unanswered here is about answering a problem the
 #. student must solve.;
@@ -379,16 +393,14 @@ msgid "vote"
 msgstr "投票"
 
 #: common/static/coffee/src/discussion/views/discussion_content_view.js
-msgid ""
-"%(voteNum)s%(startSrSpan)s vote (click to remove your vote)%(endSrSpan)s"
-msgid_plural ""
-"%(voteNum)s%(startSrSpan)s votes (click to remove your vote)%(endSrSpan)s"
-msgstr[0] "%(voteNum)s%(startSrSpan)s の投票 (投票を削除するにはクリック)%(endSrSpan)s"
+msgid "vote (click to remove your vote)"
+msgid_plural "votes (click to remove your vote)"
+msgstr[0] ""
 
 #: common/static/coffee/src/discussion/views/discussion_content_view.js
-msgid "%(voteNum)s%(startSrSpan)s vote (click to vote)%(endSrSpan)s"
-msgid_plural "%(voteNum)s%(startSrSpan)s votes (click to vote)%(endSrSpan)s"
-msgstr[0] "%(voteNum)s%(startSrSpan)sの投票 (投票するにはクリック)%(endSrSpan)s"
+msgid "vote (click to vote)"
+msgid_plural "votes (click to vote)"
+msgstr[0] ""
 
 #: common/static/coffee/src/discussion/views/discussion_thread_list_view.js
 msgid "Load more"
@@ -420,14 +432,14 @@ msgstr "レポートを削除するにはクリック"
 #: common/static/coffee/src/discussion/views/discussion_thread_show_view.js
 #: common/static/coffee/src/discussion/views/thread_response_show_view.js
 msgid "Misuse Reported%(start_sr_span)s, click to remove report%(end_span)s"
-msgstr "誤用が報告されました。%(start_sr_span)sレポートを削除するにはクリック%(end_span)s"
+msgstr "スタッフに通報されました。%(start_sr_span)sレポートを削除するにはクリック%(end_span)s"
 
 #: common/static/coffee/src/discussion/views/discussion_thread_show_view.js
 #: common/static/coffee/src/discussion/views/response_comment_show_view.js
 #: common/static/coffee/src/discussion/views/response_comment_show_view.js
 #: common/static/coffee/src/discussion/views/thread_response_show_view.js
 msgid "Report Misuse"
-msgstr "誤用を報告"
+msgstr "スタッフに通報"
 
 #. Translators: The text between start_sr_span and end_span is not shown
 #. in most browsers but will be read by screen readers.
@@ -462,7 +474,7 @@ msgstr[0] "%(numResponses)s の回答"
 
 #: common/static/coffee/src/discussion/views/discussion_thread_view.js
 msgid "Showing all responses"
-msgstr "すべての回答を表示中"
+msgstr "すべての返信を表示中"
 
 #: common/static/coffee/src/discussion/views/discussion_thread_view.js
 msgid "Showing first response"
@@ -499,7 +511,7 @@ msgstr "コミュニティTA"
 #: common/static/coffee/src/discussion/views/response_comment_show_view.js
 #: common/static/coffee/src/discussion/views/thread_response_show_view.js
 msgid "Misuse Reported, click to remove report"
-msgstr "誤用が報告されました。報告を削除するにはクリック"
+msgstr "スタッフに通報されました。通報を削除するにはクリック"
 
 #: common/static/coffee/src/discussion/views/response_comment_view.js
 msgid "Are you sure you want to delete this comment?"
@@ -747,6 +759,26 @@ msgstr "プレビュー"
 msgid "Post body"
 msgstr "ボディを送信"
 
+#: lms/static/coffee/src/instructor_dashboard/analytics.js
+msgid "Error fetching distribution."
+msgstr "分布の取得に失敗"
+
+#: lms/static/coffee/src/instructor_dashboard/analytics.js
+msgid "Unavailable metric display."
+msgstr "メトリックの表示不可"
+
+#: lms/static/coffee/src/instructor_dashboard/analytics.js
+msgid "Error fetching grade distributions."
+msgstr "評価分布の取得に失敗"
+
+#: lms/static/coffee/src/instructor_dashboard/analytics.js
+msgid "Last Updated: <%= timestamp %>"
+msgstr "最終更新：<%= timestamp %>"
+
+#: lms/static/coffee/src/instructor_dashboard/analytics.js
+msgid "<%= num_students %> students scored."
+msgstr "<%= num_students %> 人の受講者が採点。"
+
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Loading..."
 msgstr "読み込み中..."
@@ -764,58 +796,156 @@ msgid "Error generating grades. Please try again."
 msgstr "評価生成に失敗しました。再試行してください。"
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
-msgid "File Name (Newest First)"
-msgstr "ファイル名 (最新が上)"
+msgid "File Name"
+msgstr "ファイル名"
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid ""
 "Links are generated on demand and expire within 5 minutes due to the "
-"sensitive nature of student grade information."
-msgstr "リンクは自動的に生成され、受講者の評価情報の機密性のため5分以内に期限が切れます。"
+"sensitive nature of student information."
+msgstr "リンクは随時生成され、受講者の個人情報に関わるため5分で期限が切れます。"
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
-msgid "Successfully enrolled and sent email to the following students:"
-msgstr "履修登録が完了し次の受講者にメールが送信されます："
+msgid "Username"
+msgstr "ユーザー名"
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
-msgid "Successfully enrolled the following students:"
-msgstr "次の受講者の履修登録が完了しました："
+msgid "Email"
+msgstr "メールアドレス"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Revoke access"
+msgstr "アクセスを放棄"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Enter username or email"
+msgstr "ユーザー名またはメールアドレスを入力"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Please enter a username or email."
+msgstr "メールアドレスかユーザー名を入力してください。"
+
+#. Translators: A rolename appears this sentence.;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Error fetching list for role"
+msgstr "ロールの一覧の取得に失敗"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Error changing user's permissions."
+msgstr "ユーザー権限の変更に失敗しました。"
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid ""
-"Successfully sent enrollment emails to the following students. They will be "
+"Could not find a user with username or email address '<%= identifier %>'."
+msgstr " '<%= identifier %>'のユーザー名またはメールアドレスのユーザーを見つけることができません。"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid ""
+"Error: User '<%= username %>' has not yet activated their account. Users "
+"must create and activate their accounts before they can be assigned a role."
+msgstr ""
+"エラー：ユーザー '<%= username %>' "
+"はまだアカウントが有効になっていません。ユーザーは役割に追加される前に作成され有効化される必要があります。"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Error: You cannot remove yourself from the Instructor group!"
+msgstr "エラー：講師グループからあなた自身を削除することはできません！"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Error adding/removing users as beta testers."
+msgstr "ユーザーのベータテスターへの追加/削除に失敗しました。"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "These users were successfully added as beta testers:"
+msgstr "次のユーザーをベータテスターへの追加に成功しました："
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "These users were successfully removed as beta testers:"
+msgstr "次のユーザーをベータテスターからの削除に成功しました："
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "These users were not added as beta testers:"
+msgstr "次のユーザーはベータテスターに追加されませんでした："
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "These users were not removed as beta testers:"
+msgstr "次のユーザーはベーターテスターから削除されませんでした。"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid ""
+"Users must create and activate their account before they can be promoted to "
+"beta tester."
+msgstr "ユーザーはベーターテスターに昇格する前にアカウントを作成し有効化する必要があります。"
+
+#. Translators: A list of email addresses appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Could not find users associated with the following email addresses:"
+msgstr "次のメールアドレスに紐付けられたユーザーを見つけることができません："
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Error enrolling/unenrolling users."
+msgstr "ユーザーの履修/履修解除に失敗しました。"
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "The following email addresses are invalid:"
+msgstr "次のメールアドレスは無効です："
+
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Successfully enrolled and sent email to the following users:"
+msgstr "履修登録が成功しメールが次のユーザーに送信されました："
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "Successfully enrolled the following users:"
+msgstr "次のユーザーの履修登録が成功しました："
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid ""
+"Successfully sent enrollment emails to the following users. They will be "
 "allowed to enroll once they register:"
-msgstr "次の受講者へ履修登録メールの送信が完了しました。登録完了後に履修が許可されます。："
+msgstr "次のユーザーへの履修登録メールの送信が成功しました。登録完了後に履修が許可されます："
 
+#. Translators: A list of users appears after this sentence;
 #: lms/static/coffee/src/instructor_dashboard/membership.js
-msgid "These students will be allowed to enroll once they register:"
-msgstr "次の受講者は登録完了後に履修が許可されます："
+msgid "These users will be allowed to enroll once they register:"
+msgstr "次のユーザーは登録完了後に履修が許可されます："
 
+#. Translators: A list of users appears after this sentence;
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid ""
-"Successfully sent enrollment emails to the following students. They will be "
+"Successfully sent enrollment emails to the following users. They will be "
 "enrolled once they register:"
-msgstr "次の受講者に履修登録メールの送信が完了しました。登録完了後に履修登録されます。："
+msgstr "次のユーザーに履修登録メールの送信が完了しました。登録完了後に履修登録されます。："
 
+#. Translators: A list of users appears after this sentence;
 #: lms/static/coffee/src/instructor_dashboard/membership.js
-msgid "These students will be enrolled once they register:"
-msgstr "次の受講者は登録完了後に履修登録されます："
+msgid "These users will be enrolled once they register:"
+msgstr "次のユーザーは登録完了後に履修登録されます："
 
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-msgid ""
-"Emails successfully sent. The following students are no longer enrolled in "
-"the course:"
-msgstr "メールの送信に成功しました。次の受講者は講座から履修解除されます。："
-
-#: lms/static/coffee/src/instructor_dashboard/membership.js
-msgid "The following students are no longer enrolled in the course:"
-msgstr "次の受講者は講座から履修解除されました："
-
+#. Translators: A list of users appears after this sentence;
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid ""
-"These students were not affliliated with the course so could not be "
-"unenrolled:"
-msgstr "次の受講者は講座に参加していないため履修解除することが出来ません："
+"Emails successfully sent. The following users are no longer enrolled in the "
+"course:"
+msgstr "メールの送信に成功しました。次のユーザーは講座から履修解除されます。："
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid "The following users are no longer enrolled in the course:"
+msgstr "次のユーザーは講座から履修解除されました："
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/coffee/src/instructor_dashboard/membership.js
+msgid ""
+"These users were not affiliated with the course so could not be unenrolled:"
+msgstr "次のユーザーは講座に参加していないため履修解除することが出来ません："
 
 #: lms/static/coffee/src/instructor_dashboard/send_email.js
 msgid "Your message must have a subject."
@@ -830,18 +960,22 @@ msgid "Your email was successfully queued for sending."
 msgstr "メールは送信処理に送られました。"
 
 #: lms/static/coffee/src/instructor_dashboard/send_email.js
-msgid "yourself"
-msgstr "自分自身"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-msgid "everyone who is staff or instructor on this course"
-msgstr "講座のすべてのスタッフまたは講師"
+msgid ""
+"You are about to send an email titled '<%= subject %>' to yourself. Is this "
+"OK?"
+msgstr "メール'<%= subject %>' をあなた自身に送信しようとしています 。 間違いありませんか？"
 
 #: lms/static/coffee/src/instructor_dashboard/send_email.js
 msgid ""
-"ALL (everyone who is enrolled in this course as student, staff, or "
-"instructor)"
-msgstr "すべて(この講座に登録されたすべての受講者、スタッフ、講師)"
+"You are about to send an email titled '<%= subject %>' to everyone who is "
+"staff or instructor on this course. Is this OK?"
+msgstr "メール '<%= subject %>'をこの講座のスタッフと講師に送信しようとしています。間違いありませんか？"
+
+#: lms/static/coffee/src/instructor_dashboard/send_email.js
+msgid ""
+"You are about to send an email titled '<%= subject %>' to ALL (everyone who "
+"is enrolled in this course as student, staff, or instructor). Is this OK?"
+msgstr "メール '<%= subject %>'を全員(講座を履修している受講者、スタッフ、講師)に送信しようとしています。間違いありませんか？"
 
 #: lms/static/coffee/src/instructor_dashboard/send_email.js
 msgid ""
@@ -849,10 +983,6 @@ msgid ""
 "classes, it may take up to an hour (or more, if other courses are "
 "simultaneously sending email) to send all emails."
 msgstr "メールは送信処理に送られました。大きな講座ではメールを送るのに１時間程度(ほかの講座も同時にメールを送っている場合はそれ以上)かかります。"
-
-#: lms/static/coffee/src/instructor_dashboard/send_email.js
-msgid "You are about to send an email titled \""
-msgstr "次のメールを送信しようとしています \""
 
 #: lms/static/coffee/src/instructor_dashboard/send_email.js
 msgid "Error sending email."
@@ -996,6 +1126,60 @@ msgstr ""
 msgid "Error listing task history for this student and problem."
 msgstr "この受講者と問題に対するタスク履歴のリスト表示でエラーが発生しました。"
 
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Task Type"
+msgstr "タスク種別"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Task inputs"
+msgstr "タスク入力"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Task ID"
+msgstr "タスクID"
+
+#. Translators: a "Requester" is a username that requested a task such as
+#. sending email
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Requester"
+msgstr "リクエストする人"
+
+#. Translators: A timestamp of when a task (eg, sending email) was submitted
+#. appears after this
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Submitted"
+msgstr "投稿日時"
+
+#. Translators: The length of a task (eg, sending email) in seconds appears
+#. this
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Duration (sec)"
+msgstr "遅延(秒)"
+
+#. Translators: The state (eg, "In progress") of a task (eg, sending email)
+#. appears after this.
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "State"
+msgstr "状況"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Task Status"
+msgstr "タスク状況"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/coffee/src/instructor_dashboard/util.js
+msgid "Task Progress"
+msgstr "タスク進捗"
+
 #: lms/static/coffee/src/staff_grading/staff_grading.js
 msgid "Grades saved.  Fetching the next submission to grade."
 msgstr "評価が保存されました。次の評価対象を取得します。"
@@ -1062,19 +1246,17 @@ msgid "(Show)"
 msgstr "(表示)"
 
 #: lms/static/js/Markdown.Editor.js
-msgid ""
-"<p><b>Insert Hyperlink</b></p><p>http://example.com/ \"optional title\"</p>"
-msgstr "<p><b>ハイパーリンクを入力</b></p><p>http://example.com/ \"追加の題目\"</p>"
+msgid "Insert Hyperlink"
+msgstr ""
+
+#. Translators: Please keep the quotation marks (") around this text
+#: lms/static/js/Markdown.Editor.js lms/static/js/Markdown.Editor.js.c
+msgid "\"optional title\""
+msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
-msgid ""
-"<p><b>Insert Image (upload file or type "
-"url)</b></p><p>http://example.com/images/diagram.jpg \"optional "
-"title\"<br><br></p>"
+msgid "Insert Image (upload file or type url)"
 msgstr ""
-"<p><b>挿入画像 "
-"(アップロードするファイルかURLを記述)</b></p><p>http://example.com/images/diagram.jpg "
-"\"オプションの題目\"<br><br></p>"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Markdown Editing Help"
@@ -1164,6 +1346,15 @@ msgstr "リスト項目"
 msgid "Heading"
 msgstr "見出し"
 
+#: lms/templates/class_dashboard/all_section_metrics.js
+#: lms/templates/class_dashboard/all_section_metrics.js
+msgid "Unable to retrieve data, please try again later."
+msgstr "データの受信に失敗しました。少し経った後にお試しください。"
+
+#: lms/templates/class_dashboard/d3_stacked_bar_graph.js
+msgid "Number of Students"
+msgstr "受講者の数"
+
 #: cms/static/coffee/src/main.js
 msgid ""
 "This may be happening because of an error with our server or your internet "
@@ -1180,12 +1371,12 @@ msgid "<em>Editing:</em> %s"
 msgstr "<em>編集中:</em> %s"
 
 #: cms/static/coffee/src/views/module_edit.js
-#: cms/static/coffee/src/views/tabs.js cms/static/coffee/src/views/unit.js
+#: cms/static/coffee/src/views/tabs.js cms/static/coffee/src/views/tabs.js
+#: cms/static/coffee/src/views/unit.js
 #: cms/static/coffee/src/xblock/cms.runtime.v1.js
-#: cms/static/js/models/section.js cms/static/js/views/asset.js
-#: cms/static/js/views/course_info_handout.js
+#: cms/static/js/models/section.js cms/static/js/utils/drag_and_drop.js
+#: cms/static/js/views/asset.js cms/static/js/views/course_info_handout.js
 #: cms/static/js/views/course_info_update.js cms/static/js/views/overview.js
-#: cms/static/js/views/overview.js.c
 msgid "Saving&hellip;"
 msgstr "保存中&hellip;"
 
@@ -1243,6 +1434,10 @@ msgstr "はい，これを削除します"
 #: cms/static/js/index.js
 msgid "Please do not use any spaces in this field."
 msgstr "このフィールドには空白を使用しないで下さい。"
+
+#: cms/static/js/index.js
+msgid "Please do not use any spaces or special characters in this field."
+msgstr "このフィールドには空白や特殊文字を使用しないで下さい．"
 
 #: cms/static/js/index.js
 msgid ""
@@ -1500,3 +1695,13 @@ msgstr "本講座のイメージ画像をアップロードしてください。
 #: cms/static/js/views/settings/main.js
 msgid "Files must be in JPEG or PNG format."
 msgstr "ファイル形式はJPEGもしくはPNG形式である必要があります。"
+
+#: cms/static/js/views/video/translations_editor.js
+msgid ""
+"Sorry, there was an error parsing the subtitles that you uploaded. Please "
+"check the format and try again."
+msgstr "申し訳ありません、アップロードされた字幕を処理する際にエラーが発生しました。フォーマットを確認して再試行してください。"
+
+#: cms/static/js/views/video/translations_editor.js
+msgid "Upload translation."
+msgstr "翻訳をアップロード。"
