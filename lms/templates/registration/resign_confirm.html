@@ -53,7 +53,7 @@
 <header class="global">
   <nav>
     <h1 class="logo">
-      <a href="{{MKTG_URL_ROOT}}"><img src="{% static 'images/header-logo.png' %}"></a>
+      <a href="http://gacco.org/"><img src="/static/images/gacco_identity_pc.svg" width="200px"></a>
     </h1>
   </nav>
 </header>
@@ -98,7 +98,7 @@
         <div role="alert" class="status message system-error">
           <h3 class="message-title">{% trans "We're sorry, our systems seem to be having trouble processing your resignation" %}</h3>
           <p class="message-copy">
-            {% blocktrans with start_link='<a href="{{MKTG_URL_CONTACT}}">' end_link='</a>' %}
+            {% blocktrans with start_link='<a href="https://support.gacco.org/">' end_link='</a>' %}
                 Someone has been made aware of this issue. Please try again shortly. Please {{ start_link }}contact us{{ end_link }} about any concerns you have.
             {% endblocktrans %}
           </p>
@@ -121,7 +121,7 @@
 
         <div class="form-actions">
           <button name="submit" type="submit" id="submit" class="action-primary">{% trans "Resign Now" %}</button>
-          <a href="{{MKTG_URL_ROOT}}" class="action-secondary action-cancel">{% trans "Cancel" %}</a>
+          <a href="/dashboard" class="action-secondary action-cancel">{% trans "Cancel" %}</a>
         </div>
       </form>
 
@@ -148,7 +148,7 @@
         <h3>{% trans "Need Help?" %}</h3>
         <p>
           {% blocktrans with mktg_url_faq=mktg_url_faq %}
-              View our <a href="{{ mktg_url_faq }}">help section for contact information and answers to commonly asked questions</a>
+              View our <a href="https://support.gacco.org/">help section for contact information and answers to commonly asked questions</a>
           {% endblocktrans %}
         </p>
       </div>

@@ -42,10 +42,10 @@ ${progress_graph.body(grade_summary, course.grade_cutoffs, "grade-detail-graph",
       </header>
 
       %if not course.disable_progress_graph:
-        <div id="grade-detail-graph" aria-hidden="true" class="columns"></div>
+        <div id="grade-detail-graph" aria-hidden="true" class="columns show-for-medium-up"></div>
       %endif
 
-      <div class="chapters">
+      <div class="chapters" style="border-top:none;">
         %for chapter in courseware_summary:
         %if not chapter['display_name'] == "hidden":
         <section>

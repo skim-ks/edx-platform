@@ -110,9 +110,7 @@
                function(data) {
                  if (data.success) {
                    $("#change_email_title").html("${_('Please verify your new email')}");
-                   $("#change_email_form").html("<p>${_(('You\'ll receive a confirmation in your in-box.'
-                                                    ' Please click the link in the email to confirm'
-                                                    ' the email change.'))}</p>");
+                   $("#change_email_form").html("<p>メールアドレス変更メールを送信いたしました。メール文中にあるリンクをクリックすることで、メールアドレス変更確認画面が開きます。</p>");
                  } else {
                    $("#change_email_error").html(data.error).stop().css("display", "block");
                  }
@@ -279,6 +277,7 @@
   <section id="my-courses">
     <header>
 ##      <h2>${_("Current Courses")}</h2>
+      <a href="http://gacco.org/list.html" class="f_button tiny radius success right">${_("Find Courses")}</a>
       <h3>${_("Current Courses")}</h3>
       <hr>
     </header>

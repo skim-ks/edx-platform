@@ -51,13 +51,13 @@ site_status_msg = get_site_status_msg(course_id)
 				<li class="name show-for-medium">
 					<span class="tab-bar">
 						<a class="left-off-canvas-toggle menu-icon" style="display:inline;">
-						<span></span><h1><img src="http://gacco.org/images/vector/gacco_identity.svg" alt="gacco" width="75px" style="margin-left:1rem; margin-right:0.6rem; display:inline;"><small>Certified by </small><img src="http://gacco.org/images/jmooc.png" alt="JMOOC" width="50px" style="margin-bottom:0.2rem;"></h1>
+						<span></span><h1><img src="/static/images/gacco_identity_pc.svg" alt="gacco" width="160px" style="margin-left:1rem; margin-right:0.6rem; display:inline;"></h1>
 						</a>
 					</span>
 				</li>
 				<li class="name show-for-small">
                                         <span class="tab-bar">
-                                                <a class="left-off-canvas-toggle menu-icon" style="display:inline;">                                                <span></span><h1><img src="http://gacco.org/images/vector/gacco_identity.svg" alt="gacco" width="75px" style="margin-left:1rem; margin-right:0.6rem; display:inline;"></h1>
+                                                <a class="left-off-canvas-toggle menu-icon" style="display:inline;">                                                <span></span><h1><img src="/static/images/gacco_identity_mob.svg" alt="gacco" width="120px" style="margin-left:1rem; margin-right:0.6rem; display:inline;"></h1>
                                                 </a>
                                         </span>
                                 </li>
@@ -104,7 +104,8 @@ site_status_msg = get_site_status_msg(course_id)
 				<li><a href="/register">会員登録</a></li>
 				<li><a href="/dashboard">ログイン</a></li>
 				% endif
-				<li><a href="${marketing_link('FAQ')}">${_("Help")}</a></li>
+##				<li><a href="${marketing_link('FAQ')}">${_("Help")}</a></li>
+				<li><a href="https://support.gacco.org/">よくある質問</a></li>
                                 % if user.is_authenticated():
 				<li><a href="${reverse('logout')}" role="menuitem">${_("Log Out")}</a></li>
                                 % endif
@@ -138,10 +139,9 @@ site_status_msg = get_site_status_msg(course_id)
 <div class="row show-for-large-up" style="margin-top:1rem;">
   ## Sitename
   <div class="columns large-8">
-  <a href="http://gacco.org/"><img src="http://gacco.org/images/vector/gacco_identity.svg" alt="gacco"></a>
-  <span style="margin-left:0.5rem;"> </span><span style="margin-bottom:3rem;"><small>Certified by </small></span><img src="http://gacco.org/images/jmooc.png" alt="JMOOC" width="70" style="margin-bottom:0.6rem;">
+  <a href="http://gacco.org/"><img src="/static/images/gacco_identity_pc.svg" width="250px" alt="gacco"></a>
     % if course:
-      <h2 style="display:inline; font-size:1rem; color:#333333;"><span style="font-size:1.2rem; margin-left:0.2rem; margin-right:0.2rem; ">|</span>${course.display_number_with_default | h} ${course.display_name_with_default}</h2>
+      <h2 style="display:inline; font-size:0.8rem; color:#333333;"><span style="font-size:1.2rem; margin-left:0.2rem; margin-right:0.2rem; ">|</span>${course.display_number_with_default | h} ${course.display_name_with_default}</h2>
     % endif
   </div>
   ## navi button
@@ -181,7 +181,8 @@ site_status_msg = get_site_status_msg(course_id)
 ##        <ul class="dropdown-menu" aria-label="More Options" role="menu">
 ##         <%block name="navigation_dropdown_menu_links" >
             <li>
-            <a href="${marketing_link('FAQ')}">${_("Help")}</a>
+##            <a href="${marketing_link('FAQ')}">${_("Help")}</a>
+            <a href="https://support.gacco.org/">よくある質問</a>
             </li>
 ##          </%block>
           <li>
@@ -200,7 +201,8 @@ site_status_msg = get_site_status_msg(course_id)
 	</a>
 	</li>
 	<li>
-	<a href="${marketing_link('FAQ')}">${_("Help")}</a>
+##	<a href="${marketing_link('FAQ')}">${_("Help")}</a>
+        <a href="https://support.gacco.org/">よくある質問</a>
 	</li>
 	<li>
 	<a href="${reverse('logout')}" role="menuitem">${_("Log Out")}</a>
