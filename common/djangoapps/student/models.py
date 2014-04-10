@@ -30,6 +30,7 @@ from django.dispatch import receiver, Signal
 import django.dispatch
 from django.forms import ModelForm, forms
 from django.core.exceptions import ObjectDoesNotExist
+from django.utils.translation import ugettext_noop
 from django_countries import CountryField
 from track import contexts
 from track.views import server_track
@@ -191,7 +192,11 @@ class UserProfile(models.Model):
     this_year = datetime.now(UTC).year
     VALID_YEARS = range(this_year, this_year - 120, -1)
     year_of_birth = models.IntegerField(blank=True, null=True, db_index=True)
-    GENDER_CHOICES = (('m', "男性"), ('f', "女性"), ('o', "回答しない"))
+    GENDER_CHOICES = (
+        ('m', ugettext_noop('Male')),
+        ('f', ugettext_noop('Female')),
+        ('o', ugettext_noop('Other'))
+    )
     gender = models.CharField(
         blank=True, null=True, max_length=6, db_index=True, choices=GENDER_CHOICES
     )
@@ -201,15 +206,15 @@ class UserProfile(models.Model):
     # ('p_se', 'Doctorate in science or engineering'),
     # ('p_oth', 'Doctorate in another field'),
     LEVEL_OF_EDUCATION_CHOICES = (
-        ('p', "大学院卒（博士課程修了）"),
-        ('m', "大学院卒（修士課程修了）"),
-        ('b', "4年制大学卒"),
-        ('a', "短大・専門学校卒"),
-        ('hs', "高校卒"),
-        ('jhs', "中学校卒"),
-        ('el', "小学校卒"),
-        ('none', "なし"),
-        ('other', "その他")
+        ('p', ugettext_noop('Doctorate')),
+        ('m', ugettext_noop("Master's or professional degree")),
+        ('b', ugettext_noop("Bachelor's degree")),
+        ('a', ugettext_noop("Associate's degree")),
+        ('hs', ugettext_noop("Secondary/high school")),
+        ('jhs', ugettext_noop("Junior secondary/junior high/middle school")),
+        ('el', ugettext_noop("Elementary/primary school")),
+        ('none', ugettext_noop("None")),
+        ('other', ugettext_noop("Other"))
     )
     level_of_education = models.CharField(
         blank=True, null=True, max_length=6, db_index=True,
