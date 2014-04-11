@@ -91,7 +91,8 @@ function (HTML5Video, Resizer) {
         state.videoPlayer.stopAtEndTime = true;
 
         state.videoPlayer.playerVars = {
-            controls: 0,
+            controls: 1,
+	    autohide : 1,
             wmode: 'transparent',
             rel: 0,
             showinfo: 0,
@@ -160,13 +161,7 @@ function (HTML5Video, Resizer) {
                 youTubeId = state.youtubeId('1.0');
             }
             state.videoPlayer.player = new YT.Player(state.id, {
-                //playerVars: state.videoPlayer.playerVars,
-		playerVars: {
-		    autohide : 1,
-		    controls : 1,
-		    modestbranding : 1,
-		    rel : 0
-		},
+                playerVars: state.videoPlayer.playerVars,
                 videoId: youTubeId,
                 events: {
                     onReady: state.videoPlayer.onReady,

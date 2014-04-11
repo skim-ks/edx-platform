@@ -4,18 +4,19 @@ define(
 'video/00_resizer.js',
 [],
 function () {
+    var controllerHeight = 46;
 
     var Resizer = function (params) {
         var defaults = {
-                container: window,
-                element: null,
-                containerRatio: null,
-                elementRatio: null
-            },
-            callbacksList = [],
-            module = {},
-            mode = null,
-            config;
+            container: window,
+            element: null,
+            containerRatio: null,
+            elementRatio: null,
+        },
+        callbacksList = [],
+        module = {},
+        mode = null,
+        config;
 
         var initialize = function (params) {
             if (config) {
@@ -63,22 +64,33 @@ function () {
             var data = getData();
 
             switch (mode) {
-                case 'height':
-                    alignByHeightOnly();
-                    break;
-
-                case 'width':
-                    alignByWidthOnly();
-                    break;
-
-                default:
-                    if (data.containerRatio >= data.elementRatio) {
-                        alignByHeightOnly();
-
-                    } else {
-                        alignByWidthOnly();
+            case 'height':
+                alignByHeightOnly();
+                break;
+		
+            case 'width':
+                alignByWidthOnly();
+                break;
+		
+            case 'fullscreen':
+                data.containerHeight -= controllerHeight;
+                data.containerRatio = data.containerWidth / data.containerHeight;
+                if (data.containerRatio >= data.elementRatio) {
+                    alignByHeightOnly(true);
+		    
+                } else {
+                    alignByWidthOnly(true);
                     }
-                    break;
+                break;
+
+            default:
+                if (data.containerRatio >= data.elementRatio) {
+                    alignByHeightOnly();
+		    
+                } else {
+                    alignByWidthOnly();
+                    }
+                break;
             }
 
             fireCallbacks();
@@ -86,27 +98,38 @@ function () {
             return module;
         };
 
-        var alignByWidthOnly = function () {
+        var alignByWidthOnly = function (isFullScreen) {
             var data = getData(),
                 height = data.containerWidth/data.elementRatio;
 
+	    var topmargin;
+	    if(isFullScreen){
+		topmargin = 0.5*(data.containerHeight - height - controllerHeight);
+	    }else{
+		topmargin = 0.5*(data.containerHeight - height);
+	    }
+	    
             data.element.css({
                 'height': height,
                 'width': data.containerWidth,
-                'top': 0.5*(data.containerHeight - height),
+                'top': topmargin,
                 'left': 0
             });
 
             return module;
         };
 
-        var alignByHeightOnly = function () {
-            var data = getData(),
-                width = data.containerHeight*data.elementRatio;
+        var alignByHeightOnly = function (isFullScreen) {
+            var data = getData();
+	    var height = data.containerHeight;
+	    if(isFullScreen){
+		height -= controllerHeight;
+	    }
+            width = height*data.elementRatio;
 
             data.element.css({
-                'height': data.containerHeight,
-                'width': data.containerHeight*data.elementRatio,
+                'height': height,
+                'width': width,
                 'top': 0,
                 'left': 0.5*(data.containerWidth - width)
             });
