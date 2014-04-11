@@ -63,13 +63,12 @@
           </section>
           <div class="video-player-post"></div>
 	  
-          <section class="video-controls is-hidden show-for-medium-up">
+          <section class="video-controls is-hidden show-for-medium-up" style="background:rgba(0,0,0,0.8); border:none;">
               <div class="secondary-controls">
-                      <a href="#" class="add-fullscreen" title="${_('Fill browser')}" role="button" aria-disabled="false">${_('Fill browser')}</a>
+                      <a href="#" class="add-fullscreen" title="${_('Fill browser')}" role="button" aria-disabled="false" style="border:none; width:40px;">${_('Fill browser')}</a>
 
-                      <div class="lang menu-container">
-                        <a href="#" class="hide-subtitles" title="${_('Turn off captions')}" role="button" aria-
-                        disabled="false">${_('Turn off captions')}</a>
+                      <div class="lang menu-container" style="border:none;">
+                        <a href="#" class="hide-subtitles" title="${_('Turn off captions')}" role="button" aria-disabled="false" style="width:40px;">${_('Turn off captions')}</a>
                       </div>
               </div>
           </section>
@@ -84,7 +83,7 @@
     <a class="nav-skip sr" id="after-transcript_${id}" href="#before-transcript_${id}">${_('Go back to start of transcript.')}</a>
 
     <div class="focus_grabber last"></div>
-  <ul class="wrapper-downloads">
+  <ul class="wrapper-downloads show-for-large-up">
     % if sources.get('main'):
         <li class="video-sources">
             ${('<a href="%s">' + _('Download video') + '</a>') % sources.get('main')}

@@ -253,7 +253,7 @@ function () {
                 .setParams({
                     container: window
                 })
-                .setMode('both');
+                .setMode('fullscreen');
 
         }
 
