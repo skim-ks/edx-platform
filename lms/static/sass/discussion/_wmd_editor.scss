@@ -130,10 +130,12 @@
 
 .wmd-prompt-background {
   background-color: Black;
+  z-index: 1200000;
 }
 
 .wmd-prompt-dialog {
   padding: $baseline;
+  z-index: 1200001;
 
   > div {
     font-size: 0.8em;
