@@ -27,8 +27,8 @@
 
     // The text that appears on the upper part of the dialog box when
     // entering links.
-    var linkDialogText = gettext("<p><b>Insert Hyperlink</b></p><p>http://example.com/ \"optional title\"</p>");
-    var imageDialogText = gettext("<p><b>Insert Image (upload file or type url)</b></p><p>http://example.com/images/diagram.jpg \"optional title\"<br><br></p>");
+    var linkDialogText = gettext("<p><b>Webページへのリンクを挿入します</b></p><p>例）http://example.com/ </p>");
+    var imageDialogText = gettext("<p><b>画像を挿入します (URLを入力してください)</b></p><p>例）http://example.com/images/diagram.jpg <br><br></p>");
 
     // The default text that appears in the dialog input box when entering
     // links.
@@ -977,7 +977,7 @@
         style.position = "absolute";
         style.top = "0";
 
-        style.zIndex = "1000";
+//        style.zIndex = "1000";
 
         if (uaSniffed.isIE) {
             style.filter = "alpha(opacity=50)";
@@ -1068,7 +1068,7 @@
             dialog.style.padding = "10px;";
             dialog.style.position = "fixed";
             dialog.style.width = "400px";
-            dialog.style.zIndex = "1001";
+//            dialog.style.zIndex = "1001";
 
             // The dialog text.
             var question = doc.createElement("div");
@@ -1099,7 +1099,7 @@
             form.appendChild(input);
 
             // The choose file button if prompt type is 'image'
-
+/* //disable to upload images...
             if (imageUploadHandler) {
               var chooseFile = doc.createElement("input");
               chooseFile.type = "file";
@@ -1111,7 +1111,7 @@
               form.appendChild(doc.createElement("br"));
               form.appendChild(chooseFile);
             }
-
+*/
 
             // The ok button
             var okButton = doc.createElement("input");
