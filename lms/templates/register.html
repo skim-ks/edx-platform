@@ -114,7 +114,7 @@
 <div style="width:100%; height:121px; margin-bottom:3rem; background-color:#ccc;">
   <div class="row">
     <div class="columns">
-      <h3 style="margin-top:1rem;">よこうそ！gaccoへ。</h3>
+      <h3 style="margin-top:1rem;">ようこそ！gaccoへ。</h3>
       <h3>gaccoは誰でも無料で受講できるウェブサービスです。</h3>
     </div>
   </div>
@@ -145,6 +145,10 @@
       <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
 
       <!-- status messages -->
+      <div role="alert" class="status message">
+        <h3 class="message-title" style="color: red; font-weight: bold;">大変申し訳ありませんが、お使いの環境ではシステムの動作に問題が発生する可能性があります。新しいブラウザや端末をご利用いただけますよう、お願いいたします。</h3>
+      </div>
+
       <div role="alert" class="status message">
         <h3 class="message-title"></h3>
       </div>
