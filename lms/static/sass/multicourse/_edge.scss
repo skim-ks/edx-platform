@@ -233,12 +233,12 @@ $paleYellow: #fffcf1;
       font-weight: 400;
     }
 
-    input[type="submit"] {
-      @include blue-button;
-      display: block;
-      color: #fff;
-      text-shadow: none;
-    }
+//    input[type="submit"] {
+//      @include blue-button;
+//      display: block;
+//      color: #fff;
+//      text-shadow: none;
+//    }
 
     textarea {
       height: 50px;

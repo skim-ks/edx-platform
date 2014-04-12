@@ -419,16 +419,16 @@
 
   // forms - actions
   .form-actions {
-    @include clearfix();
-
-    button[type="submit"] {
-      @extend %m-btn-primary;
-
-      &:disabled, &.is-disabled {
-        opacity: 0.3;
-        cursor: default !important;
-      }
-    }
+//    @include clearfix();
+//
+//    button[type="submit"] {
+//      @extend %m-btn-primary;
+//
+//      &:disabled, &.is-disabled {
+//        opacity: 0.3;
+//        cursor: default !important;
+//      }
+//    }
 
     .action-primary {
       float: left;
