@@ -265,12 +265,13 @@ function () {
                     }
                 } else {
                     if (self.isTouch) {
-                        Caption.subtitlesEl.find('li').html(
+/*                        Caption.subtitlesEl.find('li').html(
                             gettext(
                                 'Caption will be displayed when ' +
                                 'you start playing the video.'
                             )
                         );
+*/
                     } else {
                         Caption.renderCaption();
                     }
@@ -339,6 +340,10 @@ function () {
         this.videoCaption.scrollCaption();
 
         this.videoCaption.setSubtitlesHeight();
+	if($(window).width() <= 640){
+            this.videoCaption.hideCaptions(true);
+
+	}
     }
 
     function renderLanguageMenu(languages) {
