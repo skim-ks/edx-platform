@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-04-08 14:04-0400\n"
-"PO-Revision-Date: 2014-04-10 02:30+0000\n"
-"Last-Translator: わたカフェの店長\n"
+"POT-Creation-Date: 2014-04-10 16:17-0400\n"
+"PO-Revision-Date: 2014-04-12 07:50+0000\n"
+"Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,7 +39,7 @@ msgid "Page not found"
 msgstr "ページが見つかりません"
 
 #: cms/templates/asset_index.html:183
-#: lms/templates/courseware/courseware.html:188
+#: lms/templates/courseware/courseware.html:193
 #: lms/templates/verify_student/_modal_editname.html:32
 msgid "close"
 msgstr "閉じる"
@@ -49,7 +49,7 @@ msgid "Skip to this view's content"
 msgstr "このコンテンツをスキップする"
 
 #: cms/templates/component.html:13 cms/templates/manage_users.html:15
-#: cms/templates/settings.html:51 cms/templates/settings_advanced.html:45
+#: cms/templates/settings.html:55 cms/templates/settings_advanced.html:45
 #: cms/templates/settings_graders.html:46 cms/templates/widgets/header.html:70
 #: lms/templates/wiki/includes/article_menu.html:55
 msgid "Settings"
@@ -89,12 +89,19 @@ msgstr "キャンセル"
 msgid "Edit"
 msgstr "編集"
 
-#: cms/templates/component.html:48 cms/templates/studio_xblock_wrapper.html:29
+#: cms/templates/component.html:48
 #: lms/templates/discussion/_underscore_templates.html:89
 #: lms/templates/discussion/_underscore_templates.html:147
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache:33
 msgid "Delete"
 msgstr "削除"
+
+#: cms/templates/container.html:89
+#: lms/templates/courseware/instructor_dashboard.html:698
+#: lms/templates/courseware/instructor_dashboard.html:705
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html:39
+msgid "Loading..."
+msgstr "読み込み中..."
 
 #. Translators: this is a verb describing the action of viewing more details
 #: cms/templates/container_xblock_component.html:17
@@ -106,7 +113,7 @@ msgstr "見る"
 msgid "Error:"
 msgstr "エラー:"
 
-#: cms/templates/index.html:108 cms/templates/settings.html:75
+#: cms/templates/index.html:108 cms/templates/settings.html:79
 #: lms/templates/courseware/course_about.html:288
 msgid "Course Number"
 msgstr "講座番号"
@@ -543,7 +550,7 @@ msgstr "{course_number}のメールアドレス設定"
 #: lms/templates/dashboard.html:451
 #: lms/templates/modal/_modal-settings-language.html:23
 msgid "window open"
-msgstr "ウィンドウ開"
+msgstr "ウィンドウを開く"
 
 #: lms/templates/dashboard.html:309
 msgid "Receive course emails"
@@ -579,7 +586,7 @@ msgstr "パスワードを確認してください"
 msgid ""
 "We will send a confirmation to both {email} and your new email as part of "
 "the process."
-msgstr "手続きとして {email} と新しいメールアドレスの両方に確認メールを送信します。"
+msgstr "メールアドレス変更の手続きのため、新しいメールアドレスに確認メールが送信されます。また、メールアドレス変更後に新しいアドレスと旧アドレス（{email}）の両方に通知のメールが送信されます。"
 
 #: lms/templates/dashboard.html:405
 msgid "Change your name"
@@ -871,8 +878,8 @@ msgstr "エラーメッセージ、トラブルが発生する手順等を含む
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html:26
 #: lms/templates/discussion/_underscore_templates.html:26
 #: lms/templates/discussion/_underscore_templates.html:122
-#: lms/templates/discussion/mustache/_inline_thread.mustache:20
-#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:21
+#: lms/templates/discussion/mustache/_inline_thread.mustache:21
+#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:22
 #: lms/templates/instructor/staff_grading.html:63
 #: lms/templates/instructor/staff_grading.html:86
 #: lms/templates/peer_grading/peer_grading_problem.html:57
@@ -1089,6 +1096,10 @@ msgid ""
 "Please provide launch_url. Click \"Edit\", and fill in the required fields."
 msgstr "launch_urlを入力してください。そして、編集をクリックし、必須項目を入力してください。"
 
+#: lms/templates/lti_form.html:25
+msgid "Press to Launch"
+msgstr ""
+
 #: lms/templates/manage_user_standing.html:6
 msgid "Disable or Reenable student accounts"
 msgstr "受講者のアカウントを利用不可、もしくは利用不可の取り消しをする。"
@@ -1254,13 +1265,14 @@ msgstr "ログイン"
 
 #: lms/templates/provider_login.html:42
 msgid "Email or password is incorrect."
-msgstr "メールアドレス、または、パスワードが間違っています。"
+msgstr "メールアドレス、もしくはパスワードが間違っています。"
 
 #: lms/templates/provider_login.html:44
 msgid ""
-"Please note that we will be sending your user name, email, and full name to "
-"this third party site."
-msgstr "ユーザー名、メールアドレス、および氏名を第三者の関連サイトに送信しようとしていることにご留意ください。"
+"Your username, email, and full name will be sent to {destination}, where the"
+" collection and use of this information will be governed by their terms of "
+"service and privacy policy."
+msgstr ""
 
 #: lms/templates/provider_login.html:50
 #, python-format
@@ -2213,97 +2225,97 @@ msgstr ""
 msgid "{course_number} Courseware"
 msgstr "講座番号「{course_number}」を学習する"
 
-#: lms/templates/courseware/courseware.html:170
+#: lms/templates/courseware/courseware.html:175
 msgid "Return to Exam"
 msgstr "試験に戻る"
 
-#: lms/templates/courseware/courseware.html:192
+#: lms/templates/courseware/courseware.html:197
 msgid "Course Navigation"
 msgstr "講座メニュー"
 
-#: lms/templates/courseware/courseware.html:220
+#: lms/templates/courseware/courseware.html:225
 msgid "Open Calculator"
 msgstr "計算機を開く"
 
-#: lms/templates/courseware/courseware.html:224
+#: lms/templates/courseware/courseware.html:229
 msgid "Calculator Input Field"
 msgstr "計算機の入力枠"
 
-#: lms/templates/courseware/courseware.html:227
+#: lms/templates/courseware/courseware.html:232
 msgid ""
 "Use the arrow keys to navigate the tips or use the tab key to return to the "
 "calculator"
 msgstr "このヒントを誘導するために矢印キーを使う、もしくは、計算機に戻るためにタブキーを使ってください。"
 
-#: lms/templates/courseware/courseware.html:228
+#: lms/templates/courseware/courseware.html:233
 msgid "Hints"
 msgstr "ヒント"
 
-#: lms/templates/courseware/courseware.html:230
+#: lms/templates/courseware/courseware.html:235
 msgid "Integers"
 msgstr "整数"
 
-#: lms/templates/courseware/courseware.html:231
+#: lms/templates/courseware/courseware.html:236
 msgid "Decimals"
 msgstr "少数"
 
-#: lms/templates/courseware/courseware.html:232
+#: lms/templates/courseware/courseware.html:237
 msgid "Scientific notation"
 msgstr "科学的メモ"
 
-#: lms/templates/courseware/courseware.html:233
+#: lms/templates/courseware/courseware.html:238
 msgid "Appending SI postfixes"
 msgstr "SI postfixesに追加中"
 
-#: lms/templates/courseware/courseware.html:234
+#: lms/templates/courseware/courseware.html:239
 msgid "Supported SI postfixes"
 msgstr "支援されたSI postfixes"
 
-#: lms/templates/courseware/courseware.html:290
+#: lms/templates/courseware/courseware.html:295
 msgid "Operators"
 msgstr "操作者"
 
-#: lms/templates/courseware/courseware.html:290
+#: lms/templates/courseware/courseware.html:295
 msgid "parallel resistors function"
 msgstr "並列抵抗関数"
 
-#: lms/templates/courseware/courseware.html:291
+#: lms/templates/courseware/courseware.html:296
 msgid "Functions"
 msgstr "関数"
 
-#: lms/templates/courseware/courseware.html:292
+#: lms/templates/courseware/courseware.html:297
 msgid "Constants"
 msgstr "いつも"
 
-#: lms/templates/courseware/courseware.html:303
+#: lms/templates/courseware/courseware.html:308
 msgid "Euler's number"
 msgstr "オイラー数"
 
-#: lms/templates/courseware/courseware.html:308
+#: lms/templates/courseware/courseware.html:313
 msgid "ratio of a circle's circumference to it's diameter"
 msgstr "その円の直径の円周率"
 
-#: lms/templates/courseware/courseware.html:313
+#: lms/templates/courseware/courseware.html:318
 msgid "Boltzmann constant"
 msgstr "ボツルマン定数"
 
-#: lms/templates/courseware/courseware.html:318
+#: lms/templates/courseware/courseware.html:323
 msgid "speed of light"
 msgstr "光速"
 
-#: lms/templates/courseware/courseware.html:323
+#: lms/templates/courseware/courseware.html:328
 msgid "freezing point of water in degrees Kelvin"
 msgstr "絶対温度における氷点"
 
-#: lms/templates/courseware/courseware.html:328
+#: lms/templates/courseware/courseware.html:333
 msgid "fundamental charge"
 msgstr "基本的充電"
 
-#: lms/templates/courseware/courseware.html:336
+#: lms/templates/courseware/courseware.html:341
 msgid "Calculate"
 msgstr "計算"
 
-#: lms/templates/courseware/courseware.html:337
+#: lms/templates/courseware/courseware.html:342
 msgid "Calculator Output Field"
 msgstr "計算機の出力枠"
 
@@ -2704,12 +2716,6 @@ msgstr "グラフを読み込み中。クラスのサイズによっては数分
 msgid "Count of Students that Opened a Subsection"
 msgstr "節を開いた受講者の数"
 
-#: lms/templates/courseware/instructor_dashboard.html:698
-#: lms/templates/courseware/instructor_dashboard.html:705
-#: lms/templates/instructor/instructor_dashboard_2/metrics.html:39
-msgid "Loading..."
-msgstr "読み込み中..."
-
 #: lms/templates/courseware/instructor_dashboard.html:701
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html:25
 msgid "Grade Distribution per Problem"
@@ -2859,7 +2865,7 @@ msgstr "シラバス"
 msgid ""
 "You were most recently in {section_link}.  If you're done with that, choose "
 "another section on the left."
-msgstr "前回は{section_link}にアクセスしました。別のものを学習する場合には、該当の項目を左側のメニューからお選びください。"
+msgstr "前回は{section_link}にアクセスしました。別のものを学習する場合には、該当の項目をメニュー（単元リスト）からお選びください。"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html:28
 msgid ""
@@ -3286,8 +3292,8 @@ msgid "View as {name}"
 msgstr "{name}と見る"
 
 #: lms/templates/discussion/_underscore_templates.html:12
-#: lms/templates/discussion/mustache/_inline_thread.mustache:9
-#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:10
+#: lms/templates/discussion/mustache/_inline_thread.mustache:11
+#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:12
 msgid "Add A Response"
 msgstr "返信を追加"
 
@@ -3298,8 +3304,8 @@ msgid "This thread is closed."
 msgstr "このスレッドは閉鎖されました。"
 
 #: lms/templates/discussion/_underscore_templates.html:22
-#: lms/templates/discussion/mustache/_inline_thread.mustache:16
-#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:17
+#: lms/templates/discussion/mustache/_inline_thread.mustache:17
+#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:18
 msgid "Post a response:"
 msgstr "返信を投稿："
 
@@ -3504,18 +3510,13 @@ msgstr "ユーザプロフィール"
 msgid "Active Threads"
 msgstr "活動的なスレッド"
 
-#: lms/templates/discussion/mustache/_inline_thread.mustache:13
-#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:14
-msgid "Loading content"
-msgstr "コンテンツ読み込み中"
-
-#: lms/templates/discussion/mustache/_inline_thread.mustache:26
-#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:27
+#: lms/templates/discussion/mustache/_inline_thread.mustache:28
+#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:29
 msgid "Expand discussion"
 msgstr "ディスカッションを展開する"
 
-#: lms/templates/discussion/mustache/_inline_thread.mustache:27
-#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:28
+#: lms/templates/discussion/mustache/_inline_thread.mustache:29
+#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:30
 msgid "Collapse discussion"
 msgstr "ディスカッションをたたむ"
 
@@ -4457,7 +4458,7 @@ msgstr "レポート管理"
 
 #: lms/templates/open_ended_problems/combined_notifications.html:22
 msgid "Here are items that could potentially need your attention."
-msgstr "注目が必要かもしれない内容を表示します。"
+msgstr "レポートに関する情報はこちらに表示されます。"
 
 #: lms/templates/open_ended_problems/combined_notifications.html:26
 msgid "No items require attention at the moment."
