@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-04-08 14:04-0400\n"
-"PO-Revision-Date: 2014-04-10 02:30+0000\n"
-"Last-Translator: わたカフェの店長\n"
+"POT-Creation-Date: 2014-04-10 16:17-0400\n"
+"PO-Revision-Date: 2014-04-12 07:50+0000\n"
+"Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -105,7 +105,7 @@ msgstr "大学院卒（修士課程修了）"
 
 #: common/djangoapps/student/models.py:216
 msgid "Bachelor's degree"
-msgstr "4年制大学卒"
+msgstr "4年制および6年制大学卒"
 
 #: common/djangoapps/student/models.py:217
 msgid "Associate's degree"
@@ -171,7 +171,7 @@ msgstr "ログイン試行に失敗し過ぎました、しばらく経った後
 
 #: common/djangoapps/student/views.py:772
 msgid "Email or password is incorrect."
-msgstr "メールアドレスもしくはパスワードが間違っています。"
+msgstr "メールアドレス、もしくはパスワードが間違っています。"
 
 #: common/djangoapps/student/views.py:829
 msgid ""
@@ -928,69 +928,73 @@ msgstr "提出"
 msgid "Final Check"
 msgstr "最終確認"
 
-#: common/lib/xmodule/xmodule/capa_base.py:512
+#: common/lib/xmodule/xmodule/capa_base.py:409
+msgid "Checking..."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/capa_base.py:530
 msgid "Warning: The problem has been reset to its initial state!"
 msgstr "警告: 問題は初期状態に戻りました！"
 
 #. Translators: Following this message, there will be a bulleted list of
 #. items.
-#: common/lib/xmodule/xmodule/capa_base.py:516
+#: common/lib/xmodule/xmodule/capa_base.py:534
 msgid ""
 "The problem's state was corrupted by an invalid submission. The submission "
 "consisted of:"
 msgstr "問題のステータスは無効な投稿によって破損しました。投稿内容："
 
-#: common/lib/xmodule/xmodule/capa_base.py:523
+#: common/lib/xmodule/xmodule/capa_base.py:541
 msgid "If this error persists, please contact the course staff."
 msgstr "このエラーが解決しない場合は、コーススタッフに問い合わせください。"
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
-#: common/lib/xmodule/xmodule/capa_base.py:889
-#: common/lib/xmodule/xmodule/capa_base.py:1174
-#: common/lib/xmodule/xmodule/capa_base.py:1223
+#: common/lib/xmodule/xmodule/capa_base.py:911
+#: common/lib/xmodule/xmodule/capa_base.py:1196
+#: common/lib/xmodule/xmodule/capa_base.py:1245
 msgid "Problem is closed."
 msgstr "問題はの期間は終了しました。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:897
+#: common/lib/xmodule/xmodule/capa_base.py:919
 msgid "Problem must be reset before it can be checked again."
 msgstr "問題は再度チェックされる前にリセットしなければいけません。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:905
+#: common/lib/xmodule/xmodule/capa_base.py:927
 #, python-brace-format
 msgid "You must wait at least {wait} seconds between submissions."
 msgstr " {wait} 秒以上あけて投稿してください。"
 
 #. Translators: {msg} will be replaced with a problem's error message.
-#: common/lib/xmodule/xmodule/capa_base.py:932
+#: common/lib/xmodule/xmodule/capa_base.py:954
 #, python-brace-format
 msgid "Error: {msg}"
 msgstr "エラー：{msg}"
 
 #. Translators: 'rescoring' refers to the act of re-submitting a student's
 #. solution so it can get a new score.
-#: common/lib/xmodule/xmodule/capa_base.py:1094
+#: common/lib/xmodule/xmodule/capa_base.py:1116
 msgid "Problem's definition does not support rescoring."
 msgstr "問題は再採点するように定義されていません。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1099
+#: common/lib/xmodule/xmodule/capa_base.py:1121
 msgid "Problem must be answered before it can be graded again."
 msgstr "問題は再評価される前に回答する必要があります。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1184
+#: common/lib/xmodule/xmodule/capa_base.py:1206
 msgid "Problem needs to be reset prior to save."
 msgstr "問題を保存するためにはリセットする必要があります。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1192
+#: common/lib/xmodule/xmodule/capa_base.py:1214
 msgid "Your answers have been saved."
 msgstr "回答は保存されました。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1194
+#: common/lib/xmodule/xmodule/capa_base.py:1216
 msgid ""
 "Your answers have been saved but not graded. Click 'Check' to grade them."
 msgstr "回答は保存されましたが、評価されていません。'チェック'をクリックして評価してください。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1231
+#: common/lib/xmodule/xmodule/capa_base.py:1253
 msgid "Refresh the page and make an attempt before resetting."
 msgstr "リセットをする前にページをリフレッシュしてください。"
 
@@ -1016,6 +1020,20 @@ msgstr "一般"
 msgid "TBD"
 msgstr "未定"
 
+#: common/lib/xmodule/xmodule/lti_module.py:229
+#, python-brace-format
+msgid ""
+"Could not parse custom parameter: {custom_parameter}. Should be \"x=y\" "
+"string."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/lti_module.py:661
+#, python-brace-format
+msgid ""
+"Could not parse LTI passport: {lti_passport}. Should be \"id:key:secret\" "
+"string."
+msgstr ""
+
 #. Translators: 'Courseware' refers to the tab in the courseware that leads to
 #. the content of a course
 #: common/lib/xmodule/xmodule/tabs.py:276
@@ -1036,7 +1054,7 @@ msgstr "成績"
 
 #. Translators: "Wiki" is the name of the course's wiki page
 #: common/lib/xmodule/xmodule/tabs.py:336
-#: lms/djangoapps/course_wiki/views.py:129 lms/templates/wiki/base.html:4
+#: lms/djangoapps/course_wiki/views.py:132 lms/templates/wiki/base.html:4
 msgid "Wiki"
 msgstr "Wiki"
 
@@ -1068,7 +1086,7 @@ msgstr "相互採点"
 #. syllabus of the course.
 #: common/lib/xmodule/xmodule/tabs.py:651
 msgid "Syllabus"
-msgstr "授業計画"
+msgstr "シラバス"
 
 #. Translators: 'Instructor' appears on the tab that leads to the instructor
 #. dashboard, which is
@@ -1360,20 +1378,20 @@ msgstr "{problem_info_x} {problem_info_n} - {count_grade} {students} ({percent:.
 
 #. Translators: this string includes wiki markup.  Leave the ** and the _
 #. alone.
-#: lms/djangoapps/course_wiki/views.py:86
+#: lms/djangoapps/course_wiki/views.py:89
 #, python-brace-format
 msgid "This is the wiki for **{organization}**'s _{course_name}_."
 msgstr "これは **{organization}**の _{course_name}_Wikiです"
 
-#: lms/djangoapps/course_wiki/views.py:96
+#: lms/djangoapps/course_wiki/views.py:99
 msgid "Course page automatically created."
 msgstr "講座ページは自動的に生成されました。"
 
-#: lms/djangoapps/course_wiki/views.py:124
+#: lms/djangoapps/course_wiki/views.py:127
 msgid "Welcome to the edX Wiki"
 msgstr "edX Wikiへようこそ"
 
-#: lms/djangoapps/course_wiki/views.py:126
+#: lms/djangoapps/course_wiki/views.py:129
 msgid "Visit a course wiki to add an article."
 msgstr "記事を追加するには講座 Wikiへ進んでください。"
 
@@ -3214,7 +3232,7 @@ msgstr "Wikiプレビュー"
 #: lms/templates/wiki/history.html:238
 #: lms/templates/wiki/includes/cheatsheet.html:7
 msgid "window open"
-msgstr "ウィンドウを開く"
+msgstr "ウィンドウ開"
 
 #: lms/templates/wiki/edit.html:66
 msgid "Back to editor"

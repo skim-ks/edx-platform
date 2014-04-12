@@ -167,7 +167,7 @@ msgstr "大学院卒（修士課程修了）"
 
 #: common/djangoapps/student/models.py
 msgid "Bachelor's degree"
-msgstr "4年制大学卒"
+msgstr "4年制および6年制大学卒"
 
 #: common/djangoapps/student/models.py
 msgid "Associate's degree"
@@ -234,13 +234,8 @@ msgid "Too many failed login attempts. Try again later."
 msgstr "ログイン試行に失敗し過ぎました、しばらく経った後にお試しください。"
 
 #: common/djangoapps/student/views.py lms/templates/provider_login.html
-#, fuzzy
 msgid "Email or password is incorrect."
-msgstr ""
-"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
-"メールアドレスもしくはパスワードが間違っています。\n"
-"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
-"メールアドレス、または、パスワードが間違っています。"
+msgstr "メールアドレス、もしくはパスワードが間違っています。"
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -966,6 +961,10 @@ msgid "Final Check"
 msgstr "最終確認"
 
 #: common/lib/xmodule/xmodule/capa_base.py
+msgid "Checking..."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/capa_base.py
 msgid "Warning: The problem has been reset to its initial state!"
 msgstr "警告: 問題は初期状態に戻りました！"
 
@@ -1051,6 +1050,18 @@ msgstr "一般"
 msgid "TBD"
 msgstr "未定"
 
+#: common/lib/xmodule/xmodule/lti_module.py
+msgid ""
+"Could not parse custom parameter: {custom_parameter}. Should be \"x=y\" "
+"string."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/lti_module.py
+msgid ""
+"Could not parse LTI passport: {lti_passport}. Should be \"id:key:secret\" "
+"string."
+msgstr ""
+
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Courseware' refers to the tab in the courseware that leads to
 #. the content of a course
@@ -1109,13 +1120,8 @@ msgstr "相互採点"
 #. Translators: "Syllabus" appears on a tab that, when clicked, opens the
 #. syllabus of the course.
 #: common/lib/xmodule/xmodule/tabs.py lms/templates/courseware/syllabus.html
-#, fuzzy
 msgid "Syllabus"
-msgstr ""
-"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
-"授業計画\n"
-"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
-"シラバス"
+msgstr "シラバス"
 
 #. Translators: 'Instructor' appears on the tab that leads to the instructor
 #. dashboard, which is
@@ -3260,7 +3266,7 @@ msgstr "記事を削除する"
 
 #: lms/templates/wiki/delete.html
 #: lms/templates/wiki/plugins/attachments/index.html
-#: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
+#: cms/templates/component.html
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
@@ -3350,9 +3356,9 @@ msgstr "Wikiプレビュー"
 msgid "window open"
 msgstr ""
 "#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
-"ウィンドウを開く\n"
+"ウィンドウ開\n"
 "#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
-"ウィンドウ開"
+"ウィンドウを開く"
 
 #: lms/templates/wiki/edit.html
 msgid "Back to editor"
@@ -3923,6 +3929,13 @@ msgstr "一時保存"
 msgid "Cancel"
 msgstr "キャンセル"
 
+#: cms/templates/container.html
+#: lms/templates/courseware/instructor_dashboard.html
+#: lms/templates/courseware/instructor_dashboard.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+msgid "Loading..."
+msgstr "読み込み中..."
+
 #. Translators: this is a verb describing the action of viewing more details
 #: cms/templates/container_xblock_component.html
 #: lms/templates/wiki/includes/article_menu.html
@@ -4363,7 +4376,8 @@ msgstr "パスワードを確認してください"
 msgid ""
 "We will send a confirmation to both {email} and your new email as part of "
 "the process."
-msgstr "手続きとして {email} と新しいメールアドレスの両方に確認メールを送信します。"
+msgstr ""
+"メールアドレス変更の手続きのため、新しいメールアドレスに確認メールが送信されます。また、メールアドレス変更後に新しいアドレスと旧アドレス（{email}）の両方に通知のメールが送信されます。"
 
 #: lms/templates/dashboard.html
 msgid "Change your name"
@@ -4879,6 +4893,10 @@ msgid ""
 "Please provide launch_url. Click \"Edit\", and fill in the required fields."
 msgstr "launch_urlを入力してください。そして、編集をクリックし、必須項目を入力してください。"
 
+#: lms/templates/lti_form.html
+msgid "Press to Launch"
+msgstr ""
+
 #: lms/templates/manage_user_standing.html
 msgid "Disable or Reenable student accounts"
 msgstr "受講者のアカウントを利用不可、もしくは利用不可の取り消しをする。"
@@ -5045,9 +5063,10 @@ msgstr "ログイン"
 
 #: lms/templates/provider_login.html
 msgid ""
-"Please note that we will be sending your user name, email, and full name to "
-"this third party site."
-msgstr "ユーザー名、メールアドレス、および氏名を第三者の関連サイトに送信しようとしていることにご留意ください。"
+"Your username, email, and full name will be sent to {destination}, where the"
+" collection and use of this information will be governed by their terms of "
+"service and privacy policy."
+msgstr ""
 
 #: lms/templates/provider_login.html
 #, python-format
@@ -6482,12 +6501,6 @@ msgid "Count of Students that Opened a Subsection"
 msgstr "節を開いた受講者の数"
 
 #: lms/templates/courseware/instructor_dashboard.html
-#: lms/templates/courseware/instructor_dashboard.html
-#: lms/templates/instructor/instructor_dashboard_2/metrics.html
-msgid "Loading..."
-msgstr "読み込み中..."
-
-#: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Grade Distribution per Problem"
 msgstr "問題ごとの成績分布"
@@ -6632,7 +6645,7 @@ msgstr "{course.display_number_with_default}のお知らせ"
 msgid ""
 "You were most recently in {section_link}.  If you're done with that, choose "
 "another section on the left."
-msgstr "前回は{section_link}にアクセスしました。別のものを学習する場合には、該当の項目を左側のメニューからお選びください。"
+msgstr "前回は{section_link}にアクセスしました。別のものを学習する場合には、該当の項目をメニュー（単元リスト）からお選びください。"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid ""
@@ -7281,11 +7294,6 @@ msgstr "ユーザプロフィール"
 #: lms/templates/discussion/user_profile.html
 msgid "Active Threads"
 msgstr "活動的なスレッド"
-
-#: lms/templates/discussion/mustache/_inline_thread.mustache
-#: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
-msgid "Loading content"
-msgstr "コンテンツ読み込み中"
 
 #: lms/templates/discussion/mustache/_inline_thread.mustache
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
@@ -8266,7 +8274,7 @@ msgstr "レポート管理"
 
 #: lms/templates/open_ended_problems/combined_notifications.html
 msgid "Here are items that could potentially need your attention."
-msgstr "注目が必要かもしれない内容を表示します。"
+msgstr "レポートに関する情報はこちらに表示されます。"
 
 #: lms/templates/open_ended_problems/combined_notifications.html
 msgid "No items require attention at the moment."
@@ -12952,3 +12960,7 @@ msgstr "フラグされた投稿"
 #: Temporary Show Answer(s) has been deleted
 msgid "Show Answer(s)"
 msgstr "答えを見る"
+
+#: lms/templates/video.html
+msgid "Download timed transcript"
+msgstr "字幕をダウンロード"
