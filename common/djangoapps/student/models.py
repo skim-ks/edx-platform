@@ -1,4 +1,3 @@
-#-*-coding=utf8-*-
 """
 Models for User Information (students, staff, etc)
 
