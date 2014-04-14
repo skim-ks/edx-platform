@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-04-10 16:17-0400\n"
-"PO-Revision-Date: 2014-04-12 07:50+0000\n"
-"Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
+"POT-Creation-Date: 2014-04-12 15:40-0400\n"
+"PO-Revision-Date: 2014-04-14 03:17+0000\n"
+"Last-Translator: わたカフェの店長\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,7 +89,8 @@ msgstr "キャンセル"
 msgid "Edit"
 msgstr "編集"
 
-#: cms/templates/component.html:48
+#: cms/templates/component.html:48 cms/templates/studio_xblock_wrapper.html:33
+#: cms/templates/studio_xblock_wrapper.html:35
 #: lms/templates/discussion/_underscore_templates.html:89
 #: lms/templates/discussion/_underscore_templates.html:147
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache:33
@@ -3131,6 +3132,10 @@ msgstr "新しい投稿"
 msgid "Show Discussion"
 msgstr "ディスカッションを表示"
 
+#: lms/templates/discussion/_discussion_module_studio.html:7
+msgid "To view live discussions, click Preview or View Live in Unit Settings."
+msgstr ""
+
 #: lms/templates/discussion/_filter_dropdown.html:29
 msgid "Filter Topics"
 msgstr "トピックを絞り込む"
@@ -3479,7 +3484,7 @@ msgstr ","
 #, python-format
 msgid "%s discussion started"
 msgid_plural "%s discussions started"
-msgstr[0] "%sにディスカッションが開始"
+msgstr[0] "%s件の新規ディスカッションを投稿"
 
 #: lms/templates/discussion/_user_profile.html:9
 #, python-format
@@ -3508,7 +3513,7 @@ msgstr "ユーザプロフィール"
 
 #: lms/templates/discussion/user_profile.html:36
 msgid "Active Threads"
-msgstr "活動的なスレッド"
+msgstr "活動中のスレッド"
 
 #: lms/templates/discussion/mustache/_inline_thread.mustache:28
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache:29
@@ -3572,12 +3577,16 @@ msgid ""
 "by a member of the course staff."
 msgstr "講座スタッフのメンバーから{site_name}の{course_name}のベータテスターに招待されました。"
 
-#: lms/templates/emails/add_beta_tester_email_message.txt:11
+#: lms/templates/emails/add_beta_tester_email_message.txt:12
 msgid "Visit {course_about_url} to join the course and begin the beta test."
 msgstr "講座に参加しベータテストを行うには {course_about_url} へアクセスしてください。"
 
 #: lms/templates/emails/add_beta_tester_email_message.txt:14
-#: lms/templates/emails/enroll_email_allowedmessage.txt:38
+msgid "Visit {site_name} to enroll in the course and begin the beta test."
+msgstr ""
+
+#: lms/templates/emails/add_beta_tester_email_message.txt:18
+#: lms/templates/emails/enroll_email_allowedmessage.txt:40
 #: lms/templates/emails/remove_beta_tester_email_message.txt:15
 #: lms/templates/emails/unenroll_email_allowedmessage.txt:10
 msgid "This email was automatically sent from {site_name} to {email_address}"
@@ -3632,7 +3641,7 @@ msgstr "{site_name} の {course_name} に参加するように講座スタッフ
 msgid "To access the course visit {course_url} and login."
 msgstr "講座へは {course_url} にアクセスしてログインしてください。"
 
-#: lms/templates/emails/enroll_email_allowedmessage.txt:15
+#: lms/templates/emails/enroll_email_allowedmessage.txt:16
 msgid ""
 "To access the course visit {course_about_url} and register for the course."
 msgstr "講座へは {course_about_url} へアクセスして講座に登録してください。"
@@ -3655,6 +3664,10 @@ msgid ""
 "Once you have registered and activated your account, visit "
 "{course_about_url} to join the course."
 msgstr "アカウントを登録して有効化してから、{course_about_url} にアクセスして講座に参加してください。"
+
+#: lms/templates/emails/enroll_email_allowedmessage.txt:35
+msgid "You can then enroll in {course_name}."
+msgstr ""
 
 #: lms/templates/emails/enroll_email_allowedsubject.txt:3
 msgid "You have been invited to register for {course_name}"
@@ -4104,7 +4117,7 @@ msgid "section_display_name"
 msgstr "セクション表示名"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:33
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:70
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:76
 msgid "Enter email addresses separated by new lines or commas."
 msgstr "メールアドレスを、改行またはカンマ区切りで入力してください。"
 
@@ -4115,7 +4128,7 @@ msgid ""
 msgstr "バウンスするメールアドレスには通知は届きません。表記を再確認してください。"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:35
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:74
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:80
 msgid "Email Addresses"
 msgstr "Eメールアドレス"
 
@@ -4123,86 +4136,90 @@ msgstr "Eメールアドレス"
 msgid "Auto Enroll"
 msgstr "自動受講登録"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:43
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:44
 msgid ""
 "If this option is <em>checked</em>, users who have not yet registered for "
 "{platform_name} will be automatically enrolled."
 msgstr "もし、このオプションが<em>有効</em>の場合、edXに未登録のユーザも自動的に{platform_name}に履修登録されます。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:44
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:45
 msgid ""
 "If this option is left <em>unchecked</em>, users who have not yet registered"
 " for {platform_name} will not be enrolled, but will be allowed to enroll "
 "once they make an account."
 msgstr "もし、オプションが<em>無効</em>のままである場合、{platform_name} に未登録の生徒は履修登録されませんが、アカウントを作成してからは履修登録が可能となります。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:50
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:79
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:47
+msgid "Checking this box has no effect if 'Unenroll' is selected."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:54
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:85
 msgid "Notify users by email"
 msgstr "メールでユーザーに知らせる"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:53
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:82
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:58
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:88
 msgid ""
 "If this option is <em>checked</em>, users will receive an email "
 "notification."
 msgstr "もし、このオプションが<em>有効</em>の場合、ユーザーはメール通知を受け取ります。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:58
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:64
 msgid "Enroll"
 msgstr "受講"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:59
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:65
 msgid "Unenroll"
 msgstr "受講取消し"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:67
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:73
 msgid "Batch Beta Testers"
 msgstr "ベータテスターをバッチする"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:71
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:77
 msgid ""
 "Note: Users must have an activated {platform_name} account before they can "
 "be enrolled as a beta tester."
 msgstr "注意：ベータテスターにする前に、ユーザは{platform_name}に有効化されたアカウントが必要です。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:87
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:93
 msgid "Add beta testers"
 msgstr "ベータテスターを追加する"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:88
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:94
 msgid "Remove beta testers"
 msgstr "ベータテスターを削除する"
 
 #. Translators: an "Administration List" is a list, such as Course Staff, that
 #. users can be added to.
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:99
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:105
 msgid "Administration List Management"
 msgstr "管理者リストの管理"
 
 #. Translators: an "Administrator Group" is a group, such as Course Staff,
 #. that
 #. users can be added to.
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:105
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:111
 msgid "Select an Administrator Group:"
 msgstr "管理者グループを選択："
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:107
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:113
 msgid "Getting available lists..."
 msgstr "有効なリストを取得しています・・・"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:115
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:121
 msgid ""
 "Staff cannot modify staff or beta tester lists. To modify these lists, "
 "contact your instructor and ask them to add you as an instructor for staff "
 "and beta lists, or a discussion admin for discussion management."
 msgstr "スタッフ権限では、スタッフもしくはベータテスターの一覧を変更できません。このリストを変更するには、講師にコンタクトを取り、あなたを講師権限として登録するよう依頼し、その上でスタッフとベータテスターのリストを追加しましょう。また、フォーラム管理者とフォーラム管理メンバーの関係においても同様です。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:124
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:130
 msgid "Course Staff"
 msgstr "講座スタッフ"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:126
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:132
 msgid ""
 "Course staff can help you manage limited aspects of your course. Staff can "
 "enroll and unenroll students, as well as modify their grades and see all "
@@ -4210,58 +4227,58 @@ msgid ""
 "will not be able to edit your course."
 msgstr "講座スタッフは講座の一部の管理業務を支援することができます。スタッフは学習者の受講登録および受講取消しができ、また同様に受講者の成績を調整し、全ての講座データを見ることができます。講座スタッフは自動的にStudioへのアクセス権が付与されるものではなく、講座制作ができるようになるものでもありません。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:132
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:138
 msgid "Add Staff"
 msgstr "スタッフを追加する"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:137
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:143
 msgid "Instructors"
 msgstr "講師"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:139
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:145
 msgid ""
 "Instructors are the core administration of your course. Instructors can add "
 "and remove course staff, as well as administer discussion access."
 msgstr "講師（権限）はコースのコアな管理権限です。講師はコーススタッフを追加したり、削除したり、またフォーラムについての管理者権限アクセスが可能です。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:143
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:149
 msgid "Add Instructor"
 msgstr "講師を追加する"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:148
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:154
 msgid "Beta Testers"
 msgstr "ベータテスター"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:150
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:156
 msgid ""
 "Beta testers can see course content before the rest of the students. They "
 "can make sure that the content works, but have no additional privileges."
 msgstr "ベータテスターは、ベータテスターではない一般の学習者よりも先に講座コンテンツを閲覧することができます。ベータテスターはコンテンツの動作を確認することができるが、それ以上の特権は有さないものです。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:155
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:161
 msgid "Add Beta Tester"
 msgstr "ベータテスターを追加"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:160
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:166
 msgid "Discussion Admins"
 msgstr "ディスカッション管理者"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:162
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:168
 msgid ""
 "Discussion admins can edit or delete any post, clear misuse flags, close and"
 " re-open threads, endorse responses, and see posts from all cohorts. They "
 "CAN add/delete other moderators and their posts are marked as 'staff'."
 msgstr "ディスカッション管理者は全ての投稿を編集、削除でき、スタッフに通報フラグを削除できます。また、スレッドを再開封、返信を下書き、そして、全ての群からの投稿を見ることができます。また管理者は調整役を追加/削除でき、同権限による投稿は「スタッフ」とマークされます。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:167
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:173
 msgid "Add Discussion Admin"
 msgstr "ディスカッション管理者を追加"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:174
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:180
 msgid "Discussion Moderators"
 msgstr "ディスカッションモデレーター"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:176
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:182
 msgid ""
 "Discussion moderators can edit or delete any post, clear misuse flags, close"
 " and re-open threads, endorse responses, and see posts from all cohorts. "
@@ -4269,15 +4286,15 @@ msgid ""
 "'staff'."
 msgstr "ディスカッション調整役は全ての投稿を編集、削除でき、スタッフに通報フラグを削除できます。また、スレッドを再開封、返信を下書き、そして、全ての群からの投稿を見ることができます。調整役は調整役を追加/削除できません、また同権限による投稿は「スタッフ」とマークされます。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:181
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:187
 msgid "Add Moderator"
 msgstr "モデレーターを追加する"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:186
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:192
 msgid "Discussion Community TAs"
 msgstr "ディスカッションコミュニティTA"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:188
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:194
 msgid ""
 "Community TA's are members of the community whom you deem particularly "
 "helpful on the discussion boards. They can edit or delete any post, clear "
@@ -4285,7 +4302,7 @@ msgid ""
 "from all cohorts. Their posts are marked 'Community TA'."
 msgstr "コミュニティTAはディスカッションにおいて特に役立つと見立てられるメンバーのことです。コミュニティTAは全ての投稿を編集、削除でき、スタッフに通報フラグを削除できます。また、スレッドを再開封、返信を下書き、そして、全ての群からの投稿を見ることができます。コミュニティTAの投稿は「コミュニティTA」とマークされます。"
 
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:194
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:200
 msgid "Add Community TA"
 msgstr "コミュニティTAを追加"
 
