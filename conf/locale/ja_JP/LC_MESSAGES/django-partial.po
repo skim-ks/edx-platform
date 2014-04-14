@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-04-10 16:17-0400\n"
-"PO-Revision-Date: 2014-04-12 07:50+0000\n"
-"Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
+"POT-Creation-Date: 2014-04-12 15:40-0400\n"
+"PO-Revision-Date: 2014-04-14 03:00+0000\n"
+"Last-Translator: わたカフェの店長\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -958,7 +958,7 @@ msgstr "問題はの期間は終了しました。"
 
 #: common/lib/xmodule/xmodule/capa_base.py:919
 msgid "Problem must be reset before it can be checked again."
-msgstr "問題は再度チェックされる前にリセットしなければいけません。"
+msgstr "問題は再度提出される前にリセットしなければいけません。"
 
 #: common/lib/xmodule/xmodule/capa_base.py:927
 #, python-brace-format
@@ -992,7 +992,7 @@ msgstr "回答は保存されました。"
 #: common/lib/xmodule/xmodule/capa_base.py:1216
 msgid ""
 "Your answers have been saved but not graded. Click 'Check' to grade them."
-msgstr "回答は保存されましたが、評価されていません。'チェック'をクリックして評価してください。"
+msgstr "回答は保存されましたが、評価されていません。'提出'をクリックして評価してください。"
 
 #: common/lib/xmodule/xmodule/capa_base.py:1253
 msgid "Refresh the page and make an attempt before resetting."
@@ -1320,7 +1320,7 @@ msgstr "SubRip字幕ファイルの解析に問題があります。"
 msgid "{exception_message}: Can't find uploaded transcripts: {user_filename}"
 msgstr "{exception_message}：アップロードされた字幕が見つかりません： {user_filename}"
 
-#: common/lib/xmodule/xmodule/video_module/video_module.py:351
+#: common/lib/xmodule/xmodule/video_module/video_module.py:352
 msgid "A YouTube URL or a link to a file hosted anywhere on the web."
 msgstr "YouTubeのURL、もしくは、ウェブ上のどこかでホスティングされているファイルへのリンク"
 
@@ -1405,7 +1405,7 @@ msgstr "ユーザー {username} は存在しません。"
 msgid "User {username} has never accessed problem {location}"
 msgstr "ユーザー {username} は問題 {location} をアクセスしたことがありません。 "
 
-#: lms/djangoapps/courseware/features/video.py:435
+#: lms/djangoapps/courseware/features/video.py:433
 msgid "ERROR: No playable video sources found!"
 msgstr "エラー：動画が見つかりません"
 
@@ -2136,22 +2136,22 @@ msgstr "氏名"
 msgid "edX email"
 msgstr "edX email"
 
-#: lms/djangoapps/instructor/views/legacy.py:1450
+#: lms/djangoapps/instructor/views/legacy.py:1466
 msgid "Enrollment of students"
 msgstr "受講者の履修"
 
-#: lms/djangoapps/instructor/views/legacy.py:1526
+#: lms/djangoapps/instructor/views/legacy.py:1542
 msgid "Un-enrollment of students"
 msgstr "受講者の履修解除"
 
-#: lms/djangoapps/instructor/views/legacy.py:1732
+#: lms/djangoapps/instructor/views/legacy.py:1748
 #, python-brace-format
 msgid ""
 "Failed to find any background tasks for course \"{course}\", module "
 "\"{problem}\" and student \"{student}\"."
 msgstr "講座\"{course}\"、モジュール\"{problem}\"、受講者\"{student}\"のバックグラウンドタスクを見つけることができません。"
 
-#: lms/djangoapps/instructor/views/legacy.py:1735
+#: lms/djangoapps/instructor/views/legacy.py:1751
 #, python-brace-format
 msgid ""
 "Failed to find any background tasks for course \"{course}\" and module "

@@ -990,7 +990,7 @@ msgstr "問題はの期間は終了しました。"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem must be reset before it can be checked again."
-msgstr "問題は再度チェックされる前にリセットしなければいけません。"
+msgstr "問題は再度提出される前にリセットしなければいけません。"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "You must wait at least {wait} seconds between submissions."
@@ -1022,7 +1022,7 @@ msgstr "回答は保存されました。"
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
 "Your answers have been saved but not graded. Click 'Check' to grade them."
-msgstr "回答は保存されましたが、評価されていません。'チェック'をクリックして評価してください。"
+msgstr "回答は保存されましたが、評価されていません。'提出'をクリックして評価してください。"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Refresh the page and make an attempt before resetting."
@@ -3266,7 +3266,8 @@ msgstr "記事を削除する"
 
 #: lms/templates/wiki/delete.html
 #: lms/templates/wiki/plugins/attachments/index.html
-#: cms/templates/component.html
+#: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
+#: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
@@ -6921,6 +6922,10 @@ msgstr "新しい投稿"
 msgid "Show Discussion"
 msgstr "ディスカッションを表示"
 
+#: lms/templates/discussion/_discussion_module_studio.html
+msgid "To view live discussions, click Preview or View Live in Unit Settings."
+msgstr ""
+
 #: lms/templates/discussion/_filter_dropdown.html
 msgid "Filter Topics"
 msgstr "トピックを絞り込む"
@@ -7264,7 +7269,7 @@ msgstr ","
 #, python-format
 msgid "%s discussion started"
 msgid_plural "%s discussions started"
-msgstr[0] "%sにディスカッションが開始"
+msgstr[0] "%s件の新規ディスカッションを投稿"
 
 #: lms/templates/discussion/_user_profile.html
 #, python-format
@@ -7293,7 +7298,7 @@ msgstr "ユーザプロフィール"
 
 #: lms/templates/discussion/user_profile.html
 msgid "Active Threads"
-msgstr "活動的なスレッド"
+msgstr "活動中のスレッド"
 
 #: lms/templates/discussion/mustache/_inline_thread.mustache
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
@@ -7364,6 +7369,10 @@ msgstr "講座スタッフのメンバーから{site_name}の{course_name}のベ
 #: lms/templates/emails/add_beta_tester_email_message.txt
 msgid "Visit {course_about_url} to join the course and begin the beta test."
 msgstr "講座に参加しベータテストを行うには {course_about_url} へアクセスしてください。"
+
+#: lms/templates/emails/add_beta_tester_email_message.txt
+msgid "Visit {site_name} to enroll in the course and begin the beta test."
+msgstr ""
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 #: lms/templates/emails/enroll_email_allowedmessage.txt
@@ -7452,6 +7461,10 @@ msgid ""
 "Once you have registered and activated your account, visit "
 "{course_about_url} to join the course."
 msgstr "アカウントを登録して有効化してから、{course_about_url} にアクセスして講座に参加してください。"
+
+#: lms/templates/emails/enroll_email_allowedmessage.txt
+msgid "You can then enroll in {course_name}."
+msgstr ""
 
 #: lms/templates/emails/enroll_email_allowedsubject.txt
 msgid "You have been invited to register for {course_name}"
@@ -7940,6 +7953,10 @@ msgid ""
 msgstr ""
 "もし、オプションが<em>無効</em>のままである場合、{platform_name} "
 "に未登録の生徒は履修登録されませんが、アカウントを作成してからは履修登録が可能となります。"
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html
+msgid "Checking this box has no effect if 'Unenroll' is selected."
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -10000,14 +10017,15 @@ msgid "Editor"
 msgstr "エディタ"
 
 #: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
+#: cms/templates/studio_xblock_wrapper.html
 msgid "Duplicate"
 msgstr "複製"
 
-#: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
+#: cms/templates/component.html
 msgid "Duplicate this component"
 msgstr "このコンポーネントを複製"
 
-#: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
+#: cms/templates/component.html
 msgid "Delete this component"
 msgstr "このコンポーネントを削除"
 
@@ -10021,25 +10039,41 @@ msgstr "ドラッグして並び替え"
 msgid "Container"
 msgstr "含まれるもの"
 
-#: cms/templates/container.html cms/templates/studio_vertical_wrapper.html
-msgid "No Actions"
-msgstr "アクションなし"
-
 #: cms/templates/container.html
+msgid "This page has no content yet."
+msgstr ""
+
+#: cms/templates/container.html cms/templates/container.html
 msgid "Publishing Status"
 msgstr "発行ステータス"
 
 #: cms/templates/container.html
-msgid "This content is published with unit {unit_name}."
-msgstr "単元:{unit_name}によりこのコンテンツは発行されています。"
+msgid "Published"
+msgstr ""
 
 #: cms/templates/container.html
 msgid ""
-"You can view course components that contain other components on this page. "
-"In the case of experiment blocks, this allows you to confirm that you have "
-"properly configured your experiment groups."
+"To make changes to the content of this page, you need to edit unit "
+"{unit_link} as a draft."
 msgstr ""
-"このページの他のコンポーネントを含む講座コンポーネントを表示することができます。実験ブロックの場合、実験グループが正しく設定されていることを確認することができます。"
+
+#: cms/templates/container.html
+msgid "Draft"
+msgstr ""
+
+#: cms/templates/container.html
+msgid ""
+"You can edit the content of this page, and your changes will be published "
+"with unit {unit_link}."
+msgstr ""
+
+#: cms/templates/container.html
+msgid ""
+"You can view and edit course components that contain other components on "
+"this page. In the case of experiment blocks, this allows you to confirm that"
+" you have properly configured your experiment groups and make changes to "
+"existing content."
+msgstr ""
 
 #: cms/templates/course_info.html cms/templates/course_info.html
 msgid "Course Updates"
@@ -11776,6 +11810,10 @@ msgstr "宿題、ラボ、クイズ、試験などの割り当てタイプを作
 msgid "Expand or Collapse"
 msgstr "広げるまたはたたむ"
 
+#: cms/templates/studio_vertical_wrapper.html
+msgid "No Actions"
+msgstr "アクションなし"
+
 #: cms/templates/textbooks.html
 msgid "You have unsaved changes. Do you really want to leave this page?"
 msgstr "保存されていない変更があります。このページから移動しますか？"
@@ -12967,12 +13005,12 @@ msgstr "字幕をダウンロード"
 
 #: lms/templates/discussion/_user_profile.html
 msgid "User Role:"
-msgstr "ユーザー種別"
+msgstr "ユーザー種別:"
 
 #: lms/templates/discussion/_user_profile.html
 msgid "Posted Discussion:"
-msgstr "投稿状況"
+msgstr "投稿状況:"
 
 #: lms/templates/discussion/_user_profile.html
 msgid "Posted Comments:"
-msgstr "コメント状況"
+msgstr "コメント状況:"

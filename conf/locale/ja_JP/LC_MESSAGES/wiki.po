@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-02-27 15:43-0500\n"
+"POT-Creation-Date: 2014-04-12 15:41-0400\n"
 "PO-Revision-Date: 2014-02-24 17:06+0000\n"
 "Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
@@ -28,7 +28,7 @@ msgstr "作成された"
 msgid "Only localhost... muahahaha"
 msgstr "ローカルホストのみなのだよ…はっはっは"
 
-#: wiki/forms.py:36 wiki/forms.py:44 wiki/forms.py:201
+#: wiki/forms.py:36 wiki/forms.py:44 wiki/forms.py:205
 msgid "Title"
 msgstr "件名"
 
@@ -47,11 +47,11 @@ msgid ""
 "articles etc..."
 msgstr "こちらはあなたの記事における当初のコンテンツです。作成後、プラグインやメタデータや関連記事を追加したりするなど複数の機能を追加できます。"
 
-#: wiki/forms.py:45 wiki/forms.py:203
+#: wiki/forms.py:45 wiki/forms.py:207
 msgid "Contents"
 msgstr "コンテンツ"
 
-#: wiki/forms.py:48 wiki/forms.py:206
+#: wiki/forms.py:48 wiki/forms.py:210
 msgid "Summary"
 msgstr "まとめ"
 
@@ -60,129 +60,129 @@ msgid ""
 "Give a short reason for your edit, which will be stated in the revision log."
 msgstr "編集するにあたっての理由を記入願います。これは改変ログに蓄積されます。"
 
-#: wiki/forms.py:93
+#: wiki/forms.py:97
 msgid ""
 "While you were editing, someone else changed the revision. Your contents "
 "have been automatically merged with the new contents. Please review the text"
 " below."
 msgstr "編集中に、誰かが改変を行いました。あなたのコンテンツは新しいコンテンツに自動的にマージされました。以下をご確認ください。"
 
-#: wiki/forms.py:95
+#: wiki/forms.py:99
 msgid "No changes made. Nothing to save."
 msgstr "変更はありません。保存するものもありません。"
 
-#: wiki/forms.py:157
+#: wiki/forms.py:161
 msgid "Select an option"
 msgstr "オプションを選択"
 
-#: wiki/forms.py:202
+#: wiki/forms.py:206
 msgid "Slug"
 msgstr "文字列"
 
-#: wiki/forms.py:202
+#: wiki/forms.py:206
 msgid ""
 "This will be the address where your article can be found. Use only "
 "alphanumeric characters and - or _. Note that you cannot change the slug "
 "after creating the article."
 msgstr "これはあなたの記事が見つけられるためのアドレスとなります。英数字とハイフン、アンダースコアのみが利用できます。記事作成後には、この文字列は変更できませんのでご注意ください。"
 
-#: wiki/forms.py:206
+#: wiki/forms.py:210
 msgid "Write a brief message for the article's history log."
 msgstr "記事の改変ログ用のメッセージを記入"
 
-#: wiki/forms.py:212
+#: wiki/forms.py:220
 msgid "A slug may not begin with an underscore."
 msgstr "文字列はアンダースコアから始めることはできません。"
 
-#: wiki/forms.py:221
+#: wiki/forms.py:229
 #, python-format
 msgid "A deleted article with slug \"%s\" already exists."
 msgstr "文字列\"%s\"を用いた削除済の記事が存在します。"
 
-#: wiki/forms.py:223
+#: wiki/forms.py:231
 #, python-format
 msgid "A slug named \"%s\" already exists."
 msgstr "\"%s\"と命名されたものが既に存在します。"
 
-#: wiki/forms.py:236
+#: wiki/forms.py:244
 msgid "Yes, I am sure"
 msgstr "はい、問題ありません"
 
-#: wiki/forms.py:238
+#: wiki/forms.py:246
 msgid "Purge"
 msgstr "抹消"
 
-#: wiki/forms.py:239
+#: wiki/forms.py:247
 msgid ""
 "Purge the article: Completely remove it (and all its contents) with no undo."
 " Purging is a good idea if you want to free the slug such that users can "
 "create new articles in its place."
 msgstr "記事抹消：記事は完全に削除され(その中のコンテンツも含めて)、元に戻すことはできません。その記事にアクセスするための文字列を別の新しい記事で使えるように、文字列を開放したいというのであれば、記事末梢は良い方法となります。"
 
-#: wiki/forms.py:246 wiki/plugins/attachments/forms.py:24
+#: wiki/forms.py:254 wiki/plugins/attachments/forms.py:24
 #: wiki/plugins/images/forms.py:64
 msgid "You are not sure enough!"
 msgstr "確認が不十分です！"
 
-#: wiki/forms.py:248
+#: wiki/forms.py:256
 msgid "While you tried to delete this article, it was modified. TAKE CARE!"
 msgstr "この記事を削除しようとしている間に、改変されております。ご注意を！"
 
-#: wiki/forms.py:254
+#: wiki/forms.py:262
 msgid "Lock article"
 msgstr "記事を保護する"
 
-#: wiki/forms.py:254
+#: wiki/forms.py:262
 msgid "Deny all users access to edit this article."
 msgstr "この記事を編集不可とする"
 
-#: wiki/forms.py:257
+#: wiki/forms.py:265
 msgid "Permissions"
 msgstr "権限"
 
-#: wiki/forms.py:261
+#: wiki/forms.py:269
 msgid "Owner"
 msgstr "作成者"
 
-#: wiki/forms.py:262
+#: wiki/forms.py:270
 msgid "Enter the username of the owner."
 msgstr "作成者のユーザー名を入力"
 
-#: wiki/forms.py:263
+#: wiki/forms.py:271
 msgid "(none)"
 msgstr "(なし)"
 
-#: wiki/forms.py:268
+#: wiki/forms.py:276
 msgid "Inherit permissions"
 msgstr "権限を継承"
 
-#: wiki/forms.py:268
+#: wiki/forms.py:276
 msgid ""
 "Check here to apply the above permissions recursively to articles under this"
 " one."
 msgstr "この記事配下の記事において上記の権限を再帰的に適用するかを、こちらでご確認ください。"
 
-#: wiki/forms.py:273
+#: wiki/forms.py:281
 msgid "Permission settings for the article were updated."
 msgstr "この記事についての権限設定が更新されました。"
 
-#: wiki/forms.py:275
+#: wiki/forms.py:283
 msgid "Your permission settings were unchanged, so nothing saved."
 msgstr "あなたの権限設定は変更されていません、そのため保存もされていません。"
 
-#: wiki/forms.py:314
+#: wiki/forms.py:322
 msgid "No user with that username"
 msgstr "そのようなユーザーはおりません。"
 
-#: wiki/forms.py:336
+#: wiki/forms.py:344
 msgid "Article locked for editing"
 msgstr "編集中のため記事は保護中"
 
-#: wiki/forms.py:343
+#: wiki/forms.py:351
 msgid "Article unlocked for editing"
 msgstr "記事を編集するため保護解除"
 
-#: wiki/forms.py:356
+#: wiki/forms.py:364
 msgid "Filter..."
 msgstr "フィルタ…"
 
