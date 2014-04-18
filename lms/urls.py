@@ -71,6 +71,9 @@ urlpatterns = ('',  # nopep8
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
     url(r'^embargo$', 'student.views.embargo', name="embargo"),
+
+    url(r'^survey_init$', 'survey.views.survey_init', name="survey_init"),
+    url(r'^survey_ajax$', 'survey.views.survey_ajax', name="survey_ajax"),
 )
 
 # if settings.FEATURES.get("MULTIPLE_ENROLLMENT_ROLES"):
