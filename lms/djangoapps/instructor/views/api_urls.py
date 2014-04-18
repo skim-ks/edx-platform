@@ -51,4 +51,7 @@ urlpatterns = patterns('',  # nopep8
         'instructor.views.api.list_grade_downloads', name="list_grade_downloads"),
     url(r'calculate_grades_csv$',
         'instructor.views.api.calculate_grades_csv', name="calculate_grades_csv"),
+
+    url(r'^get_survey$',
+        'instructor.views.api.get_survey', name="get_survey"),
 )

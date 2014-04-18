@@ -54,6 +54,7 @@ def instructor_dashboard_2(request, course_id):
         _section_student_admin(course_id, access),
         _section_data_download(course_id, access),
         _section_analytics(course_id, access),
+        _section_survey(course_id, access),
     ]
 
     if (settings.FEATURES.get('INDIVIDUAL_DUE_DATES') and access['instructor']):
@@ -226,5 +227,16 @@ def _section_analytics(course_id, access):
         'access': access,
         'get_distribution_url': reverse('get_distribution', kwargs={'course_id': course_id}),
         'proxy_legacy_analytics_url': reverse('proxy_legacy_analytics', kwargs={'course_id': course_id}),
+    }
+    return section_data
+
+
+def _section_survey(course_id, access):
+    """ Provide data for the corresponding survey section """
+    section_data = {
+        'section_key': 'survey',
+        'section_display_name': _('Survey'),
+        'access': access,
+        'get_survey_url': reverse('get_survey', kwargs={'course_id': course_id}),
     }
     return section_data
