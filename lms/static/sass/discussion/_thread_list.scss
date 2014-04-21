@@ -110,19 +110,32 @@
       cursor: pointer;
       border-radius: 0 3px 0 0;
 
-      .post-search .post-search-field {
-        cursor: text;
-        pointer-events: auto;
-	margin: 0px;
-	padding: 0 0 0 25px;
-        //border-radius: 30px;
-        background: url(/static/images/search-icon.png) no-repeat 7px center #fff;
-      	cursor: pointer;
+      .post-search{
+        position: relative;
 
-        &::-webkit-input-placeholder,
-        &:-moz-placeholder,
-        &:-ms-input-placeholder {
-          opacity: 1.0;
+        .post-search-field {
+          cursor: text;
+          pointer-events: auto;
+   	  margin: 0px;
+	  padding: 0 0 0 25px;
+          //border-radius: 30px;
+          background: url(/static/images/search-icon.png) no-repeat 7px center #fff;
+      	  cursor: pointer;
+
+          &::-webkit-input-placeholder,
+          &:-moz-placeholder,
+          &:-ms-input-placeholder {
+            opacity: 1.0;
+          }
+        }
+        .clearButton{
+	  position: absolute;
+	  cursor: pointer;
+	  width: 45px;
+	  height: 45px;
+	  top: -5px;
+	  right: -15px;
+          background: url(/static/images/clear-form-icon.png) no-repeat 7px center;
         }
       }
   }
