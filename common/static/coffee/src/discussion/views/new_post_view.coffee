@@ -175,7 +175,7 @@ if Backbone?
                   # TODO: Move this out of the callback, this makes it feel sluggish
                   thread = new Thread response['content']
                   DiscussionUtil.clearFormErrors(@$(".new-post-form-errors"))
-                  @$el.hide()
+                  ##@$el.hide()
                   ## close new post modal
                   $('#discussion_new_post_modal').foundation('reveal', 'close');
                   @$(".new-post-title").val("").attr("prev-text", "")
