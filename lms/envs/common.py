@@ -1168,6 +1168,9 @@ INSTALLED_APPS = (
     'reverification',
 
     'embargo',
+
+    # Entrance/Exit Survey
+    'survey',
 )
 
 ######################### MARKETING SITE ###############################
