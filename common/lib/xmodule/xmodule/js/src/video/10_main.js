@@ -88,10 +88,10 @@ function (
         state.modules = [
             FocusGrabber,
             VideoControl,
-            VideoQualityControl,
-            VideoProgressSlider,
-            VideoVolumeControl,
-            VideoSpeedControl,
+//            VideoQualityControl,
+//            VideoProgressSlider,
+//            VideoVolumeControl,
+//            VideoSpeedControl,
             VideoCaption
         ];
 

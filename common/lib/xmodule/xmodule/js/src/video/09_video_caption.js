@@ -340,9 +340,9 @@ function () {
         this.videoCaption.scrollCaption();
 
         this.videoCaption.setSubtitlesHeight();
-	if($(window).width() <= 640){
+	if(($(window).width() <= 480 && window.devicePixelRatio < 2) ||
+	   ($(window).width() <= 640 && window.devicePixelRatio==2)){
             this.videoCaption.hideCaptions(true);
-
 	}
     }
 
