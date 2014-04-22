@@ -962,7 +962,7 @@ msgstr "最終確認"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Checking..."
-msgstr ""
+msgstr "確認中..."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Warning: The problem has been reset to its initial state!"
@@ -996,10 +996,28 @@ msgstr "問題は再度提出される前にリセットしなければいけま
 msgid "You must wait at least {wait} seconds between submissions."
 msgstr " {wait} 秒以上あけて投稿してください。"
 
+#: common/lib/xmodule/xmodule/capa_base.py
+msgid ""
+"You must wait at least {wait_secs} between submissions. {remaining_secs} "
+"remaining."
+msgstr "最低 {wait_secs}秒投稿の間をあけてください。残り {remaining_secs} 秒"
+
 #. Translators: {msg} will be replaced with a problem's error message.
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Error: {msg}"
 msgstr "エラー：{msg}"
+
+#: common/lib/xmodule/xmodule/capa_base.py
+msgid "{num_hour} hour"
+msgstr "{num_hour} 時間"
+
+#: common/lib/xmodule/xmodule/capa_base.py
+msgid "{num_minute} minute"
+msgstr "{num_minute} 分"
+
+#: common/lib/xmodule/xmodule/capa_base.py
+msgid "{num_second} second"
+msgstr "{num_second} 秒"
 
 #. Translators: 'rescoring' refers to the act of re-submitting a student's
 #. solution so it can get a new score.
@@ -1054,13 +1072,13 @@ msgstr "未定"
 msgid ""
 "Could not parse custom parameter: {custom_parameter}. Should be \"x=y\" "
 "string."
-msgstr ""
+msgstr "カスタムパラメータを解析することができませんでした。\"x=y\" の文字列である必要があります。：{custom_parameter} "
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid ""
 "Could not parse LTI passport: {lti_passport}. Should be \"id:key:secret\" "
 "string."
-msgstr ""
+msgstr "LTIパスポートを解析することができませんでした。\"id:key:secret\"の文字列である必要があります：{lti_passport}"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Courseware' refers to the tab in the courseware that leads to
@@ -1135,13 +1153,13 @@ msgstr "講師"
 #. graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Self"
-msgstr "自己採点"
+msgstr "自己"
 
 #. Translators: "AI" is used to denote an openended response that is machine-
 #. graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "AI"
-msgstr "機械採点"
+msgstr "機械"
 
 #. Translators: "Peer" is used to denote an openended response that is peer-
 #. graded
@@ -1792,10 +1810,14 @@ msgstr "タスクは既に実行中です。"
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/tools.py
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Username"
 msgstr "ユーザー名"
 
 #: lms/djangoapps/instructor/views/api.py lms/templates/help_modal.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/open_ended_problems/open_ended_flagged_problems.html
 msgid "Name"
 msgstr "名前"
@@ -3335,6 +3357,7 @@ msgstr "プレビュー"
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/modal/_modal-settings-language.html
 #: lms/templates/modal/accessible_confirm.html
 msgid "Close"
@@ -4252,6 +4275,10 @@ msgid ""
 " on our {fb_link_start}facebook page{fb_link_end}. Though we may not have a "
 "chance to respond to every email, we take all feedback into consideration."
 msgstr ""
+"もし {platform_name} についての一般的な質問があれば {contact_email} "
+"へメールをください。既にあなたの質問が回答されているかどうかを確認するためには {faq_link_start}FAQページ{faq_link_end}"
+" を御覧ください。また {fb_link_start}facebookページ{fb_link_end} "
+"に参加いただき、議論することもできます。私たちは頂いた全てのメールに返信をすることが難しいかもしれませんが、私たちは頂いた全てのフィードバックを考慮に入れていきます。"
 
 #: lms/templates/contact.html
 msgid "Technical Inquiries and Feedback"
@@ -4267,6 +4294,11 @@ msgid ""
 "as screenshots or other pertinent details. If you find a bug or other "
 "issues, you can reach us at the following: {bugs_email}."
 msgstr ""
+"{platform_name} "
+"のプラットフォームに推奨いただける事項やフィードバックがある、もしくは、プラットフォームにおける一般的な技術的な問題(例：メールアドレスやパスワードでの問題)に直面した場合、"
+" {tech_email} "
+"にご連絡ください。技術的な質問はお使いのFirefoxもしくはChromeが現行バージョンのものかどかを確認いただき、そしてメール文中にブラウザとバージョンを記載してください。また、画面キャプチャや適切な詳細情報も合わせていただけると幸いです。もし、バグやその他の問題を発見したのであれば、"
+" {bugs_email} にご連絡ください。"
 
 #: lms/templates/contact.html
 msgid "Media"
@@ -4896,7 +4928,7 @@ msgstr "launch_urlを入力してください。そして、編集をクリッ�
 
 #: lms/templates/lti_form.html
 msgid "Press to Launch"
-msgstr ""
+msgstr "押して起動"
 
 #: lms/templates/manage_user_standing.html
 msgid "Disable or Reenable student accounts"
@@ -4947,7 +4979,7 @@ msgstr ""
 #: lms/templates/module-error.html
 #: lms/templates/courseware/courseware-error.html
 msgid "There has been an error on the {platform_name} servers"
-msgstr ""
+msgstr "{platform_name}のサーバーにエラーがあります。"
 
 #: lms/templates/module-error.html
 msgid ""
@@ -4955,6 +4987,7 @@ msgid ""
 " fix it as soon as possible. Please email us at {tech_support_email} to "
 "report any problems or downtime."
 msgstr ""
+"申し訳ございません。このモジュールは一時的に利用できません。スタッフができるだけ早く修正すべく働いています。問題やダウンダイムについて{tech_support_email}へメールをお願いします。"
 
 #: lms/templates/module-error.html
 msgid "Raw data:"
@@ -5068,6 +5101,7 @@ msgid ""
 " collection and use of this information will be governed by their terms of "
 "service and privacy policy."
 msgstr ""
+"ユーザー名、メールアドレス、氏名は{destination}に送信されます。情報の収集や利用方法のサービスやプライバシーポリシーの条件は先方のものが適用されます。"
 
 #: lms/templates/provider_login.html
 #, python-format
@@ -5306,7 +5340,7 @@ msgstr "次"
 
 #: lms/templates/signup_modal.html
 msgid "Sign Up for {platform_name}"
-msgstr ""
+msgstr "{platform_name}に登録"
 
 #: lms/templates/signup_modal.html lms/templates/signup_modal.html
 msgid "e.g. yourname@domain.com"
@@ -5384,7 +5418,7 @@ msgstr "タグ"
 
 #: lms/templates/staff_problem_info.html
 msgid "Optional tag (eg \"done\" or \"broken\"):"
-msgstr ""
+msgstr "オプションタグ(例：\"完了\"または\"破損\"):"
 
 #: lms/templates/staff_problem_info.html
 msgid "tag"
@@ -6000,6 +6034,7 @@ msgid ""
 " fix it as soon as possible. Please email us at {tech_support_email}' to "
 "report any problems or downtime."
 msgstr ""
+"申し訳ございません。このモジュールは一時的に利用できません。スタッフができるだけ早く修正すべく働いています。問題やダウンダイムについて{tech_support_email}へメールをお願いします。"
 
 #: lms/templates/courseware/courseware.html
 msgid "{course_number} Courseware"
@@ -6804,6 +6839,14 @@ msgid ""
 msgstr "履修解除してよろしいですか？（認証済み {cert_name_long}発行予定）："
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+msgid ""
+"In order to request a refund for the amount you paid, you will need to send "
+"an email to {billing_email}.  Be sure to include your email and the course "
+"name."
+msgstr ""
+"支払った額の返金を要求するには {billing_email} にメールを送信してください。 メールアドレスと講座名を忘れずに記入ください。"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Email Settings"
 msgstr "メールアドレス設定"
 
@@ -6924,7 +6967,7 @@ msgstr "ディスカッションを表示"
 
 #: lms/templates/discussion/_discussion_module_studio.html
 msgid "To view live discussions, click Preview or View Live in Unit Settings."
-msgstr ""
+msgstr "現在のディスカッションを見るためには、単元設定でプレビューまたはライブ表示をクリックしてください。"
 
 #: lms/templates/discussion/_filter_dropdown.html
 msgid "Filter Topics"
@@ -7372,7 +7415,7 @@ msgstr "講座に参加しベータテストを行うには {course_about_url} �
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 msgid "Visit {site_name} to enroll in the course and begin the beta test."
-msgstr ""
+msgstr "講座にベータテスターとして登録するには{site_name}を訪れてください。"
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 #: lms/templates/emails/enroll_email_allowedmessage.txt
@@ -7464,7 +7507,7 @@ msgstr "アカウントを登録して有効化してから、{course_about_url}
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 msgid "You can then enroll in {course_name}."
-msgstr ""
+msgstr "{course_name}を受講することができます。"
 
 #: lms/templates/emails/enroll_email_allowedsubject.txt
 msgid "You have been invited to register for {course_name}"
@@ -7956,7 +7999,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Checking this box has no effect if 'Unenroll' is selected."
-msgstr ""
+msgstr "\"履修解除\"が選択されているときは、このチェックボックスは何も影響しません。"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -8125,6 +8168,27 @@ msgstr "グラフの再読み込み"
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Count of Students Opened a Subsection"
 msgstr "節を開いた受講者の数"
+
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+msgid "Download Student Opened as a CSV"
+msgstr "CSVで受講者のOpenedをダウンロード"
+
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+msgid "Download Student Grades as a CSV"
+msgstr "CSVで受講者の成績をダウンロード"
+
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+msgid "This is a partial list, to view all students download as a csv."
+msgstr "これはリストの一部です。すべての受講者を見るにはCSVでダウンロードしてください。"
+
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+msgid "Grade"
+msgstr "成績"
+
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+msgid "Percent"
+msgstr "パーセント"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
@@ -8864,7 +8928,7 @@ msgstr "プレスの中"
 
 #: lms/templates/static_templates/server-down.html
 msgid "Currently the {platform_name} servers are down"
-msgstr ""
+msgstr "現在{platform_name}のサーバーはダウンしています"
 
 #: lms/templates/static_templates/server-down.html
 #: lms/templates/static_templates/server-overloaded.html
@@ -8872,10 +8936,11 @@ msgid ""
 "Our staff is currently working to get the site back up as soon as possible. "
 "Please email us at {tech_support_email} to report any problems or downtime."
 msgstr ""
+" スタッフができるだけ早く復旧するように作業しています。問題やダウンダイムについて {tech_support_email} へメールをお願いします。"
 
 #: lms/templates/static_templates/server-error.html
 msgid "There has been a 500 error on the {platform_name} servers"
-msgstr ""
+msgstr "500エラーが{platform_name}のサーバーに発生しています。"
 
 #: lms/templates/static_templates/server-error.html
 msgid ""
@@ -8885,7 +8950,7 @@ msgstr "しばらくしたら、このページをリロードしてください
 
 #: lms/templates/static_templates/server-overloaded.html
 msgid "Currently the {platform_name} servers are overloaded"
-msgstr ""
+msgstr "現在、{platform_name}は高負荷になっています。"
 
 #: lms/templates/university_profile/edge.html
 #: lms/templates/university_profile/edge.html
@@ -9305,7 +9370,7 @@ msgstr "失敗"
 
 #: lms/templates/verify_student/midcourse_reverify_dash.html
 msgid "Don't want to re-verify right now?"
-msgstr ""
+msgstr "今、再認証はお望みではありませんか？"
 
 #: lms/templates/verify_student/midcourse_reverify_dash.html
 msgid "Why do I need to re-verify?"
@@ -10041,7 +10106,7 @@ msgstr "含まれるもの"
 
 #: cms/templates/container.html
 msgid "This page has no content yet."
-msgstr ""
+msgstr "このページにはコンテンツがまだありません。"
 
 #: cms/templates/container.html cms/templates/container.html
 msgid "Publishing Status"
@@ -10049,23 +10114,23 @@ msgstr "発行ステータス"
 
 #: cms/templates/container.html
 msgid "Published"
-msgstr ""
+msgstr "公開済み"
 
 #: cms/templates/container.html
 msgid ""
 "To make changes to the content of this page, you need to edit unit "
 "{unit_link} as a draft."
-msgstr ""
+msgstr "このページのコンテンツを編集するには、単元を下書きで編集{unit_link}する必要があります。"
 
 #: cms/templates/container.html
 msgid "Draft"
-msgstr ""
+msgstr "下書き"
 
 #: cms/templates/container.html
 msgid ""
 "You can edit the content of this page, and your changes will be published "
 "with unit {unit_link}."
-msgstr ""
+msgstr "このページのコンテンツを編集できます。変更は{unit_link}で公開されます。"
 
 #: cms/templates/container.html
 msgid ""
@@ -10074,6 +10139,7 @@ msgid ""
 " you have properly configured your experiment groups and make changes to "
 "existing content."
 msgstr ""
+"このページの他のコンポーネントを含む講座コンポーネントを表示することができます。実験ブロックの場合、実験グループが正しく設定されていることを確認することができ既存のコンテンツの変更ができます。"
 
 #: cms/templates/course_info.html cms/templates/course_info.html
 msgid "Course Updates"
@@ -13014,3 +13080,19 @@ msgstr "投稿状況:"
 #: lms/templates/discussion/_user_profile.html
 msgid "Posted Comments:"
 msgstr "コメント状況:"
+
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
+msgid "Survey"
+msgstr "アンケート"
+
+#: lms/templates/instructor/instructor_dashboard_2/survey.html
+msgid "Survey Download"
+msgstr "アンケート結果ダウンロード"
+
+#: lms/templates/instructor/instructor_dashboard_2/survey.html
+msgid "The survey result can be downloaded as a CSV file."
+msgstr "アンケート結果がCSVファイルでダウンロードできます。"
+
+#: lms/templates/instructor/instructor_dashboard_2/survey.html
+msgid "Get Survey CSV"
+msgstr "アンケート結果をCSVとしてダウンロードする"
