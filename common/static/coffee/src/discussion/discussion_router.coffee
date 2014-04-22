@@ -55,4 +55,5 @@ if Backbone?
       $('.new-post-title').focus()
 
     hideNewPost: (event) =>
-      @newPost.slideUp(300)
+##      @newPost.slideUp(300)
+      $('.close-reveal-modal').trigger('click')
