@@ -4,6 +4,23 @@
     <h2>${display_name}</h2>
 % endif
 
+<style type="text/css">
+@media screen and (max-width: 480px)
+{
+  .video-controls{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2)
+{
+  .video-controls{
+    display: none;
+  }
+}
+</style>
+
+
 <div
     id="video_${id}"
     class="video closed"
@@ -63,7 +80,8 @@
           </section>
           <div class="video-player-post"></div>
 	  
-          <section class="video-controls is-hidden show-for-medium-up" style="background:rgba(0,0,0,0.8); border:none;">
+##          <section class="video-controls is-hidden show-for-medium-up" style="background:rgba(0,0,0,0.8); border:none;">
+          <section class="video-controls is-hidden" style="background:rgba(0,0,0,0.8); border:none;">
               <div class="secondary-controls">
                       <a href="#" class="add-fullscreen" title="${_('Fill browser')}" role="button" aria-disabled="false" style="border:none; width:40px;">${_('Fill browser')}</a>
 
