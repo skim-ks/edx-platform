@@ -1,8 +1,17 @@
 .container .discussion-body {
+  .discussion-column {
+    margin-left : 1rem;
+    @media screen and (max-width:640px) {
+      margin-left : 0;
+    }
+  }
   .discussion-article {
     position: relative;
     min-height: 468px;         
     padding: 30px 30px 10px;
+    @media screen and (max-width:640px) {
+      padding: 30px 10px 10px;
+    }
 
     a {
       word-wrap: break-word;
@@ -48,6 +57,23 @@
 
       &.is-followed {
         background-position: 0 0;
+      }
+    }
+    .discussion-response{
+      .response-local{
+        clear: both;
+      }
+    }
+    .add-response{
+      padding: 0px;
+      clear: both;
+    }
+    .discussion-reply-new {
+      padding: 0;
+
+      h4 {
+        font-size: 16px;
+        font-weight: 700;
       }
     }
   }

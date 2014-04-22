@@ -6,6 +6,7 @@ if Backbone?
       "click .browse-dropdown": "toggleTopicDrop"
       "keydown .post-search-field": "performSearch"
       "focus .post-search-field": "showSearch"
+      "click .clearButton": "clearSearch"
       "click .sort-bar a": "sortThreads"
       "click .drop-menu-parent-category": "toggleAccordion"
       "click .drop-menu-meta-category": "filterTopic"
@@ -131,6 +132,7 @@ if Backbone?
     loadMorePages: (event) ->
       if event
         event.preventDefault()
+        event.stopPropagation()
       @$(".more-pages").html('<div class="loading-animation" tabindex=0><span class="sr" role="alert">' + gettext('Loading more threads') + '</span></div>')
       @$(".more-pages").addClass("loading")
       loadingDiv = @$(".more-pages .loading-animation")
@@ -252,8 +254,8 @@ if Backbone?
     toggleTopicDrop: (event) =>
       event.preventDefault()
       event.stopPropagation()
-      if @current_search != ""
-        @clearSearch()
+##      if @current_search != ""
+##        @clearSearch()
       if event.data && event.data.dst
         if $(event.target).closest(".f-dropdown").length > 0
           return false
@@ -267,7 +269,7 @@ if Backbone?
       if target.hasClass('open')
         target.css({left:'0px'})
 ##        @$(".browse-topic-drop-menu-wrapper").show()
-        $(".browse-topic-drop-search-input").focus()
+##        $(".browse-topic-drop-search-input").focus()
         $("body").bind "click", {dst:target_name}, @toggleTopicDrop
         $("body").bind "keydown", @setActiveItem
       else
@@ -351,7 +353,7 @@ if Backbone?
       @hideTopicDrop($("#browse-topic-filter-dropdown"))
       if @current_search != ""
         @setTopic(event)
-        @clearSearch @filterTopic, event
+##        @clearSearch @filterTopic, event
       else
         @setTopic(event)  # just sets the title for the dropdown
         item = $(event.target).closest('dd')
@@ -473,7 +475,7 @@ if Backbone?
 
     clearSearch: (callback, value) ->
       @$(".post-search-field").val("")
-      @searchFor("", callback, value)
+##      @searchFor("", callback, value)
 
     setActiveItem: (event) ->
       if event.which == 13

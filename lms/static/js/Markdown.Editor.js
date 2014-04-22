@@ -1445,7 +1445,7 @@
             }
 
             buttons.bold = makeButton("wmd-bold-button", gettext("Bold (Ctrl+B)"), "0px", bindCommand("doBold"));
-            buttons.italic = makeButton("wmd-italic-button", gettext("Italic (Ctrl+I)"), "-20px", bindCommand("doItalic"));
+//            buttons.italic = makeButton("wmd-italic-button", gettext("Italic (Ctrl+I)"), "-20px", bindCommand("doItalic"));
             makeSpacer(1);
             buttons.link = makeButton("wmd-link-button", gettext("Hyperlink (Ctrl+L)"), "-40px", bindCommand(function (chunk, postProcessing) {
                 return this.doLinkOrImage(chunk, postProcessing, false);

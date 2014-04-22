@@ -2,7 +2,7 @@
 <script type="text/template" id="thread-list-template">
     <div class="browse-search" style="border-bottom:none;">
       <div class="browse" style="background-color:transparent;">
-	  <a href="#" class="f_button secondary small expand split" style="margin-bottom:0;">
+	  <a href="#" class="f_button secondary small expand split" style="margin-bottom:0; padding-left:0.5rem; padding-right:3rem;">
             <p class="current-board" style="margin-bottom:0; line-height:1rem;">${_("Show All Discussions")}</p>
 	    <span class="browse-dropdown" data-dropdown="browse-topic-filter-dropdown"></span>
           </a>
@@ -16,7 +16,7 @@
     <div class="hide-for-medium-up browse-search">
       <div class="browse" style="background-color:#fff;">
 	<a href="#" class="split f_button secondary expand small">
-	  <p class="current-thread"  style="margin-bottom:0; line-height:1rem;">スレッドリスト</p>
+	  <p class="current-thread"  style="margin-bottom:0; line-height:1rem; margin-left:0.5rem; margin-right:3rem">スレッドリスト</p>
 	  <span class="browse-dropdown" data-dropdown="browse-topic-list"></span>
 	</a>
       </div>
@@ -30,6 +30,7 @@
     <div class="search" style="padding-top:10px; padding-bottom:10px;">
       <form class="post-search">
         <input type="text" id="search-discussions" placeholder="${_("Search all discussions")}" class="post-search-field">
+        <a href="#" class="clearButton" onclick="return false;"></a>
       </form>
     </div>
 
