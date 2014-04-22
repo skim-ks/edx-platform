@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-04-12 15:40-0400\n"
-"PO-Revision-Date: 2014-04-14 03:00+0000\n"
-"Last-Translator: わたカフェの店長\n"
+"POT-Creation-Date: 2014-04-15 11:05-0400\n"
+"PO-Revision-Date: 2014-04-21 13:52+0000\n"
+"Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -351,12 +351,12 @@ msgstr "このメールアドレスのアカウントは既に存在していま
 msgid "Old email is the same as the new email."
 msgstr "旧メールアドレスが新しいメールアドレスと同じです。"
 
-#: common/djangoapps/student/views.py:1672
+#: common/djangoapps/student/views.py:1673
 msgid "Name required"
 msgstr "名前は必須"
 
-#: common/djangoapps/student/views.py:1715
-#: common/djangoapps/student/views.py:1728
+#: common/djangoapps/student/views.py:1716
+#: common/djangoapps/student/views.py:1729
 msgid "Invalid ID"
 msgstr "不正なID"
 
@@ -765,7 +765,7 @@ msgstr "{0} つ以上のユニークな言葉を含む必要があります。"
 msgid "Too similar to a restricted dictionary word."
 msgstr "辞書にある単語に類似すぎています。"
 
-#: common/lib/capa/capa/capa_problem.py:375
+#: common/lib/capa/capa/capa_problem.py:383
 msgid "Cannot rescore problems with possible file submissions"
 msgstr "ファイル送信による問題の再採点はできません。"
 
@@ -822,50 +822,50 @@ msgstr "(ソースコード行が利用できません)"
 msgid "See XML source line {sourcenum}."
 msgstr "XMLソースを確認してください　行番号： {sourcenum}"
 
-#: common/lib/capa/capa/responsetypes.py:877
-#: common/lib/capa/capa/responsetypes.py:909
+#: common/lib/capa/capa/responsetypes.py:1136
+#: common/lib/capa/capa/responsetypes.py:1168
 msgid "There was a problem with the staff answer to this problem."
 msgstr "この問題に対するスタッフの回答に問題があります。"
 
-#: common/lib/capa/capa/responsetypes.py:922
+#: common/lib/capa/capa/responsetypes.py:1181
 #, python-brace-format
 msgid "Could not interpret '{student_answer}' as a number."
 msgstr " '{student_answer}' を数字として受け取ることができません。"
 
-#: common/lib/capa/capa/responsetypes.py:931
+#: common/lib/capa/capa/responsetypes.py:1190
 #, python-brace-format
 msgid "You may not use variables ({bad_variables}) in numerical problems."
 msgstr "入力値 ({bad_variables}) は数的な問題では使用することが出来ません。"
 
-#: common/lib/capa/capa/responsetypes.py:940
+#: common/lib/capa/capa/responsetypes.py:1199
 #, python-brace-format
 msgid "factorial function evaluated outside its domain:'{student_answer}'"
 msgstr "階乗関数が領域外で評価されました：'{student_answer}'"
 
-#: common/lib/capa/capa/responsetypes.py:947
+#: common/lib/capa/capa/responsetypes.py:1206
 #, python-brace-format
 msgid "Invalid math syntax: '{student_answer}'"
 msgstr "数式構文に誤りがあります：'{student_answer}'"
 
-#: common/lib/capa/capa/responsetypes.py:954
+#: common/lib/capa/capa/responsetypes.py:1213
 msgid "You may not use complex numbers in range tolerance problems"
 msgstr "範囲指定の問題では、複素数は使用することが出来ません。"
 
-#: common/lib/capa/capa/responsetypes.py:959
+#: common/lib/capa/capa/responsetypes.py:1218
 msgid ""
 "There was a problem with the staff answer to this problem: complex boundary."
 msgstr "この問題に対してスタッフの回答に問題がありました：複雑な境界"
 
-#: common/lib/capa/capa/responsetypes.py:961
+#: common/lib/capa/capa/responsetypes.py:1220
 msgid ""
 "There was a problem with the staff answer to this problem: empty boundary."
 msgstr "この問題に対してスタッフの回答に問題がありました：空の境界"
 
-#: common/lib/capa/capa/responsetypes.py:1404
+#: common/lib/capa/capa/responsetypes.py:1663
 msgid "CustomResponse: check function returned an invalid dictionary!"
 msgstr "カスタム応答: チェック処理が無効な辞書を応答しました！"
 
-#: common/lib/capa/capa/responsetypes.py:1674
+#: common/lib/capa/capa/responsetypes.py:1933
 #, python-brace-format
 msgid ""
 "Unable to deliver your submission to grader (Reason: {error_msg}). Please "
@@ -877,124 +877,146 @@ msgstr "評価処理にあなたの投稿を送信することが出来ません
 #. problems
 #. are sent to, either to be machine-graded, peer-graded, or instructor-
 #. graded.
-#: common/lib/capa/capa/responsetypes.py:1704
+#: common/lib/capa/capa/responsetypes.py:1963
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py:321
 msgid "Invalid grader reply. Please contact the course staff."
 msgstr "無効な評価処理の応答です。コーススタッフに連絡してください。"
 
-#: common/lib/capa/capa/responsetypes.py:2037
+#: common/lib/capa/capa/responsetypes.py:2296
 #, python-brace-format
 msgid "Invalid input: {bad_input} not permitted in answer."
 msgstr "無効な入力： {bad_input} は回答として許可されていません。"
 
-#: common/lib/capa/capa/responsetypes.py:2052
+#: common/lib/capa/capa/responsetypes.py:2311
 #, python-brace-format
 msgid ""
 "factorial function not permitted in answer for this problem. Provided answer"
 " was: {bad_input}"
 msgstr "階乗関数はこの問題の回答では許可されていません。入力された回答：{bad_input}"
 
-#: common/lib/capa/capa/responsetypes.py:2059
+#: common/lib/capa/capa/responsetypes.py:2318
 #, python-brace-format
 msgid "Invalid input: Could not parse '{bad_input}' as a formula."
 msgstr "無効な入力：'{bad_input}' は式として処理することが出来ません。"
 
-#: common/lib/capa/capa/responsetypes.py:2067
+#: common/lib/capa/capa/responsetypes.py:2326
 #, python-brace-format
 msgid "Invalid input: Could not parse '{bad_input}' as a formula"
 msgstr "無効な入力：'{bad_input}' は式として処理することが出来ません。"
 
 #. Translators: 'SchematicResponse' is a problem type and should not be
 #. translated.
-#: common/lib/capa/capa/responsetypes.py:2210
+#: common/lib/capa/capa/responsetypes.py:2469
 #, python-brace-format
 msgid "Error in evaluating SchematicResponse. The error was: {error_msg}"
 msgstr "回路図の評価に問題があります。 エラー内容：{error_msg}"
 
-#: common/lib/capa/capa/responsetypes.py:2782
+#: common/lib/capa/capa/responsetypes.py:3041
 msgid "The Staff answer could not be interpreted as a number."
 msgstr "スタッフの回答は数字で受け取ることは出来ません。"
 
-#: common/lib/capa/capa/responsetypes.py:2796
+#: common/lib/capa/capa/responsetypes.py:3055
 #, python-brace-format
 msgid "Could not interpret '{given_answer}' as a number."
 msgstr "'{given_answer}' を数字として受け取ることができません。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:377
+#: common/lib/xmodule/xmodule/capa_base.py:390
 msgid "Check"
 msgstr "提出"
 
-#: common/lib/xmodule/xmodule/capa_base.py:378
+#: common/lib/xmodule/xmodule/capa_base.py:391
 msgid "Final Check"
 msgstr "最終確認"
 
-#: common/lib/xmodule/xmodule/capa_base.py:409
+#: common/lib/xmodule/xmodule/capa_base.py:422
 msgid "Checking..."
-msgstr ""
+msgstr "確認中..."
 
-#: common/lib/xmodule/xmodule/capa_base.py:530
+#: common/lib/xmodule/xmodule/capa_base.py:543
 msgid "Warning: The problem has been reset to its initial state!"
 msgstr "警告: 問題は初期状態に戻りました！"
 
 #. Translators: Following this message, there will be a bulleted list of
 #. items.
-#: common/lib/xmodule/xmodule/capa_base.py:534
+#: common/lib/xmodule/xmodule/capa_base.py:547
 msgid ""
 "The problem's state was corrupted by an invalid submission. The submission "
 "consisted of:"
 msgstr "問題のステータスは無効な投稿によって破損しました。投稿内容："
 
-#: common/lib/xmodule/xmodule/capa_base.py:541
+#: common/lib/xmodule/xmodule/capa_base.py:554
 msgid "If this error persists, please contact the course staff."
 msgstr "このエラーが解決しない場合は、コーススタッフに問い合わせください。"
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
-#: common/lib/xmodule/xmodule/capa_base.py:911
-#: common/lib/xmodule/xmodule/capa_base.py:1196
-#: common/lib/xmodule/xmodule/capa_base.py:1245
+#: common/lib/xmodule/xmodule/capa_base.py:929
+#: common/lib/xmodule/xmodule/capa_base.py:1309
+#: common/lib/xmodule/xmodule/capa_base.py:1358
 msgid "Problem is closed."
 msgstr "問題はの期間は終了しました。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:919
+#: common/lib/xmodule/xmodule/capa_base.py:937
 msgid "Problem must be reset before it can be checked again."
 msgstr "問題は再度提出される前にリセットしなければいけません。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:927
+#: common/lib/xmodule/xmodule/capa_base.py:946
 #, python-brace-format
 msgid "You must wait at least {wait} seconds between submissions."
 msgstr " {wait} 秒以上あけて投稿してください。"
 
+#: common/lib/xmodule/xmodule/capa_base.py:956
+#, python-brace-format
+msgid ""
+"You must wait at least {wait_secs} between submissions. {remaining_secs} "
+"remaining."
+msgstr "最低 {wait_secs}秒投稿の間をあけてください。残り {remaining_secs} 秒"
+
 #. Translators: {msg} will be replaced with a problem's error message.
-#: common/lib/xmodule/xmodule/capa_base.py:954
+#: common/lib/xmodule/xmodule/capa_base.py:988
 #, python-brace-format
 msgid "Error: {msg}"
 msgstr "エラー：{msg}"
 
+#: common/lib/xmodule/xmodule/capa_base.py:1107
+#, python-brace-format
+msgid "{num_hour} hour"
+msgstr "{num_hour} 時間"
+
+#: common/lib/xmodule/xmodule/capa_base.py:1112
+#, python-brace-format
+msgid "{num_minute} minute"
+msgstr "{num_minute} 分"
+
+#: common/lib/xmodule/xmodule/capa_base.py:1118
+#, python-brace-format
+msgid "{num_second} second"
+msgstr "{num_second} 秒"
+
 #. Translators: 'rescoring' refers to the act of re-submitting a student's
 #. solution so it can get a new score.
-#: common/lib/xmodule/xmodule/capa_base.py:1116
+#: common/lib/xmodule/xmodule/capa_base.py:1229
 msgid "Problem's definition does not support rescoring."
 msgstr "問題は再採点するように定義されていません。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1121
+#: common/lib/xmodule/xmodule/capa_base.py:1234
 msgid "Problem must be answered before it can be graded again."
 msgstr "問題は再評価される前に回答する必要があります。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1206
+#: common/lib/xmodule/xmodule/capa_base.py:1319
 msgid "Problem needs to be reset prior to save."
 msgstr "問題を保存するためにはリセットする必要があります。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1214
+#: common/lib/xmodule/xmodule/capa_base.py:1327
 msgid "Your answers have been saved."
 msgstr "回答は保存されました。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1216
+#: common/lib/xmodule/xmodule/capa_base.py:1329
 msgid ""
 "Your answers have been saved but not graded. Click 'Check' to grade them."
 msgstr "回答は保存されましたが、評価されていません。'提出'をクリックして評価してください。"
 
-#: common/lib/xmodule/xmodule/capa_base.py:1253
+#: common/lib/xmodule/xmodule/capa_base.py:1366
 msgid "Refresh the page and make an attempt before resetting."
 msgstr "リセットをする前にページをリフレッシュしてください。"
 
@@ -1025,14 +1047,14 @@ msgstr "未定"
 msgid ""
 "Could not parse custom parameter: {custom_parameter}. Should be \"x=y\" "
 "string."
-msgstr ""
+msgstr "カスタムパラメータを解析することができませんでした。\"x=y\" の文字列である必要があります。：{custom_parameter} "
 
 #: common/lib/xmodule/xmodule/lti_module.py:661
 #, python-brace-format
 msgid ""
 "Could not parse LTI passport: {lti_passport}. Should be \"id:key:secret\" "
 "string."
-msgstr ""
+msgstr "LTIパスポートを解析することができませんでした。\"id:key:secret\"の文字列である必要があります：{lti_passport}"
 
 #. Translators: 'Courseware' refers to the tab in the courseware that leads to
 #. the content of a course
@@ -1100,13 +1122,13 @@ msgstr "講師"
 #. graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py:41
 msgid "Self"
-msgstr "自己採点"
+msgstr "自己"
 
 #. Translators: "AI" is used to denote an openended response that is machine-
 #. graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py:44
 msgid "AI"
-msgstr "機械採点"
+msgstr "機械"
 
 #. Translators: "Peer" is used to denote an openended response that is peer-
 #. graded
@@ -1345,31 +1367,31 @@ msgstr "検索"
 msgid "Copyright"
 msgstr "著作権"
 
-#: lms/djangoapps/class_dashboard/dashboard_data.py:180
+#: lms/djangoapps/class_dashboard/dashboard_data.py:184
 #, python-brace-format
 msgid ""
 "{label} {problem_name} - {count_grade} {students} ({percent:.0f}%: "
 "{grade:.0f}/{max_grade:.0f} {questions})"
 msgstr "{label} {problem_name} - {count_grade} {students} ({percent:.0f}%: {grade:.0f}/{max_grade:.0f} {questions})"
 
-#: lms/djangoapps/class_dashboard/dashboard_data.py:184
-#: lms/djangoapps/class_dashboard/dashboard_data.py:332
+#: lms/djangoapps/class_dashboard/dashboard_data.py:188
+#: lms/djangoapps/class_dashboard/dashboard_data.py:338
 msgid "students"
 msgstr "受講者"
 
-#: lms/djangoapps/class_dashboard/dashboard_data.py:188
-#: lms/djangoapps/class_dashboard/dashboard_data.py:337
+#: lms/djangoapps/class_dashboard/dashboard_data.py:192
+#: lms/djangoapps/class_dashboard/dashboard_data.py:343
 msgid "questions"
 msgstr "問題"
 
-#: lms/djangoapps/class_dashboard/dashboard_data.py:244
+#: lms/djangoapps/class_dashboard/dashboard_data.py:249
 #, python-brace-format
 msgid ""
 "{num_students} student(s) opened Subsection {subsection_num}: "
 "{subsection_name}"
 msgstr "{num_students} の受講者が節を開きました {subsection_num}: {subsection_name}"
 
-#: lms/djangoapps/class_dashboard/dashboard_data.py:329
+#: lms/djangoapps/class_dashboard/dashboard_data.py:335
 #, python-brace-format
 msgid ""
 "{problem_info_x} {problem_info_n} - {count_grade} {students} "
@@ -1405,7 +1427,7 @@ msgstr "ユーザー {username} は存在しません。"
 msgid "User {username} has never accessed problem {location}"
 msgstr "ユーザー {username} は問題 {location} をアクセスしたことがありません。 "
 
-#: lms/djangoapps/courseware/features/video.py:433
+#: lms/djangoapps/courseware/features/video.py:434
 msgid "ERROR: No playable video sources found!"
 msgstr "エラー：動画が見つかりません"
 
@@ -2378,14 +2400,14 @@ msgstr " \n     %(course_name)s における証明書の取得おめでとうご
 msgid "Add to profile"
 msgstr "プロフィールに追加"
 
-#: lms/djangoapps/open_ended_grading/staff_grading_service.py:27
+#: lms/djangoapps/open_ended_grading/staff_grading_service.py:28
 #, python-brace-format
 msgid ""
 "Could not contact the external grading server. Please contact the "
 "development team at {email}."
 msgstr "外部評価サーバに接続できませんでした。 開発担当 {email} にお問い合わせください。"
 
-#: lms/djangoapps/open_ended_grading/staff_grading_service.py:315
+#: lms/djangoapps/open_ended_grading/staff_grading_service.py:316
 msgid ""
 "Cannot find any open response problems in this course. Have you submitted "
 "answers to any open response assessment questions? If not, please do so and "

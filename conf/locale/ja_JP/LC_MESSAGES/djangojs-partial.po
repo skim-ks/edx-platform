@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-04-12 15:40-0400\n"
-"PO-Revision-Date: 2014-04-11 00:50+0000\n"
-"Last-Translator: Aoshi <support@225nou.com>\n"
+"POT-Creation-Date: 2014-04-15 11:06-0400\n"
+"PO-Revision-Date: 2014-04-18 12:00+0000\n"
+"Last-Translator: h_yoshida <h_yoshida@matsumo-sys.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/edx-platform/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -231,11 +231,11 @@ msgstr "ブラウザを満たせ"
 msgid "Exit full browser"
 msgstr "フルブラウザをやめる"
 
-#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js:76
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js:114
 msgid "HD on"
 msgstr "HDオン"
 
-#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js:82
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js:120
 msgid "HD off"
 msgstr "HDオフ"
 
@@ -393,7 +393,7 @@ msgstr[0] "投票(投票を削除するにはクリック)"
 #: common/static/coffee/src/discussion/views/discussion_content_view.js:281
 msgid "vote (click to vote)"
 msgid_plural "votes (click to vote)"
-msgstr[0] ""
+msgstr[0] "投票(クリックして投票)"
 
 #: common/static/coffee/src/discussion/views/discussion_thread_list_view.js:153
 msgid "Load more"
@@ -455,7 +455,7 @@ msgstr "着目スレッド"
 #: common/static/coffee/src/discussion/views/discussion_thread_view.js:96
 msgid ""
 "The thread you selected has been deleted. Please select another thread."
-msgstr ""
+msgstr "あなたが選択したスレッドは削除されています。他のスレッドを選択してください。"
 
 #: common/static/coffee/src/discussion/views/discussion_thread_view.js:98
 msgid "We had some trouble loading responses. Please reload the page."
@@ -1227,7 +1227,7 @@ msgstr "リンクを挿入"
 #. Translators: Please keep the quotation marks (") around this text
 #: lms/static/js/Markdown.Editor.js:32 lms/static/js/Markdown.Editor.js.c:35
 msgid "\"optional title\""
-msgstr ""
+msgstr "\"追加の題名\""
 
 #: lms/static/js/Markdown.Editor.js:33
 msgid "Insert Image (upload file or type url)"
@@ -1326,6 +1326,6 @@ msgstr "見出し"
 msgid "Unable to retrieve data, please try again later."
 msgstr "データの受信に失敗しました。少し経った後にお試しください。"
 
-#: lms/templates/class_dashboard/d3_stacked_bar_graph.js:424
+#: lms/templates/class_dashboard/d3_stacked_bar_graph.js:425
 msgid "Number of Students"
 msgstr "受講者の数"
