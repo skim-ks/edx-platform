@@ -1,6 +1,26 @@
 <%! from django.utils.translation import ugettext as _ %>
 
 <%namespace name='static' file='static_content.html'/>
+<script>
+  var isSubmitted = false;
+  function formSubmit(){
+    if(!isSubmitted){
+    isSubmitted = true;
+    setTimeout("resetSubmit()", 800);
+    isConfirmed = confirm("解答を提出します。\nよろしいですか？");
+    if(isConfirmed){
+      $('.check').trigger('click');
+    }
+    return true;
+  } else{
+    return false;  
+  }    
+}  
+function resetSubmit(){
+  isSubmitted = false;
+}
+</script>
+
 <h2 class="problem-header">
   ${ problem['name'] }
 </h2>
@@ -14,7 +34,9 @@
     <input type="hidden" name="problem_id" value="${ problem['name'] }" />
 
     % if check_button:
-    <input class="check f_button tiny radius success" type="button" value="${ check_button }" />
+##    <input class="check f_button tiny radius success" type="button" value="${ check_button }" />
+    <input class="check" style="display:none;">
+    <input class="f_button tiny radius success" type="button" value="解答を提出する" onclick="formSubmit();"/>
     % endif
     % if reset_button:
     <input class="reset f_button tiny radius alert" type="button" value="${_('Reset')}" />
