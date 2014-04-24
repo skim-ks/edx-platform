@@ -34,8 +34,7 @@ function resetSubmit(){
     <input type="hidden" name="problem_id" value="${ problem['name'] }" />
 
     % if check_button:
-##    <input class="check f_button tiny radius success" type="button" value="${ check_button }" />
-    <input class="check" style="display:none;">
+    <input class="check f_button tiny radius success" type="button" value="${ check_button }" style="display:none;">
     <input class="f_button tiny radius success" type="button" value="解答を提出する" onclick="formSubmit();"/>
     % endif
     % if reset_button:
