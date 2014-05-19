@@ -3,22 +3,25 @@
 <%namespace name='static' file='static_content.html'/>
 <script>
   var isSubmitted = false;
-  function formSubmit(){
-    if(!isSubmitted){
+  
+function resetSubmit(){
+  isSubmitted = false;
+}
+
+$(".submit_wrapper_button").click(function(event){
+  if(!isSubmitted){
     isSubmitted = true;
     setTimeout("resetSubmit()", 800);
     isConfirmed = confirm("解答を提出します。\nよろしいですか？");
     if(isConfirmed){
-      $('.check').trigger('click');
+      $(this).prev('.check').trigger('click');
     }
     return true;
   } else{
     return false;  
   }    
-}  
-function resetSubmit(){
-  isSubmitted = false;
-}
+});
+
 </script>
 
 <h2 class="problem-header">
@@ -35,7 +38,7 @@ function resetSubmit(){
 
     % if check_button:
     <input class="check f_button tiny radius success" type="button" value="${ check_button }" style="display:none;">
-    <input class="f_button tiny radius success" type="button" value="解答を提出する" onclick="formSubmit();"/>
+    <input class="f_button tiny radius success submit_wrapper_button" type="button" value="解答を提出する"/>
     % endif
     % if reset_button:
     <input class="reset f_button tiny radius alert" type="button" value="${_('Reset')}" />
